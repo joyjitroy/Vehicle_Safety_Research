@@ -827,6 +827,7 @@ The repository keeps small, shareable datasets in `data/` and expects large AV d
 - `data/waymo/` — Waymo Open Motion Dataset TFRecord files, used by all phases.
 - `data/processed/` — Derived parquet/CSV artifacts.
 - `phase2-prism/datasets/` — Local nuScenes and Argoverse 2 data (not tracked; add this folder to `.gitignore` if you create it).
+- `phase2-prism/results/models/` — Saved trained model weights for PRISM (e.g., `agentic_policy.pt`, `kinematic_lstm.pt`, `vru_lstm.pt`).
 - `phase3-prism-ar/data/prism_ar/` — Generated PRISM-AR annotations and rendered AR overlay images.
 
 To point Phase 2 and Phase 3 at external datasets, set the `SDIQ_*` environment variables in `phase2-prism/src/sdiq/config.py` or use Windows directory junctions (e.g. `C:\data_prismar\nuscenes`, `C:\data_prismar\argoverse2`, `C:\data_prismar\waymo`, `C:\data_prismar\crss`).
@@ -875,6 +876,8 @@ To point Phase 2 and Phase 3 at external datasets, set the `SDIQ_*` environment 
 │   │   └── figures/               # Paper figures
 │   ├── docs/                      # setup, implementation plan, architecture docs
 │   ├── reference/                 # Original sanity scripts
+│   ├── results/                   # Trained model weights and outputs
+│   │   └── models/                # Saved PyTorch weights (agentic, kinematic, VRU)
 │   ├── src/sdiq/                  # config, data loaders, models, agentic layer
 │   └── tests/                     # Pytest suite (61 tests)
 └── phase3-prism-ar/               # Phase 3: risk-adaptive AR cues for VRUs

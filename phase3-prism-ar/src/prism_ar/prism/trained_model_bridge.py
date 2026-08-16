@@ -1,13 +1,14 @@
 """Bridge to the trained SafeDriver-IQ/PRISM Random Forest model.
 
 Loads the CRSS-trained model and feature-engineering pipeline from the
-safedriver-iq-main repository, maps DrivingScene attributes to CRSS features,
-and produces an environmental safety score / risk estimate.
+phase1-safedriver-iq folder in the current repository, maps DrivingScene
+attributes to CRSS features, and produces an environmental safety score /
+risk estimate.
 
 Requires:
-    C:\Personal\EB1A\...\safedriver-iq-main\results\models\best_safety_model.pkl
-    C:\Personal\EB1A\...\safedriver-iq-main\results\models\feature_names.txt
-    C:\Personal\EB1A\...\safedriver-iq-main\src\feature_engineering.py
+    <repo-root>/phase1-safedriver-iq/results/models/best_safety_model.pkl
+    <repo-root>/phase1-safedriver-iq/results/models/feature_names.txt
+    <repo-root>/phase1-safedriver-iq/src/feature_engineering.py
 """
 from __future__ import annotations
 
@@ -21,8 +22,18 @@ import numpy as np
 import pandas as pd
 
 
-# Paths to trained artifacts in the safedriver-iq-main repository
-_SDIQ_ROOT = Path(r"C:\Personal\EB1A\1. Project Description\American Center for Mobility Project\03_Conference_ASCE2027\safedriver-iq-main")
+# Paths to trained artifacts in the current repository
+def _find_repo_root(start: Path) -> Path:
+    p = start.resolve()
+    while p != p.parent:
+        if (p / ".git").exists():
+            return p
+        p = p.parent
+    raise RuntimeError("Could not find repository root containing .git")
+
+
+_REPO_ROOT = _find_repo_root(Path(__file__).parent)
+_SDIQ_ROOT = _REPO_ROOT / "phase1-safedriver-iq"
 _MODEL_PATH = _SDIQ_ROOT / "results" / "models" / "best_safety_model.pkl"
 _FEATURE_NAMES_PATH = _SDIQ_ROOT / "results" / "models" / "feature_names.txt"
 _FE_PATH = _SDIQ_ROOT / "src" / "feature_engineering.py"

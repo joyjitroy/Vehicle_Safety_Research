@@ -43,10 +43,41 @@ V2V Basic Safety Messages (BSMs) and RSU Cooperative Perception Messages (CPMs) 
 
 ![CREST Inference Flow](docs/images/F12_CREST_Inference_Flow.png)
 
-At each time step, an input quality/consistency stage validates timestamp alignment, source freshness, and missing data before any source contributes to the scene representation. The frozen CREST model produces a raw hazard logit, and the frozen Platt layer converts it to a calibrated probability. This probability, plus the lead time at the chosen FAR operating point, is the actionable output delivered to driver alerts, ADAS decision support, fleet monitoring, and infrastructure planning.
+At each time step t, five potential input sources are available: ego vehicle state, V2V cooperative messages, RSU cooperative perception, map/road geometry, and weather/traffic context. An input quality and consistency stage validates timestamp alignment, source freshness, and missing-data conditions before any source contributes to the scene representation. The current driving scene is constructed using only information available up to time t (causal ordering, consistent with training). CREST processes each source through an independent encoder and concatenates only the active blocks, so the frozen model can run on any subset of the five sources without architectural modification; inference continues with remaining sources if a cooperative channel drops out (not evaluated during a live channel-loss event). The frozen model produces a raw hazard logit, which the frozen Platt calibration layer converts to a calibrated hazard probability. This probability, together with the lead time and FAR operating point, is the actionable output delivered to driver alerts, ADAS decision support, fleet safety monitoring, and infrastructure planning. The cycle repeats with each new data update.
+
+**Algorithm 1 - CREST Real-Time Hazard Inference:**
+
+```
+Require: Ego state x_ego in R^6; V2X message set M; map/weather context c in R^8;
+         frozen Platt parameters (a, b); FAR threshold tau
+Ensure:  Calibrated hazard probability p; alert decision d
+
+1: N   <- { m in M : ||m.pos - x_ego.pos||_2 <= 300 }        # neighbors within 300 m
+2: N_K <- TopK(N, k=10, key=distance)                        # top-10 nearest neighbors
+3: e   <- f_ego(x_ego)                                       # ego encoder, e in R^64
+4: v   <- mean_{j in N_K} f_nbr(x_j)                          # neighbor encoder, mean-pooled, v in R^32
+5: m   <- f_map(c)                                            # map/weather encoder, m in R^8
+6: l   <- f_fuse([e; v; m])                                   # fusion MLP, l in R
+7: p   <- sigmoid(a * l + b)                                  # frozen Platt calibration
+8: if p > tau then
+9:     d <- 1                                                 # issue hazard alert
+10: else
+11:    d <- 0
+12: end if
+13: return p, d
+```
+
+**Operating point selection and alert delivery.** The alert issuance operating point is fixed at 5% FAR, established before evaluation from the precision-recall and ROC curves and not adjusted afterward. At this threshold, CREST detects 96 of 838 holdout hazard events (11.5%), with median lead time 2.97 s and mean 3.52 s. The two quantities delivered downstream are the calibrated hazard probability and the estimated lead time.
 
 ![CREST HMI Alert](docs/images/F13_CREST_HMI_Alert.png)
+
+Illustrative HMI display showing a hazard probability of 0.83 and a lead-time estimate of 2.9 s alongside a queue-ahead advisory. The display is indicative only; actual HMI integration and interface standards are outside the scope of the paper.
+
 ![CREST Warning Sequence](docs/images/F14_CREST_Warning_Sequence.png)
+
+Warning-to-stop sequence at the median lead time: at t = -2.97 s, CREST issues an alert (hazard probability 0.83, queue-ahead advisory); at t = -1.5 s, braking is initiated; at t = 0 s, the vehicle reaches a safe stop before entering the hazard zone. The 1.47 s interval between alert and braking represents the driver/ADAS response window available at the median operating point.
+
+**Deployment considerations.** V2V Basic Safety Messages broadcast at 10 Hz within a 500 m radius under SAE J2735 provide kinematic data from vehicles ahead of and behind the ego vehicle. RSU Collective Perception Messages, simulated with a 300 m coverage radius under ETSI EN 302 637-2, report detected objects within the infrastructure's field of view. CREST requires five runtime input channels (ego state, V2V, RSU, map geometry, weather context) and can operate on any active subset without architectural modification. Full cooperative deployment depends on roadside V2X infrastructure and vehicle-side OBU availability, neither of which is evaluated in this paper; latency budgets, communication reliability under congestion, regulatory certification, and fleet penetration rates remain open engineering and policy questions.
 
 ## 3. Datasets
 
@@ -135,15 +166,19 @@ An observation window is labeled y=1 if either hazard type onset falls within th
 
 ![PR Curve](docs/images/F6_PR_Curve.png)
 
+Precision-recall curves for B1 (ego-only CREST, solid) versus B0 (TTC baseline, dashed) on the holdout set. B1 exceeds B0 by 17.8 percentage points in AUPRC, confirming that temporal learning over ego kinematics provides substantial lift over a non-learned analytical heuristic.
+
 ### RSU Coverage Sweep
 
 ![RSU Sweep](docs/images/F7_RSU_Sweep_Plot.png)
+
+Holdout AUPRC as a function of RSU coverage radius (150 m, 300 m, 500 m). The relationship is monotonic: A4-150 (0.672) falls marginally below the ego-only baseline (150 m covers too few upstream vehicles for meaningful advance context), A4-300 improves to 0.687, and A4-500 reaches 0.722, a 4.4 pp gain over B1. Gains accumulate as coverage radius extends.
 
 ### Training Dynamics
 
 ![Learning Curves](docs/images/F8_Learning_Curves.png)
 
-Both B1 and A2 converge within 3 epochs with no overfitting on the calibration split.
+Training and validation loss curves for B1 and A2 across 5 epochs. Both configurations converge within 3 epochs with no sign of overfitting on the calibration split; the validation loss gap between A2 and B1 stabilizes by epoch 2, indicating the weather encoder's contribution is established early and does not require extended training.
 
 ### Cross-Site Generalization (Split Comparison)
 

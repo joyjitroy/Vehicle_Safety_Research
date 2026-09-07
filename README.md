@@ -783,11 +783,21 @@ V2V BSMs and RSU CPMs are simulated on top of ground-truth trajectories with com
 
 ![V2X Coverage](phase4-crest/docs/images/F15_V2X_Coverage.png)
 
-**Real-time inference pipeline:**
+**Real-time inference pipeline.** At each time step t, CREST validates timestamp alignment, source freshness, and missing-data conditions across the five potential input sources (ego, V2V, RSU, map geometry, weather/traffic) before constructing the current driving scene using only information available up to t. Each active source is processed through an independent encoder; the frozen model runs on any subset of sources without architectural modification. The frozen model produces a raw hazard logit, converted by the frozen Platt calibration layer to a calibrated hazard probability, which is delivered with the estimated lead time to driver alerts, ADAS decision support, fleet monitoring, and infrastructure planning.
 
 ![CREST Inference Flow](phase4-crest/docs/images/F12_CREST_Inference_Flow.png)
+
+The alert issuance operating point is fixed at 5% FAR, established before evaluation and not adjusted afterward. At this threshold CREST detects 96/838 holdout events (11.5%), median lead time 2.97 s, mean 3.52 s.
+
 ![CREST HMI Alert](phase4-crest/docs/images/F13_CREST_HMI_Alert.png)
+
+Illustrative HMI display showing a hazard probability of 0.83 and lead-time estimate of 2.9 s alongside a queue-ahead advisory (indicative only; interface standards are outside the scope of the paper).
+
 ![CREST Warning Sequence](phase4-crest/docs/images/F14_CREST_Warning_Sequence.png)
+
+Warning-to-stop sequence at the median lead time: alert issued at t = -2.97 s (hazard probability 0.83), braking initiated at t = -1.5 s, safe stop reached at t = 0 s. The 1.47 s interval between alert and braking is the driver/ADAS response window at the median operating point.
+
+V2V BSMs broadcast at 10 Hz within a 500 m radius under SAE J2735; RSU CPMs are simulated with a 300 m coverage radius under ETSI EN 302 637-2. Full cooperative deployment depends on roadside V2X infrastructure and vehicle-side OBU availability, neither evaluated in this paper.
 
 ### 3. Dataset Summary
 
@@ -848,12 +858,29 @@ CREST is trained and evaluated on NGSIM and MiTra, two open-access freeway traje
 
 †Inference-time plugins; base model not retrained.
 
-![PR Curves](phase4-crest/docs/images/F6_PR_Curve.png)
 ![Ablation](phase4-crest/docs/images/F5_Ablation_Bar_Chart.png)
+
+Holdout AUPRC across all eleven configurations; B1 (gray) is the reference, primary-chain variants in blue, inference-time plugins in orange.
+
+![PR Curves](phase4-crest/docs/images/F6_PR_Curve.png)
+
+Precision-recall curves for B1 (ego-only, solid) versus B0 (TTC baseline, dashed). B1 exceeds B0 by 17.8 pp AUPRC.
+
 ![RSU Sweep](phase4-crest/docs/images/F7_RSU_Sweep_Plot.png)
+
+Holdout AUPRC versus RSU coverage radius (150/300/500 m): monotonic improvement from 0.672 to 0.722 as radius increases.
+
 ![Learning Curves](phase4-crest/docs/images/F8_Learning_Curves.png)
+
+Training/validation loss for B1 and A2 across 5 epochs; both converge within 3 epochs with no overfitting.
+
 ![Split Comparison](phase4-crest/docs/images/F9_Split_Comparison.png)
+
+AUPRC across training, calibration, and holdout splits for all configurations, confirming stable generalization (holdout values annotated in green).
+
 ![Lead Time](phase4-crest/docs/images/F10_Lead_Time.png)
+
+Empirical CDF of lead time at 5% FAR: median 2.97 s, 35.4% of detections provide at least 5 s of warning.
 
 **Lead time by FAR operating point (B1, holdout):**
 

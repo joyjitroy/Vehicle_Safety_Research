@@ -1,0 +1,21 @@
+{
+  "total_events": 7442,
+  "queue_events": 195,
+  "hard_brake_events": 7247,
+  "prediction_horizon_s": 10.0,
+  "total_positive_windows": 7442,
+  "by_dataset": {
+    "mitra_t4": 1683,
+    "mitra_t5": 1664,
+    "mitra_t6": 674,
+    "mitra_t7": 1258,
+    "mitra_t8": 1284,
+    "mitra_t9": 801,
+    "ngsim_i-80_0400pm-0415pm": 8,
+    "ngsim_i-80_0500pm-0515pm": 19,
+    "ngsim_i-80_0515pm-0530pm": 10,
+    "ngsim_us-101_0750am-0805am": 8,
+    "ngsim_us-101_0805am-0820am": 14,
+    "ngsim_us-101_0820am-0835am": 19
+  }
+}

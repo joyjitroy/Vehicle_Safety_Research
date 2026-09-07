@@ -1,0 +1,22 @@
+[
+  {
+    "horizon_s": 5,
+    "num_events": 150,
+    "independent_positive_windows": 114
+  },
+  {
+    "horizon_s": 10,
+    "num_events": 150,
+    "independent_positive_windows": 90
+  },
+  {
+    "horizon_s": 15,
+    "num_events": 150,
+    "independent_positive_windows": 72
+  },
+  {
+    "horizon_s": 20,
+    "num_events": 150,
+    "independent_positive_windows": 61
+  }
+]

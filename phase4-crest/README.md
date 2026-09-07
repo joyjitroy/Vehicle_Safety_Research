@@ -59,10 +59,11 @@ CREST is trained and evaluated on NGSIM and MiTra, two open-access freeway traje
 | Method | Ground camera | Drone | Ground camera |
 | Location | California, USA | Milan, Italy | Nashville, USA |
 | Freeway | US-101, I-80 | A50 | I-24 |
-| Duration | ~45 min/site | 135 min (9 sessions) | 3 incident days |
+| Duration | ~45 min/site | 135 min (9 sessions) | 3 incident days (Nov-Dec 2022) |
 | Traffic | Mixed | Free-flow to congestion | Incident-driven |
 | Labels | Queue onset | Hard braking, queue onset | Queue onset |
 | Role | Train + holdout | Train + holdout | US validation |
+| Source / Publication | FHWA, ITS DataHub, released 2016 [19] | Chaudhari et al., *Scientific Data*, 2025 [20] | Gloudemans et al., *Transp. Res. Part C*, 2023 [21] |
 
 ### Data Split Summary
 

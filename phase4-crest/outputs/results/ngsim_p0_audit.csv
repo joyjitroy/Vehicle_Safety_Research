@@ -1,0 +1,7 @@
+file,total_rows,unique_vehicles,hard_brake_events,queue_events
+I-80/0400pm-0415pm/trajectories-0400-0415.csv,1048575,1725,0,21
+I-80/0500pm-0515pm/trajectories-0500-0515.csv,1048575,1416,0,32
+I-80/0515pm-0530pm/trajectories-0515-0530.csv,1048575,1242,0,33
+US-101/0750am-0805am/trajectories-0750am-0805am.csv,1048575,1993,0,11
+US-101/0805am-0820am/trajectories-0805am-0820am.csv,1048575,1533,0,24
+US-101/0820am-0835am/trajectories-0820am-0835am.csv,1048575,1298,0,29

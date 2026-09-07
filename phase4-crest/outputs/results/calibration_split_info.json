@@ -1,0 +1,13 @@
+{
+  "calibration_fraction": 0.2,
+  "ngsim_us101": {
+    "duration_ms": 2495700,
+    "calibration_start_global_time": 1118848976260,
+    "train_end_global_time": 1118848976259
+  },
+  "mitra_t6": {
+    "duration_s": 1019.018067,
+    "calibration_start_time_s": 815.2144536,
+    "train_end_time_s": 815.2134536
+  }
+}

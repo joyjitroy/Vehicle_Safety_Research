@@ -1,0 +1,11 @@
+{
+  "dataset": "I-24 MOTION INCEPTION v1.0",
+  "model": "CREST B1 (ego-kinematic baseline)",
+  "checkpoint": "baseline.pt",
+  "n_snapshots": 3210,
+  "n_hazard": 1860,
+  "n_clean": 1350,
+  "auprc": 0.6662,
+  "brier": 0.3646,
+  "mean_prob": 0.1934
+}

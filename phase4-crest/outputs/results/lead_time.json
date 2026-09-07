@@ -1,0 +1,5898 @@
+{
+  "far_thresholds": {
+    "far_1pct": 0.6896704435348511,
+    "far_5pct": 0.6786369681358337,
+    "far_10pct": 0.6265401840209961
+  },
+  "operating_points": {
+    "far_1pct": {
+      "n_detected": 21,
+      "n_missed": 817,
+      "detection_rate": 0.025059665871121718,
+      "mean_lead_time_s": 2.4761904761957245,
+      "median_lead_time_s": 1.2666666666746096
+    },
+    "far_5pct": {
+      "n_detected": 96,
+      "n_missed": 742,
+      "detection_rate": 0.11455847255369929,
+      "mean_lead_time_s": 3.5211805555590665,
+      "median_lead_time_s": 2.9666666666730634
+    },
+    "far_10pct": {
+      "n_detected": 198,
+      "n_missed": 640,
+      "detection_rate": 0.23627684964200477,
+      "mean_lead_time_s": 3.3377106689067264,
+      "median_lead_time_s": 2.366666666660592
+    }
+  },
+  "events": [
+    {
+      "dataset_source": "ngsim_i-80_0400pm-0415pm",
+      "event_onset_s": 1113433822.7,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "ngsim_i-80_0400pm-0415pm",
+      "event_onset_s": 1113433890.5,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "ngsim_i-80_0400pm-0415pm",
+      "event_onset_s": 1113433689.0,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "ngsim_i-80_0400pm-0415pm",
+      "event_onset_s": 1113433790.5,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": 1.0000085830688477
+    },
+    {
+      "dataset_source": "ngsim_i-80_0400pm-0415pm",
+      "event_onset_s": 1113433390.1,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "ngsim_i-80_0400pm-0415pm",
+      "event_onset_s": 1113433744.1,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "ngsim_i-80_0400pm-0415pm",
+      "event_onset_s": 1113433842.8,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "ngsim_i-80_0400pm-0415pm",
+      "event_onset_s": 1113433936.7,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "ngsim_i-80_0500pm-0515pm",
+      "event_onset_s": 1113436876.8,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "ngsim_i-80_0500pm-0515pm",
+      "event_onset_s": 1113437205.3,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "ngsim_i-80_0500pm-0515pm",
+      "event_onset_s": 1113437235.7,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "ngsim_i-80_0500pm-0515pm",
+      "event_onset_s": 1113436840.7,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "ngsim_i-80_0500pm-0515pm",
+      "event_onset_s": 1113437345.6,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": 4.100005626678467
+    },
+    {
+      "dataset_source": "ngsim_i-80_0500pm-0515pm",
+      "event_onset_s": 1113437378.2,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "ngsim_i-80_0500pm-0515pm",
+      "event_onset_s": 1113437526.1,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "ngsim_i-80_0500pm-0515pm",
+      "event_onset_s": 1113436920.7,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "ngsim_i-80_0500pm-0515pm",
+      "event_onset_s": 1113436953.0,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "ngsim_i-80_0500pm-0515pm",
+      "event_onset_s": 1113437087.1,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "ngsim_i-80_0500pm-0515pm",
+      "event_onset_s": 1113437157.6,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "ngsim_i-80_0500pm-0515pm",
+      "event_onset_s": 1113437326.9,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "ngsim_i-80_0500pm-0515pm",
+      "event_onset_s": 1113437491.6,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "ngsim_i-80_0500pm-0515pm",
+      "event_onset_s": 1113437508.6,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "ngsim_i-80_0500pm-0515pm",
+      "event_onset_s": 1113437461.3,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "ngsim_i-80_0500pm-0515pm",
+      "event_onset_s": 1113436898.7,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": 9.5367431640625e-06
+    },
+    {
+      "dataset_source": "ngsim_i-80_0500pm-0515pm",
+      "event_onset_s": 1113437041.9,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": 6.900002956390381
+    },
+    {
+      "dataset_source": "ngsim_i-80_0500pm-0515pm",
+      "event_onset_s": 1113437136.1,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "ngsim_i-80_0500pm-0515pm",
+      "event_onset_s": 1113437083.9,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "ngsim_i-80_0515pm-0530pm",
+      "event_onset_s": 1113437711.4,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "ngsim_i-80_0515pm-0530pm",
+      "event_onset_s": 1113437589.6,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "ngsim_i-80_0515pm-0530pm",
+      "event_onset_s": 1113437790.2,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": 9.5367431640625e-06
+    },
+    {
+      "dataset_source": "ngsim_i-80_0515pm-0530pm",
+      "event_onset_s": 1113437679.4,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "ngsim_i-80_0515pm-0530pm",
+      "event_onset_s": 1113437913.4,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "ngsim_i-80_0515pm-0530pm",
+      "event_onset_s": 1113437772.4,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "ngsim_i-80_0515pm-0530pm",
+      "event_onset_s": 1113437935.0,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": 9.5367431640625e-06
+    },
+    {
+      "dataset_source": "ngsim_i-80_0515pm-0530pm",
+      "event_onset_s": 1113437646.6,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "ngsim_i-80_0515pm-0530pm",
+      "event_onset_s": 1113437697.6,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "ngsim_i-80_0515pm-0530pm",
+      "event_onset_s": 1113438066.6,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 15.115111,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 162.262219,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 249.68295,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 156.122748,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 185.085036,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 437.937821,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 515.515378,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 596.429604,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 613.246417,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": 0.033333333342397964,
+      "far_10pct_lead_s": 0.033333333342397964
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 632.599098,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 712.278756,
+      "far_1pct_lead_s": 0.2666666666755191,
+      "far_5pct_lead_s": 4.233333333338578,
+      "far_10pct_lead_s": 4.233333333338578
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 289.389312,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 352.118692,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 440.57379,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 538.171362,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 814.948065,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": 0.033333333342397964
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 277.043637,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 529.963156,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 552.118638,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 650.517011,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 502.535735,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 500.433634,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 507.740939,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 544.978167,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 522.55575,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 498.698566,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 490.757293,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 504.437637,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": 9.599999999999682
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 166.032655,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 516.115979,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 239.305909,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 257.090355,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 174.007294,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": 6.966666666666839
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 246.045981,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 209.14242,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 179.312598,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 259.55949,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 169.002291,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 162.929553,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 158.32495,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 156.790082,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 183.183134,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 181.548167,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 179.913199,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 153.820446,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 240.073343,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 178.745364,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 213.646923,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 509.843041,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 509.008873,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 511.911776,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 562.762613,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 537.070261,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 17.283946,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 262.228826,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 471.604813,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 468.134677,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": 2.4333333333273117,
+      "far_10pct_lead_s": 2.4333333333273117
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 264.798061,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 268.001263,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": 2.366666666660592
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 256.990255,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 250.784051,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 255.088354,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 227.4941,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": 7.800000000000125,
+      "far_10pct_lead_s": 7.800000000000125
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 253.319919,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": 3.066666666667061
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 261.194458,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 257.056989,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 293.927182,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 268.13473,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 267.233829,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 246.212814,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 244.043979,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 249.88315,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 255.355287,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 286.48641,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 264.431027,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 293.827082,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 273.706967,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": 1.633333333326675
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 270.270198,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 289.789713,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 298.331586,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 300.366954,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 293.026282,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 277.844437,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 307.640892,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 297.697618,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": 6.466666666663855,
+      "far_10pct_lead_s": 6.466666666663855
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 28.261587,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": 0.03333333333283761
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 98.465106,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 311.044295,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 317.817733,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 309.47606,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 306.239491,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 312.979563,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 308.108026,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 94.694669,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 668.601757,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 625.091592,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 617.85102,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": 0.13333333334230701
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 180.447066,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": 0.03333333333389987
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 614.781284,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": 0.033333333342397964,
+      "far_10pct_lead_s": 0.033333333342397964
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 620.119955,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 37.570894,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 15.949278,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 103.470109,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 125.392025,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 45.945934,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 7.407405,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 50.51717,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 133.666965,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 18.885547,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 485.385256,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 671.90506,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 689.422573,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 603.136309,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 551.017538,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 214.948224,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 543.476665,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 546.279467,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 187.454071,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 162.562519,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 182.916201,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 114.080717,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 143.910539,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 150.45041,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 140.640603,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 529.529389,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 630.263429,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 631.698197,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": 4.833333333338032
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 595.695537,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 569.869718,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 574.140655,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 513.48001,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 373.039607,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 615.548718,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 522.622483,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 550.984171,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 192.459075,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 178.044664,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 157.991283,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 98.865506,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 4.23757,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": 0.9333333333333456
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 43.643632,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 317.083666,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 121.354656,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 757.357156,
+      "far_1pct_lead_s": 3.800000000005639,
+      "far_5pct_lead_s": 3.800000000005639,
+      "far_10pct_lead_s": 3.800000000005639
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 282.649241,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 100.700674,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 279.079005,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 300.700621,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": 7.333333333331211,
+      "far_10pct_lead_s": 7.333333333331211
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 71.971953,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 105.605577,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 531.965157,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 291.491414,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 126.393026,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 301.634888,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 315.648898,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": 0.03333333332540178
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 311.678262,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 316.416332,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 333.700278,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": 0.2666666666589208
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 86.753397,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 125.859159,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 587.520698,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 257.757689,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": 8.700000000000074,
+      "far_10pct_lead_s": 8.700000000000074
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 291.925181,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": 0.19999999999220108
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 101.034341,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 339.572816,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 295.829084,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": 0.03333333332540178
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 330.730643,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": 5.866666666663377,
+      "far_10pct_lead_s": 5.866666666663377
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 331.56481,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 332.732644,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 337.270514,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 424.357578,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 301.601521,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 319.886468,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 346.412988,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 348.047955,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 137.537501,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 283.416675,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 215.648925,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 316.649899,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 342.809385,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 344.110686,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 123.289924,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 177.844464,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 355.989228,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 345.345253,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 167.867823,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 163.696987,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 162.062019,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 164.16412,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 354.721294,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": 8.733333333332325
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 350.550457,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 352.085325,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 160.660618,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 162.262219,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 164.731354,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 353.386626,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 358.49173,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 360.026598,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 357.690929,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": 0.03333333332540178,
+      "far_10pct_lead_s": 0.03333333332540178
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 554.154007,
+      "far_1pct_lead_s": 8.166666666668334,
+      "far_5pct_lead_s": 8.166666666668334,
+      "far_10pct_lead_s": 8.166666666668334
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 359.29253,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": 1.5666666666599554,
+      "far_10pct_lead_s": 1.5666666666599554
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 597.897739,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": 0.033333333342397964
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 144.544506,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 146.913541,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 545.4453,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": 2.366666666673609
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 362.629199,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": 0.5999999999925194
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 207.707652,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 366.032602,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": 5.23333333332954
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 198.698646,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 612.545716,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": 0.033333333342397964
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 209.709654,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 185.118402,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 221.721663,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 707.006819,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 373.573474,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": 4.3999999999955435
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 215.749025,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 236.202807,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 373.973874,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": 4.799999999995862
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 376.876777,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 233.233171,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 375.041609,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 356.256161,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 249.18245,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 382.582481,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 385.71895,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 383.983882,
+      "far_1pct_lead_s": 0.03333333332540178,
+      "far_5pct_lead_s": 4.133333333328665,
+      "far_10pct_lead_s": 7.366666666664571
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 364.497734,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": 0.13333333332548136
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 375.708942,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 254.92152,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 384.984882,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 314.347597,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": 2.1999999999937927,
+      "far_10pct_lead_s": 2.1999999999937927
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 260.126724,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 384.150715,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 392.225454,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 233.566838,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 377.177077,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 258.65859,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 380.246812,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 287.821078,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 394.79469,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 295.528784,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 394.961523,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 303.803723,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 298.231485,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 359.19243,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 396.362924,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": 5.499999999996419,
+      "far_10pct_lead_s": 5.499999999996419
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 307.340592,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 311.611529,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 400.066627,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 312.512429,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": 0.3666666666590004,
+      "far_10pct_lead_s": 0.3666666666590004
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 406.306198,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 503.036236,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 407.674232,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 523.456651,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 623.456624,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": 0.033333333342397964,
+      "far_10pct_lead_s": 0.033333333342397964
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 325.191772,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 413.24647,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": 5.533333333329779
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 415.982539,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": 0.03333333332540178
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 390.490387,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 371.971873,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 321.755003,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 309.142393,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 406.473032,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 331.297876,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": 9.93333333333328,
+      "far_10pct_lead_s": 9.93333333333328
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 420.854075,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 407.807699,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 775.141602,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 409.3092,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": 0.03333333332540178
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 334.267512,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 407.674232,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 354.85476,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": 0.2666666666589208
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 427.627514,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 353.253159,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 415.081638,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 357.991229,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 419.352574,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": 0.03333333332540178,
+      "far_10pct_lead_s": 0.03333333332540178
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 359.425997,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": 0.06666666665876164,
+      "far_10pct_lead_s": 0.06666666665876164
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 422.956177,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 424.023911,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 420.987542,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 364.497734,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": 0.13333333332548136
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 414.914804,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 430.330216,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 374.140708,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": 4.966666666662661
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 360.960865,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 424.224111,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": 2.0666666666603533
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 335.568813,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": 1.7333333333267547
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 417.417306,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 433.299851,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 418.418307,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 432.398951,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": 9.233333333332723,
+      "far_10pct_lead_s": 9.233333333332723
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 380.580479,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": 2.366666666660592
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 437.504054,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": -7.958078640513122e-12
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 431.09765,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 375.875776,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 385.985883,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 440.17339,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 579.345858,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 353.75366,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 431.264483,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 449.482696,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": 0.16666666665884122
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 442.809358,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 453.9872,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 397.297192,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 450.650531,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 455.088301,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 401.668228,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": 1.6999999999933948
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 455.221767,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 394.060622,
+      "far_1pct_lead_s": 0.3333333333256405,
+      "far_5pct_lead_s": 0.3333333333256405,
+      "far_10pct_lead_s": 0.3333333333256405
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 445.178393,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": 1.9666666666602737,
+      "far_10pct_lead_s": 1.9666666666602737
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 463.596807,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 450.450331,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 402.435662,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 404.804697,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": 8.099999999998488
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 467.80101,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 409.275834,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 465.331875,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 472.23878,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 468.668544,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 470.804012,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": 7.299999999997851
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 476.57645,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": 7.9666666666650485,
+      "far_10pct_lead_s": 7.9666666666650485
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 471.371246,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": 1.7999999999934744,
+      "far_10pct_lead_s": 1.7999999999934744
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 455.355234,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 687.754238,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 473.173047,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 478.945485,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 437.337221,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 442.809358,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 452.185398,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": 0.03333333332540178
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 482.849388,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 722.889364,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": 6.13333333333685
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 390.723953,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 430.597149,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 479.345885,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": 9.466666666666242
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 486.55309,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": 0.0999999999921215,
+      "far_10pct_lead_s": 0.0999999999921215
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 468.067943,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 488.021225,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 425.091645,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 472.705914,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 427.794347,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 478.311518,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 697.363845,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 767.70083,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 484.217422,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 489.522726,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 438.605155,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 493.126328,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 475.775649,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": 7.166666666664412,
+      "far_10pct_lead_s": 7.166666666664412
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 496.930131,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 769.469265,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": 0.033333333342397964,
+      "far_10pct_lead_s": 0.033333333342397964
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 495.361897,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 484.651189,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 491.724927,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 489.956493,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 438.972189,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 485.819023,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 495.361897,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 486.986857,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 503.136336,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 501.067601,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": 7.399999999997931
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 504.80467,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 502.669202,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": 9.099999999999284
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 491.024227,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 506.439638,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": 0.03333333332540178
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 490.89076,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 783.116241,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 507.674206,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 509.108974,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 505.405271,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 510.143341,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 457.323869,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 511.044242,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 507.273806,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 479.779652,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 520.453649,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 518.685214,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 508.808673,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": 9.93333333333328
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 512.178709,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 777.043503,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 504.537737,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": 0.03333333332540178
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 513.012876,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 525.959153,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 518.885414,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": 3.066666666667629
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 516.015879,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 527.727587,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 529.095622,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 506.206071,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 507.640839,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 532.398924,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": 8.900000000001
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 475.975849,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": 7.366666666664571,
+      "far_10pct_lead_s": 7.366666666664571
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 485.685556,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 510.810675,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 533.933792,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": 9.700000000000273
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 678.578398,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 749.34915,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 515.882412,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 482.348887,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 530.797323,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 537.437294,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 756.789922,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": 0.23333333334221606
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 488.321525,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 516.249445,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 546.212734,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 532.966158,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 531.297823,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 539.105629,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 549.949804,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 493.660196,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 534.901426,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 552.852706,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 499.232433,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 535.335193,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 556.089275,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 555.088274,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 502.001868,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 534.334192,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 565.331848,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": 5.46666666667079
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 564.464314,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 503.536736,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": 9.233333333332723,
+      "far_10pct_lead_s": 9.233333333332723
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 562.295479,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 561.261112,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 568.401584,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": 0.100000000009004,
+      "far_10pct_lead_s": 0.100000000009004
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 572.639154,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 551.618138,
+      "far_1pct_lead_s": 1.2666666666746096,
+      "far_5pct_lead_s": 1.2666666666746096,
+      "far_10pct_lead_s": 1.93333333334067
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 574.541055,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 579.045558,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": 0.8333333333416704,
+      "far_10pct_lead_s": 0.8333333333416704
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 566.332849,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 582.315494,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 560.226744,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 734.334139,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 542.175364,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 569.669518,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 500.2668,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": 6.599999999997294,
+      "far_10pct_lead_s": 6.599999999997294
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 585.68553,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 685.31847,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 574.407588,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 528.228088,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 577.343857,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": 0.13333333334230701
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 588.788632,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 579.078925,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 575.141655,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 523.456651,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 564.597781,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": 4.866666666671335
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 590.390233,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 567.200383,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": 1.0333333333414885,
+      "far_10pct_lead_s": 1.0333333333414885
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 580.94746,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 591.591434,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 507.407272,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 582.682528,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 589.822999,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 592.826002,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 594.494336,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 596.796638,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": 0.100000000009004,
+      "far_10pct_lead_s": 0.100000000009004
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 596.596438,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 583.850362,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 600.30014,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 582.482327,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 598.798639,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 602.669176,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 604.03721,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 601.434608,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": 2.433333333340215,
+      "far_10pct_lead_s": 2.500000000006821
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 608.508346,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 520.053248,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 610.844015,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": 0.13333333334230701
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 607.040212,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": 4.9666666666712445,
+      "far_10pct_lead_s": 5.0000000000045475
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 608.508346,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 580.180026,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 610.109948,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 576.91009,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": 3.0666666666729725,
+      "far_10pct_lead_s": 3.0666666666729725
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 596.729905,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 604.904744,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 607.207046,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 616.149319,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 611.878382,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 604.938111,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 703.937083,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 602.402242,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 618.818654,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 591.558067,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 612.61245,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": 0.5666666666752462
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 659.559384,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 599.232406,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": 5.866666666670426,
+      "far_10pct_lead_s": 5.866666666670426
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 599.99984,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 618.418254,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 585.552063,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 577.31049,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": 2.466666666673518
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 633.666832,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 693.193009,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 621.855023,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": 7.1000000000026375,
+      "far_10pct_lead_s": 7.1000000000026375
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 620.353522,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 623.356524,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 624.924759,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": 7.833333333335304,
+      "far_10pct_lead_s": 7.833333333335304
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 633.766932,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 599.29914,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 634.567732,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": 4.466666666671699,
+      "far_10pct_lead_s": 4.466666666671699
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 636.069233,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 625.792293,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": 0.033333333342397964,
+      "far_10pct_lead_s": 0.033333333342397964
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 626.92676,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 626.893393,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": 0.033333333342397964
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 614.113951,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": 0.9333333333415794
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 635.301799,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 696.763245,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 645.111607,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 636.703201,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 632.098597,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 638.304802,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": 0.033333333342397964,
+      "far_10pct_lead_s": 0.033333333342397964
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 732.432237,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": 0.13333333334230701
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 620.553722,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": 2.333333333340306
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 640.44027,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 643.943772,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 647.981142,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": 7.333333333335759
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 850.650424,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 641.107604,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 641.808304,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 643.743572,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 624.390891,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 648.548376,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": 7.300000000002456
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 651.417911,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 660.293451,
+      "far_1pct_lead_s": 0.43333333334203417,
+      "far_5pct_lead_s": 0.43333333334203417,
+      "far_10pct_lead_s": 0.43333333334203417
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 662.262086,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 653.820313,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 634.167332,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 670.270092,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 663.73022,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": 0.06666666667570098,
+      "far_10pct_lead_s": 8.500000000001364
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 655.989148,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": 5.666666666670608,
+      "far_10pct_lead_s": 5.666666666670608
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 664.430921,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 672.90606,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 669.569391,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": 0.033333333342397964,
+      "far_10pct_lead_s": 0.033333333342397964
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 739.572709,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 666.599756,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 663.963787,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": 4.600000000004911
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 746.412881,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 653.95378,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 671.871693,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": 5.166666666671063,
+      "far_10pct_lead_s": 5.166666666671063
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 668.535024,
+      "far_1pct_lead_s": 8.166666666668334,
+      "far_5pct_lead_s": 8.166666666668334,
+      "far_10pct_lead_s": 8.166666666668334
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 672.138627,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 678.845331,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 676.54303,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 654.487647,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 673.106261,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 753.78692,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 680.046532,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": 6.333333333336668,
+      "far_10pct_lead_s": 7.766666666668698
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 659.893051,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 684.317469,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 770.236698,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 684.384202,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 680.013166,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 650.617111,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": 0.3000000000088221,
+      "far_10pct_lead_s": 0.3000000000088221
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 652.919412,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": 8.466666666668061
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 661.060885,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 793.092882,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 690.123273,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": 1.2666666666746096,
+      "far_10pct_lead_s": 8.066666666668425
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 695.49531,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 672.038526,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 677.310464,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 696.696511,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 695.69551,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 698.798613,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": 0.2666666666755191,
+      "far_10pct_lead_s": 0.2666666666755191
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 677.14363,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 693.092909,
+      "far_1pct_lead_s": 0.033333333342397964,
+      "far_5pct_lead_s": 0.033333333342397964,
+      "far_10pct_lead_s": 0.033333333342397964
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 704.904717,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": 5.533333333337396,
+      "far_10pct_lead_s": 8.133333333335031
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 696.863345,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": 2.400000000006912,
+      "far_10pct_lead_s": 2.400000000006912
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 705.338484,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 680.8807,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 682.916068,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 700.066547,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": 0.033333333342397964
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 754.954754,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": 0.033333333342397964
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 704.237383,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 712.94609,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 719.085561,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 706.506318,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 693.793609,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 708.441586,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 723.356497,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": 0.033333333342397964
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 697.530678,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 712.178656,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 709.876354,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 716.849993,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 717.850993,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 719.052194,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 714.247391,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 762.262059,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": 0.033333333342397964
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 716.883359,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 722.989464,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 718.351494,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": 0.9333333333415794
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 719.118928,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 701.034181,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": 5.166666666671063,
+      "far_10pct_lead_s": 5.166666666671063
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 720.086562,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 705.705518,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": 5.1000000000044565
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 729.629435,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 728.428234,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 707.307119,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 827.260374,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 724.224031,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 726.025833,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 737.871008,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 733.600072,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 734.100572,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": 7.833333333335304,
+      "far_10pct_lead_s": 7.833333333335304
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 728.995468,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": 0.06666666667570098,
+      "far_10pct_lead_s": 0.06666666667570098
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 735.969107,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 736.769907,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 731.331137,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 791.09088,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 720.286762,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 732.732538,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": 9.23333333333403
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 748.081216,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 746.312781,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 737.103574,
+      "far_1pct_lead_s": 1.6000000000076398,
+      "far_5pct_lead_s": 7.766666666668698,
+      "far_10pct_lead_s": 7.766666666668698
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 748.915383,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 750.083217,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 748.214682,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": 0.8666666666749734
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 738.638442,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 741.574711,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 739.97311,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": 6.700000000003001
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 754.120587,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 744.110579,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": 0.16666666667561003,
+      "far_10pct_lead_s": 0.16666666667561003
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 798.331452,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": 0.43333333334203417
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 743.543346,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 752.318785,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 753.98712,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 761.527992,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 759.859658,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 758.458257,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 748.815283,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 756.556355,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": 1.6333333333409428
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 752.552352,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": 5.700000000003911,
+      "far_10pct_lead_s": 5.700000000003911
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 753.78692,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": 0.033333333342397964
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 736.53634,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 767.767563,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 755.655454,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 756.623089,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": 5.733333333337214,
+      "far_10pct_lead_s": 5.733333333337214
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 766.232696,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 757.724189,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 760.660458,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 772.972767,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 770.637099,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 744.677813,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 763.46326,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 765.999129,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 764.297427,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": 0.5000000000086402,
+      "far_10pct_lead_s": 1.966666666673973
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 760.627091,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 772.272067,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 765.398528,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 777.510637,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 766.032495,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": 3.800000000005639
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 775.108235,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 769.102231,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 771.404533,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 777.47727,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": 3.933333333338851,
+      "far_10pct_lead_s": 5.533333333337396
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 781.447907,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": 2.6666666666733363,
+      "far_10pct_lead_s": 2.6666666666733363
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 775.875669,
+      "far_1pct_lead_s": 1.2000000000080036,
+      "far_5pct_lead_s": 1.2000000000080036,
+      "far_10pct_lead_s": 1.4000000000078217
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 772.872667,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 725.692166,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": 8.933333333334303
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 763.329793,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": 7.500000000002274
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 784.384176,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 774.107235,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 774.641102,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 775.408536,
+      "far_1pct_lead_s": 0.7333333333417613,
+      "far_5pct_lead_s": 0.7333333333417613,
+      "far_10pct_lead_s": 0.9333333333415794
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 787.854311,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 781.147607,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": 0.100000000009004
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 774.707835,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 782.081874,
+      "far_1pct_lead_s": 2.8000000000065484,
+      "far_5pct_lead_s": 3.4000000000060027,
+      "far_10pct_lead_s": 3.4000000000060027
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 785.35181,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": 0.033333333342397964
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 790.356813,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": 0.033333333342397964,
+      "far_10pct_lead_s": 0.033333333342397964
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 792.759215,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 779.779572,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 788.955412,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 790.757214,
+      "far_1pct_lead_s": 0.7666666666750643,
+      "far_5pct_lead_s": 0.7666666666750643,
+      "far_10pct_lead_s": 0.7666666666750643
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 788.421545,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 770.637099,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 792.625748,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 798.531653,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 782.282074,
+      "far_1pct_lead_s": 3.0666666666729725,
+      "far_5pct_lead_s": 3.0666666666729725,
+      "far_10pct_lead_s": 4.066666666672063
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 796.696485,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 800.667121,
+      "far_1pct_lead_s": 2.166666666673791,
+      "far_5pct_lead_s": 3.1000000000062755,
+      "far_10pct_lead_s": 3.1000000000062755
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 783.216341,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 797.530652,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 800.433554,
+      "far_1pct_lead_s": 1.93333333334067,
+      "far_5pct_lead_s": 2.8666666666731544,
+      "far_10pct_lead_s": 2.8666666666731544
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 811.377829,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": 4.600000000004911
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 784.717842,
+      "far_1pct_lead_s": 8.56666666666797,
+      "far_5pct_lead_s": 8.56666666666797,
+      "far_10pct_lead_s": 8.56666666666797
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 800.633754,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": 1.1333333333413975
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 804.938057,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 804.70449,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": 0.3000000000088221
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 801.701488,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": 3.4666666666726087,
+      "far_10pct_lead_s": 3.4666666666726087
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 784.117242,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 806.539658,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 807.774226,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 811.444562,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 813.27973,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": 9.933333333333394
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 792.125248,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 819.018801,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 816.249366,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": 9.266666666667334,
+      "far_10pct_lead_s": 9.266666666667334
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 799.933054,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 809.375827,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": 4.866666666671335,
+      "far_10pct_lead_s": 4.866666666671335
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 812.378829,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 823.556671,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": 0.033333333342397964
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 816.249366,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": 9.266666666667334,
+      "far_10pct_lead_s": 9.266666666667334
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 823.223004,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 822.121903,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 816.316099,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 825.825606,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 830.630409,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": 0.5000000000086402,
+      "far_10pct_lead_s": 4.200000000005275
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 801.034154,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 832.232011,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 804.637757,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 835.802247,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": 9.733333333333576,
+      "far_10pct_lead_s": 9.733333333333576
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 847.146922,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 804.837957,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 843.710152,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": 4.300000000005184,
+      "far_10pct_lead_s": 4.300000000005184
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 840.373483,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 831.965077,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 857.357129,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 839.672783,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 845.945721,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 840.940717,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": 0.033333333342397964,
+      "far_10pct_lead_s": 0.033333333342397964
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 861.995099,
+      "far_1pct_lead_s": 5.80000000000382,
+      "far_5pct_lead_s": 5.80000000000382,
+      "far_10pct_lead_s": 5.80000000000382
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 845.178287,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 847.347122,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": 5.233333333337669,
+      "far_10pct_lead_s": 5.233333333337669
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 860.159931,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 821.321103,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 879.012112,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 825.491939,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 793.026149,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 796.729851,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 792.592382,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 839.472583,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 854.254027,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 825.291739,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 869.569338,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": 7.333333333335759,
+      "far_10pct_lead_s": 7.333333333335759
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 888.021118,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 859.559331,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 861.160932,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 868.001104,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 829.529309,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": 0.033333333342397964
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 863.563334,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 873.506608,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": 1.1333333333413975,
+      "far_10pct_lead_s": 1.1666666666747005
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 857.357129,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": 0.033333333342397964
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 898.531626,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 871.537973,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 891.524621,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 875.275042,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 882.749181,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 849.549323,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 897.163592,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 879.279045,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 880.446879,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 869.836272,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": 4.36666666667179
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 871.237673,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 861.694799,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 873.072841,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 901.401161,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": 1.0000000000081855
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 882.448881,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 902.302062,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 883.983749,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": 0.033333333342397964,
+      "far_10pct_lead_s": 0.033333333342397964
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 905.571998,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 882.815914,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": 1.7000000000075488,
+      "far_10pct_lead_s": 1.7000000000075488
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 907.540633,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 877.510611,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 888.454885,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 907.473899,
+      "far_1pct_lead_s": 0.6333333333418523,
+      "far_5pct_lead_s": 0.6333333333418523,
+      "far_10pct_lead_s": 0.6333333333418523
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 891.758188,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 851.284391,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 883.850282,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": 0.16666666667561003
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 865.531968,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 891.391154,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 864.530968,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": 2.9333333333397604
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 895.528624,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 892.558988,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 893.893656,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 903.569996,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 889.889653,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 900.233327,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": 2.6666666666733363,
+      "far_10pct_lead_s": 2.6666666666733363
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 907.740833,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 842.742518,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 906.673099,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 907.373799,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 907.440533,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 899.632727,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 876.643077,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 907.440533,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 886.019117,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 907.807566,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": 0.20000000000891305
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 907.640733,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": 0.033333333342397964
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 892.158588,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": 9.433333333333849
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 884.350782,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": 3.2333333333394876,
+      "far_10pct_lead_s": 3.2333333333394876
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 907.640733,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": 0.033333333342397964
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 894.694456,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 907.707466,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 907.774199,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 907.774199,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 907.006766,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 907.073499,
+      "far_1pct_lead_s": 0.23333333334221606,
+      "far_5pct_lead_s": 0.23333333334221606,
+      "far_10pct_lead_s": 0.23333333334221606
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 907.674099,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 886.48625,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 907.340432,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 906.572999,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 907.307066,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 907.674099,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 906.906665,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 907.874299,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    },
+    {
+      "dataset_source": "mitra_t9",
+      "event_onset_s": 907.373799,
+      "far_1pct_lead_s": null,
+      "far_5pct_lead_s": null,
+      "far_10pct_lead_s": null
+    }
+  ]
+}

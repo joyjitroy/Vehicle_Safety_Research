@@ -1,0 +1,1287 @@
+{
+  "files": 6,
+  "total_rows": 6291450,
+  "total_unique_vehicles": 9207,
+  "total_hard_brake_events": 0,
+  "total_queue_events": 150,
+  "per_file": [
+    {
+      "file": "I-80/0400pm-0415pm/trajectories-0400-0415.csv",
+      "path": "C:\\Personal\\EB1A\\VehicleSafetyResearch\\crest-paper-one\\data\\raw\\ngsim\\I-80\\vehicle-trajectory-data\\0400pm-0415pm\\trajectories-0400-0415.csv",
+      "total_rows": 1048575,
+      "unique_vehicles": 1725,
+      "hard_brake_events": 0,
+      "queue_events": 21,
+      "raw_hard_brake_episodes": 0,
+      "raw_queue_episodes": 40,
+      "hard_brake_details": [],
+      "queue_details": [
+        {
+          "lane_id": 2.0,
+          "start_time_s": 1113433403.2,
+          "end_time_s": 1113433419.6,
+          "duration_s": 16.399999856948853,
+          "vehicle_count": 8.0,
+          "y_m": 246.4865784
+        },
+        {
+          "lane_id": 2.0,
+          "start_time_s": 1113433713.3,
+          "end_time_s": 1113433807.4,
+          "duration_s": 94.10000014305115,
+          "vehicle_count": 14.0,
+          "y_m": 489.39998640000005
+        },
+        {
+          "lane_id": 3.0,
+          "start_time_s": 1113433623.5,
+          "end_time_s": 1113433687.2,
+          "duration_s": 63.700000047683716,
+          "vehicle_count": 15.0,
+          "y_m": 388.1058024000001
+        },
+        {
+          "lane_id": 4.0,
+          "start_time_s": 1113433625.9,
+          "end_time_s": 1113433635.5,
+          "duration_s": 9.599999904632568,
+          "vehicle_count": 7.0,
+          "y_m": 306.95127840000004
+        },
+        {
+          "lane_id": 4.0,
+          "start_time_s": 1113433647.9,
+          "end_time_s": 1113433695.7,
+          "duration_s": 47.799999952316284,
+          "vehicle_count": 8.0,
+          "y_m": 228.3756672
+        },
+        {
+          "lane_id": 4.0,
+          "start_time_s": 1113433740.3,
+          "end_time_s": 1113433765.0,
+          "duration_s": 24.700000047683716,
+          "vehicle_count": 8.0,
+          "y_m": 448.94220600000006
+        },
+        {
+          "lane_id": 4.0,
+          "start_time_s": 1113433775.3,
+          "end_time_s": 1113433791.2,
+          "duration_s": 15.900000095367432,
+          "vehicle_count": 11.0,
+          "y_m": 287.47455840000003
+        },
+        {
+          "lane_id": 4.0,
+          "start_time_s": 1113433809.4,
+          "end_time_s": 1113433824.8,
+          "duration_s": 15.399999856948853,
+          "vehicle_count": 8.0,
+          "y_m": 150.124668
+        },
+        {
+          "lane_id": 4.0,
+          "start_time_s": 1113433888.4,
+          "end_time_s": 1113433900.2,
+          "duration_s": 11.799999952316284,
+          "vehicle_count": 6.0,
+          "y_m": 489.2625216
+        },
+        {
+          "lane_id": 4.0,
+          "start_time_s": 1113433919.1,
+          "end_time_s": 1113433931.8,
+          "duration_s": 12.700000047683716,
+          "vehicle_count": 14.0,
+          "y_m": 298.1078112
+        },
+        {
+          "lane_id": 4.0,
+          "start_time_s": 1113433942.1,
+          "end_time_s": 1113433951.2,
+          "duration_s": 9.100000143051147,
+          "vehicle_count": 5.0,
+          "y_m": 202.62982080000003
+        },
+        {
+          "lane_id": 5.0,
+          "start_time_s": 1113433164.9,
+          "end_time_s": 1113433174.3,
+          "duration_s": 9.399999856948853,
+          "vehicle_count": 4.0,
+          "y_m": 92.5415472
+        },
+        {
+          "lane_id": 5.0,
+          "start_time_s": 1113433640.6,
+          "end_time_s": 1113433653.0,
+          "duration_s": 12.400000095367432,
+          "vehicle_count": 8.0,
+          "y_m": 375.2581776
+        },
+        {
+          "lane_id": 5.0,
+          "start_time_s": 1113433739.9,
+          "end_time_s": 1113433786.6,
+          "duration_s": 46.69999980926514,
+          "vehicle_count": 11.0,
+          "y_m": 493.06642560000006
+        },
+        {
+          "lane_id": 5.0,
+          "start_time_s": 1113433890.5,
+          "end_time_s": 1113433915.5,
+          "duration_s": 25.0,
+          "vehicle_count": 10.0,
+          "y_m": 449.6305968
+        },
+        {
+          "lane_id": 5.0,
+          "start_time_s": 1113433926.2,
+          "end_time_s": 1113433947.9,
+          "duration_s": 21.700000047683716,
+          "vehicle_count": 15.0,
+          "y_m": 298.247562
+        },
+        {
+          "lane_id": 6.0,
+          "start_time_s": 1113433167.8,
+          "end_time_s": 1113433175.3,
+          "duration_s": 7.5,
+          "vehicle_count": 5.0,
+          "y_m": 101.59288800000002
+        },
+        {
+          "lane_id": 6.0,
+          "start_time_s": 1113433692.6,
+          "end_time_s": 1113433718.2,
+          "duration_s": 25.600000143051147,
+          "vehicle_count": 8.0,
+          "y_m": 138.7874796
+        },
+        {
+          "lane_id": 6.0,
+          "start_time_s": 1113433733.1,
+          "end_time_s": 1113433741.4,
+          "duration_s": 8.300000190734863,
+          "vehicle_count": 6.0,
+          "y_m": 195.1734984
+        },
+        {
+          "lane_id": 6.0,
+          "start_time_s": 1113433795.6,
+          "end_time_s": 1113433851.1,
+          "duration_s": 55.5,
+          "vehicle_count": 12.0,
+          "y_m": 210.538314
+        },
+        {
+          "lane_id": 7.0,
+          "start_time_s": 1113433938.6,
+          "end_time_s": 1113433952.6,
+          "duration_s": 14.0,
+          "vehicle_count": 4.0,
+          "y_m": 179.84175360000003
+        }
+      ]
+    },
+    {
+      "file": "I-80/0500pm-0515pm/trajectories-0500-0515.csv",
+      "path": "C:\\Personal\\EB1A\\VehicleSafetyResearch\\crest-paper-one\\data\\raw\\ngsim\\I-80\\vehicle-trajectory-data\\0500pm-0515pm\\trajectories-0500-0515.csv",
+      "total_rows": 1048575,
+      "unique_vehicles": 1416,
+      "hard_brake_events": 0,
+      "queue_events": 32,
+      "raw_hard_brake_episodes": 0,
+      "raw_queue_episodes": 63,
+      "hard_brake_details": [],
+      "queue_details": [
+        {
+          "lane_id": 2.0,
+          "start_time_s": 1113436927.1,
+          "end_time_s": 1113436932.5,
+          "duration_s": 5.400000095367432,
+          "vehicle_count": 5.0,
+          "y_m": 452.7496152
+        },
+        {
+          "lane_id": 2.0,
+          "start_time_s": 1113436953.0,
+          "end_time_s": 1113436984.7,
+          "duration_s": 31.700000047683716,
+          "vehicle_count": 8.0,
+          "y_m": 354.1495584
+        },
+        {
+          "lane_id": 2.0,
+          "start_time_s": 1113437096.6,
+          "end_time_s": 1113437134.9,
+          "duration_s": 38.30000019073486,
+          "vehicle_count": 9.0,
+          "y_m": 298.5732408
+        },
+        {
+          "lane_id": 2.0,
+          "start_time_s": 1113437155.8,
+          "end_time_s": 1113437186.0,
+          "duration_s": 30.200000047683716,
+          "vehicle_count": 10.0,
+          "y_m": 489.347256
+        },
+        {
+          "lane_id": 2.0,
+          "start_time_s": 1113437326.9,
+          "end_time_s": 1113437402.3,
+          "duration_s": 75.39999985694885,
+          "vehicle_count": 24.0,
+          "y_m": 443.938152
+        },
+        {
+          "lane_id": 2.0,
+          "start_time_s": 1113437418.5,
+          "end_time_s": 1113437494.7,
+          "duration_s": 76.20000004768372,
+          "vehicle_count": 20.0,
+          "y_m": 487.6653696
+        },
+        {
+          "lane_id": 2.0,
+          "start_time_s": 1113437508.6,
+          "end_time_s": 1113437523.0,
+          "duration_s": 14.400000095367432,
+          "vehicle_count": 9.0,
+          "y_m": 483.9175488
+        },
+        {
+          "lane_id": 3.0,
+          "start_time_s": 1113436969.1,
+          "end_time_s": 1113436996.5,
+          "duration_s": 27.40000009536743,
+          "vehicle_count": 14.0,
+          "y_m": 210.62076240000002
+        },
+        {
+          "lane_id": 3.0,
+          "start_time_s": 1113437260.3,
+          "end_time_s": 1113437266.7,
+          "duration_s": 6.400000095367432,
+          "vehicle_count": 7.0,
+          "y_m": 183.21802320000003
+        },
+        {
+          "lane_id": 4.0,
+          "start_time_s": 1113436883.7,
+          "end_time_s": 1113436893.5,
+          "duration_s": 9.799999952316284,
+          "vehicle_count": 7.0,
+          "y_m": 419.5005072000001
+        },
+        {
+          "lane_id": 4.0,
+          "start_time_s": 1113436903.7,
+          "end_time_s": 1113436949.5,
+          "duration_s": 45.799999952316284,
+          "vehicle_count": 15.0,
+          "y_m": 306.7891248
+        },
+        {
+          "lane_id": 4.0,
+          "start_time_s": 1113436961.2,
+          "end_time_s": 1113436996.2,
+          "duration_s": 35.0,
+          "vehicle_count": 9.0,
+          "y_m": 305.7198864
+        },
+        {
+          "lane_id": 4.0,
+          "start_time_s": 1113437061.6,
+          "end_time_s": 1113437077.6,
+          "duration_s": 16.0,
+          "vehicle_count": 11.0,
+          "y_m": 485.2394664
+        },
+        {
+          "lane_id": 4.0,
+          "start_time_s": 1113437097.9,
+          "end_time_s": 1113437123.5,
+          "duration_s": 25.59999990463257,
+          "vehicle_count": 11.0,
+          "y_m": 284.69082000000003
+        },
+        {
+          "lane_id": 4.0,
+          "start_time_s": 1113437163.1,
+          "end_time_s": 1113437225.9,
+          "duration_s": 62.80000019073486,
+          "vehicle_count": 17.0,
+          "y_m": 391.216896
+        },
+        {
+          "lane_id": 4.0,
+          "start_time_s": 1113437240.9,
+          "end_time_s": 1113437246.9,
+          "duration_s": 6.0,
+          "vehicle_count": 6.0,
+          "y_m": 55.8725832
+        },
+        {
+          "lane_id": 4.0,
+          "start_time_s": 1113437327.7,
+          "end_time_s": 1113437334.1,
+          "duration_s": 6.3999998569488525,
+          "vehicle_count": 6.0,
+          "y_m": 299.89637760000005
+        },
+        {
+          "lane_id": 4.0,
+          "start_time_s": 1113437347.3,
+          "end_time_s": 1113437368.1,
+          "duration_s": 20.799999952316284,
+          "vehicle_count": 16.0,
+          "y_m": 158.742888
+        },
+        {
+          "lane_id": 4.0,
+          "start_time_s": 1113437400.2,
+          "end_time_s": 1113437553.1,
+          "duration_s": 152.89999985694885,
+          "vehicle_count": 19.0,
+          "y_m": 482.5459488
+        },
+        {
+          "lane_id": 5.0,
+          "start_time_s": 1113436843.4,
+          "end_time_s": 1113436853.2,
+          "duration_s": 9.799999952316284,
+          "vehicle_count": 8.0,
+          "y_m": 368.47912080000003
+        },
+        {
+          "lane_id": 5.0,
+          "start_time_s": 1113437182.2,
+          "end_time_s": 1113437203.4,
+          "duration_s": 21.200000047683716,
+          "vehicle_count": 8.0,
+          "y_m": 490.61583360000003
+        },
+        {
+          "lane_id": 5.0,
+          "start_time_s": 1113437346.4,
+          "end_time_s": 1113437410.6,
+          "duration_s": 64.19999980926514,
+          "vehicle_count": 15.0,
+          "y_m": 310.290972
+        },
+        {
+          "lane_id": 5.0,
+          "start_time_s": 1113437441.9,
+          "end_time_s": 1113437524.9,
+          "duration_s": 83.0,
+          "vehicle_count": 18.0,
+          "y_m": 485.9021016
+        },
+        {
+          "lane_id": 6.0,
+          "start_time_s": 1113436869.3,
+          "end_time_s": 1113436877.1,
+          "duration_s": 7.799999952316284,
+          "vehicle_count": 4.0,
+          "y_m": 150.8345472
+        },
+        {
+          "lane_id": 6.0,
+          "start_time_s": 1113436900.2,
+          "end_time_s": 1113436913.8,
+          "duration_s": 13.599999904632568,
+          "vehicle_count": 12.0,
+          "y_m": 264.6999024
+        },
+        {
+          "lane_id": 6.0,
+          "start_time_s": 1113436964.6,
+          "end_time_s": 1113436970.6,
+          "duration_s": 6.0,
+          "vehicle_count": 8.0,
+          "y_m": 158.01319680000003
+        },
+        {
+          "lane_id": 6.0,
+          "start_time_s": 1113437042.1,
+          "end_time_s": 1113437093.0,
+          "duration_s": 50.90000009536743,
+          "vehicle_count": 12.0,
+          "y_m": 455.02464240000006
+        },
+        {
+          "lane_id": 6.0,
+          "start_time_s": 1113437131.7,
+          "end_time_s": 1113437142.7,
+          "duration_s": 11.0,
+          "vehicle_count": 10.0,
+          "y_m": 129.8124912
+        },
+        {
+          "lane_id": 6.0,
+          "start_time_s": 1113437260.1,
+          "end_time_s": 1113437284.1,
+          "duration_s": 24.0,
+          "vehicle_count": 10.0,
+          "y_m": 160.88868000000002
+        },
+        {
+          "lane_id": 7.0,
+          "start_time_s": 1113437083.9,
+          "end_time_s": 1113437102.2,
+          "duration_s": 18.299999952316284,
+          "vehicle_count": 7.0,
+          "y_m": 179.4004032
+        },
+        {
+          "lane_id": 7.0,
+          "start_time_s": 1113437255.5,
+          "end_time_s": 1113437281.9,
+          "duration_s": 26.40000009536743,
+          "vehicle_count": 10.0,
+          "y_m": 155.67964800000001
+        },
+        {
+          "lane_id": 7.0,
+          "start_time_s": 1113437305.0,
+          "end_time_s": 1113437313.2,
+          "duration_s": 8.200000047683716,
+          "vehicle_count": 6.0,
+          "y_m": 188.6172504
+        }
+      ]
+    },
+    {
+      "file": "I-80/0515pm-0530pm/trajectories-0515-0530.csv",
+      "path": "C:\\Personal\\EB1A\\VehicleSafetyResearch\\crest-paper-one\\data\\raw\\ngsim\\I-80\\vehicle-trajectory-data\\0515pm-0530pm\\trajectories-0515-0530.csv",
+      "total_rows": 1048575,
+      "unique_vehicles": 1242,
+      "hard_brake_events": 0,
+      "queue_events": 33,
+      "raw_hard_brake_episodes": 0,
+      "raw_queue_episodes": 54,
+      "hard_brake_details": [],
+      "queue_details": [
+        {
+          "lane_id": 2.0,
+          "start_time_s": 1113437700.7,
+          "end_time_s": 1113437706.5,
+          "duration_s": 5.799999952316284,
+          "vehicle_count": 3.0,
+          "y_m": 298.25442
+        },
+        {
+          "lane_id": 2.0,
+          "start_time_s": 1113437730.3,
+          "end_time_s": 1113437757.0,
+          "duration_s": 26.700000047683716,
+          "vehicle_count": 21.0,
+          "y_m": 142.320264
+        },
+        {
+          "lane_id": 2.0,
+          "start_time_s": 1113437892.4,
+          "end_time_s": 1113437903.0,
+          "duration_s": 10.599999904632568,
+          "vehicle_count": 11.0,
+          "y_m": 479.5758252
+        },
+        {
+          "lane_id": 2.0,
+          "start_time_s": 1113437923.2,
+          "end_time_s": 1113437963.7,
+          "duration_s": 40.5,
+          "vehicle_count": 19.0,
+          "y_m": 251.18293680000002
+        },
+        {
+          "lane_id": 2.0,
+          "start_time_s": 1113437973.8,
+          "end_time_s": 1113437991.5,
+          "duration_s": 17.700000047683716,
+          "vehicle_count": 6.0,
+          "y_m": 107.1871872
+        },
+        {
+          "lane_id": 2.0,
+          "start_time_s": 1113438066.6,
+          "end_time_s": 1113438075.7,
+          "duration_s": 9.100000143051147,
+          "vehicle_count": 7.0,
+          "y_m": 180.4062432
+        },
+        {
+          "lane_id": 2.0,
+          "start_time_s": 1113438130.2,
+          "end_time_s": 1113438143.6,
+          "duration_s": 13.399999856948853,
+          "vehicle_count": 13.0,
+          "y_m": 432.18445440000005
+        },
+        {
+          "lane_id": 2.0,
+          "start_time_s": 1113438276.5,
+          "end_time_s": 1113438288.3,
+          "duration_s": 11.799999952316284,
+          "vehicle_count": 9.0,
+          "y_m": 353.7786168
+        },
+        {
+          "lane_id": 3.0,
+          "start_time_s": 1113437696.9,
+          "end_time_s": 1113437727.6,
+          "duration_s": 30.699999809265137,
+          "vehicle_count": 10.0,
+          "y_m": 273.0023496
+        },
+        {
+          "lane_id": 3.0,
+          "start_time_s": 1113437888.8,
+          "end_time_s": 1113437967.1,
+          "duration_s": 78.29999995231628,
+          "vehicle_count": 8.0,
+          "y_m": 451.7026272
+        },
+        {
+          "lane_id": 3.0,
+          "start_time_s": 1113438186.5,
+          "end_time_s": 1113438211.8,
+          "duration_s": 25.299999952316284,
+          "vehicle_count": 13.0,
+          "y_m": 484.9349712
+        },
+        {
+          "lane_id": 3.0,
+          "start_time_s": 1113438248.0,
+          "end_time_s": 1113438262.2,
+          "duration_s": 14.200000047683716,
+          "vehicle_count": 9.0,
+          "y_m": 494.7217944
+        },
+        {
+          "lane_id": 4.0,
+          "start_time_s": 1113437589.6,
+          "end_time_s": 1113437633.2,
+          "duration_s": 43.60000014305115,
+          "vehicle_count": 6.0,
+          "y_m": 23.4013248
+        },
+        {
+          "lane_id": 4.0,
+          "start_time_s": 1113437733.3,
+          "end_time_s": 1113437745.6,
+          "duration_s": 12.299999952316284,
+          "vehicle_count": 9.0,
+          "y_m": 484.8106128
+        },
+        {
+          "lane_id": 4.0,
+          "start_time_s": 1113437790.2,
+          "end_time_s": 1113437813.0,
+          "duration_s": 22.799999952316284,
+          "vehicle_count": 9.0,
+          "y_m": 133.45668
+        },
+        {
+          "lane_id": 4.0,
+          "start_time_s": 1113437899.6,
+          "end_time_s": 1113437941.4,
+          "duration_s": 41.80000019073486,
+          "vehicle_count": 16.0,
+          "y_m": 415.9124016
+        },
+        {
+          "lane_id": 4.0,
+          "start_time_s": 1113437960.2,
+          "end_time_s": 1113437966.7,
+          "duration_s": 6.5,
+          "vehicle_count": 6.0,
+          "y_m": 173.99325120000003
+        },
+        {
+          "lane_id": 4.0,
+          "start_time_s": 1113438145.5,
+          "end_time_s": 1113438175.5,
+          "duration_s": 30.0,
+          "vehicle_count": 10.0,
+          "y_m": 436.1395392
+        },
+        {
+          "lane_id": 4.0,
+          "start_time_s": 1113438274.1,
+          "end_time_s": 1113438291.1,
+          "duration_s": 17.0,
+          "vehicle_count": 11.0,
+          "y_m": 351.0782412
+        },
+        {
+          "lane_id": 5.0,
+          "start_time_s": 1113437680.9,
+          "end_time_s": 1113437688.5,
+          "duration_s": 7.599999904632568,
+          "vehicle_count": 7.0,
+          "y_m": 213.1128072
+        },
+        {
+          "lane_id": 5.0,
+          "start_time_s": 1113437912.6,
+          "end_time_s": 1113437921.4,
+          "duration_s": 8.800000190734863,
+          "vehicle_count": 4.0,
+          "y_m": 44.9195952
+        },
+        {
+          "lane_id": 5.0,
+          "start_time_s": 1113438139.2,
+          "end_time_s": 1113438162.2,
+          "duration_s": 23.0,
+          "vehicle_count": 11.0,
+          "y_m": 485.61254160000004
+        },
+        {
+          "lane_id": 5.0,
+          "start_time_s": 1113438254.1,
+          "end_time_s": 1113438314.2,
+          "duration_s": 60.10000014305115,
+          "vehicle_count": 17.0,
+          "y_m": 332.6425656
+        },
+        {
+          "lane_id": 6.0,
+          "start_time_s": 1113437658.7,
+          "end_time_s": 1113437702.8,
+          "duration_s": 44.09999990463257,
+          "vehicle_count": 12.0,
+          "y_m": 152.2792992
+        },
+        {
+          "lane_id": 6.0,
+          "start_time_s": 1113437762.9,
+          "end_time_s": 1113437777.7,
+          "duration_s": 14.799999952316284,
+          "vehicle_count": 7.0,
+          "y_m": 145.34601360000002
+        },
+        {
+          "lane_id": 6.0,
+          "start_time_s": 1113437881.1,
+          "end_time_s": 1113437931.0,
+          "duration_s": 49.90000009536743,
+          "vehicle_count": 13.0,
+          "y_m": 258.0781224
+        },
+        {
+          "lane_id": 6.0,
+          "start_time_s": 1113438137.4,
+          "end_time_s": 1113438154.7,
+          "duration_s": 17.299999952316284,
+          "vehicle_count": 15.0,
+          "y_m": 466.6213680000001
+        },
+        {
+          "lane_id": 6.0,
+          "start_time_s": 1113438176.2,
+          "end_time_s": 1113438243.2,
+          "duration_s": 67.0,
+          "vehicle_count": 21.0,
+          "y_m": 208.8930036
+        },
+        {
+          "lane_id": 7.0,
+          "start_time_s": 1113437660.8,
+          "end_time_s": 1113437689.7,
+          "duration_s": 28.90000009536743,
+          "vehicle_count": 7.0,
+          "y_m": 152.2229112
+        },
+        {
+          "lane_id": 7.0,
+          "start_time_s": 1113437759.2,
+          "end_time_s": 1113437771.6,
+          "duration_s": 12.399999856948853,
+          "vehicle_count": 11.0,
+          "y_m": 159.2013072
+        },
+        {
+          "lane_id": 7.0,
+          "start_time_s": 1113437846.1,
+          "end_time_s": 1113437854.7,
+          "duration_s": 8.600000143051147,
+          "vehicle_count": 5.0,
+          "y_m": 124.207524
+        },
+        {
+          "lane_id": 7.0,
+          "start_time_s": 1113437896.8,
+          "end_time_s": 1113437906.2,
+          "duration_s": 9.400000095367432,
+          "vehicle_count": 4.0,
+          "y_m": 113.43833040000001
+        },
+        {
+          "lane_id": 7.0,
+          "start_time_s": 1113437945.8,
+          "end_time_s": 1113437962.0,
+          "duration_s": 16.200000047683716,
+          "vehicle_count": 10.0,
+          "y_m": 158.07507120000002
+        }
+      ]
+    },
+    {
+      "file": "US-101/0750am-0805am/trajectories-0750am-0805am.csv",
+      "path": "C:\\Personal\\EB1A\\VehicleSafetyResearch\\crest-paper-one\\data\\raw\\ngsim\\US-101\\vehicle-trajectory-data\\0750am-0805am\\trajectories-0750am-0805am.csv",
+      "total_rows": 1048575,
+      "unique_vehicles": 1993,
+      "hard_brake_events": 0,
+      "queue_events": 11,
+      "raw_hard_brake_episodes": 0,
+      "raw_queue_episodes": 26,
+      "hard_brake_details": [],
+      "queue_details": [
+        {
+          "lane_id": 1.0,
+          "start_time_s": 1118847071.6,
+          "end_time_s": 1118847125.3,
+          "duration_s": 53.700000047683716,
+          "vehicle_count": 15.0,
+          "y_m": 278.3820696
+        },
+        {
+          "lane_id": 1.0,
+          "start_time_s": 1118847236.0,
+          "end_time_s": 1118847253.0,
+          "duration_s": 17.0,
+          "vehicle_count": 13.0,
+          "y_m": 250.17435360000002
+        },
+        {
+          "lane_id": 1.0,
+          "start_time_s": 1118847470.7,
+          "end_time_s": 1118847501.6,
+          "duration_s": 30.899999856948853,
+          "vehicle_count": 13.0,
+          "y_m": 175.6195116
+        },
+        {
+          "lane_id": 1.0,
+          "start_time_s": 1118847572.8,
+          "end_time_s": 1118847607.7,
+          "duration_s": 34.90000009536743,
+          "vehicle_count": 10.0,
+          "y_m": 271.8325272
+        },
+        {
+          "lane_id": 1.0,
+          "start_time_s": 1118847697.3,
+          "end_time_s": 1118847706.2,
+          "duration_s": 8.900000095367432,
+          "vehicle_count": 7.0,
+          "y_m": 268.3343376
+        },
+        {
+          "lane_id": 1.0,
+          "start_time_s": 1118847725.3,
+          "end_time_s": 1118847745.9,
+          "duration_s": 20.600000143051147,
+          "vehicle_count": 7.0,
+          "y_m": 101.2905264
+        },
+        {
+          "lane_id": 1.0,
+          "start_time_s": 1118847789.3,
+          "end_time_s": 1118847810.7,
+          "duration_s": 21.40000009536743,
+          "vehicle_count": 6.0,
+          "y_m": 332.25120240000007
+        },
+        {
+          "lane_id": 2.0,
+          "start_time_s": 1118847733.6,
+          "end_time_s": 1118847775.0,
+          "duration_s": 41.40000009536743,
+          "vehicle_count": 11.0,
+          "y_m": 637.6562303999999
+        },
+        {
+          "lane_id": 2.0,
+          "start_time_s": 1118847792.3,
+          "end_time_s": 1118847816.3,
+          "duration_s": 24.0,
+          "vehicle_count": 7.0,
+          "y_m": 341.27846400000004
+        },
+        {
+          "lane_id": 3.0,
+          "start_time_s": 1118847738.7,
+          "end_time_s": 1118847815.4,
+          "duration_s": 76.70000004768372,
+          "vehicle_count": 23.0,
+          "y_m": 614.9291232
+        },
+        {
+          "lane_id": 5.0,
+          "start_time_s": 1118847785.6,
+          "end_time_s": 1118847808.2,
+          "duration_s": 22.600000143051147,
+          "vehicle_count": 11.0,
+          "y_m": 391.96700880000003
+        }
+      ]
+    },
+    {
+      "file": "US-101/0805am-0820am/trajectories-0805am-0820am.csv",
+      "path": "C:\\Personal\\EB1A\\VehicleSafetyResearch\\crest-paper-one\\data\\raw\\ngsim\\US-101\\vehicle-trajectory-data\\0805am-0820am\\trajectories-0805am-0820am.csv",
+      "total_rows": 1048575,
+      "unique_vehicles": 1533,
+      "hard_brake_events": 0,
+      "queue_events": 24,
+      "raw_hard_brake_episodes": 0,
+      "raw_queue_episodes": 64,
+      "hard_brake_details": [],
+      "queue_details": [
+        {
+          "lane_id": 1.0,
+          "start_time_s": 1118847857.5,
+          "end_time_s": 1118847869.5,
+          "duration_s": 12.0,
+          "vehicle_count": 4.0,
+          "y_m": 38.9226552
+        },
+        {
+          "lane_id": 1.0,
+          "start_time_s": 1118848053.4,
+          "end_time_s": 1118848058.3,
+          "duration_s": 4.8999998569488525,
+          "vehicle_count": 6.0,
+          "y_m": 232.9787568
+        },
+        {
+          "lane_id": 1.0,
+          "start_time_s": 1118848073.9,
+          "end_time_s": 1118848211.7,
+          "duration_s": 137.79999995231628,
+          "vehicle_count": 20.0,
+          "y_m": 104.61955200000001
+        },
+        {
+          "lane_id": 1.0,
+          "start_time_s": 1118848222.2,
+          "end_time_s": 1118848276.2,
+          "duration_s": 54.0,
+          "vehicle_count": 13.0,
+          "y_m": 299.7973176
+        },
+        {
+          "lane_id": 1.0,
+          "start_time_s": 1118848470.8,
+          "end_time_s": 1118848482.7,
+          "duration_s": 11.900000095367432,
+          "vehicle_count": 8.0,
+          "y_m": 254.6052312
+        },
+        {
+          "lane_id": 1.0,
+          "start_time_s": 1118848505.3,
+          "end_time_s": 1118848542.1,
+          "duration_s": 36.799999952316284,
+          "vehicle_count": 12.0,
+          "y_m": 413.679132
+        },
+        {
+          "lane_id": 1.0,
+          "start_time_s": 1118848556.6,
+          "end_time_s": 1118848567.1,
+          "duration_s": 10.5,
+          "vehicle_count": 8.0,
+          "y_m": 489.69869040000003
+        },
+        {
+          "lane_id": 2.0,
+          "start_time_s": 1118848052.3,
+          "end_time_s": 1118848098.1,
+          "duration_s": 45.799999952316284,
+          "vehicle_count": 11.0,
+          "y_m": 650.7031944
+        },
+        {
+          "lane_id": 2.0,
+          "start_time_s": 1118848113.2,
+          "end_time_s": 1118848134.5,
+          "duration_s": 21.299999952316284,
+          "vehicle_count": 6.0,
+          "y_m": 420.7053816
+        },
+        {
+          "lane_id": 2.0,
+          "start_time_s": 1118848155.3,
+          "end_time_s": 1118848172.8,
+          "duration_s": 17.5,
+          "vehicle_count": 11.0,
+          "y_m": 75.1889784
+        },
+        {
+          "lane_id": 2.0,
+          "start_time_s": 1118848496.2,
+          "end_time_s": 1118848537.2,
+          "duration_s": 41.0,
+          "vehicle_count": 12.0,
+          "y_m": 570.5517672
+        },
+        {
+          "lane_id": 2.0,
+          "start_time_s": 1118848549.3,
+          "end_time_s": 1118848577.9,
+          "duration_s": 28.600000143051147,
+          "vehicle_count": 12.0,
+          "y_m": 411.67354800000004
+        },
+        {
+          "lane_id": 3.0,
+          "start_time_s": 1118848092.6,
+          "end_time_s": 1118848104.0,
+          "duration_s": 11.400000095367432,
+          "vehicle_count": 8.0,
+          "y_m": 365.28390240000004
+        },
+        {
+          "lane_id": 3.0,
+          "start_time_s": 1118848125.7,
+          "end_time_s": 1118848166.7,
+          "duration_s": 41.0,
+          "vehicle_count": 12.0,
+          "y_m": 212.21517120000001
+        },
+        {
+          "lane_id": 3.0,
+          "start_time_s": 1118848183.4,
+          "end_time_s": 1118848252.6,
+          "duration_s": 69.19999980926514,
+          "vehicle_count": 17.0,
+          "y_m": 423.0314628
+        },
+        {
+          "lane_id": 3.0,
+          "start_time_s": 1118848495.8,
+          "end_time_s": 1118848574.2,
+          "duration_s": 78.40000009536743,
+          "vehicle_count": 11.0,
+          "y_m": 649.0493496
+        },
+        {
+          "lane_id": 4.0,
+          "start_time_s": 1118848133.5,
+          "end_time_s": 1118848218.1,
+          "duration_s": 84.59999990463257,
+          "vehicle_count": 15.0,
+          "y_m": 644.9235768000001
+        },
+        {
+          "lane_id": 4.0,
+          "start_time_s": 1118848239.8,
+          "end_time_s": 1118848249.4,
+          "duration_s": 9.600000143051147,
+          "vehicle_count": 7.0,
+          "y_m": 51.371601600000005
+        },
+        {
+          "lane_id": 4.0,
+          "start_time_s": 1118848495.7,
+          "end_time_s": 1118848584.4,
+          "duration_s": 88.70000004768372,
+          "vehicle_count": 20.0,
+          "y_m": 651.793464
+        },
+        {
+          "lane_id": 5.0,
+          "start_time_s": 1118848133.9,
+          "end_time_s": 1118848141.7,
+          "duration_s": 7.799999952316284,
+          "vehicle_count": 6.0,
+          "y_m": 627.1448976
+        },
+        {
+          "lane_id": 5.0,
+          "start_time_s": 1118848163.0,
+          "end_time_s": 1118848174.3,
+          "duration_s": 11.299999952316284,
+          "vehicle_count": 9.0,
+          "y_m": 502.77003840000003
+        },
+        {
+          "lane_id": 5.0,
+          "start_time_s": 1118848199.3,
+          "end_time_s": 1118848211.1,
+          "duration_s": 11.799999952316284,
+          "vehicle_count": 8.0,
+          "y_m": 281.0204184
+        },
+        {
+          "lane_id": 5.0,
+          "start_time_s": 1118848236.3,
+          "end_time_s": 1118848250.8,
+          "duration_s": 14.5,
+          "vehicle_count": 11.0,
+          "y_m": 87.6560604
+        },
+        {
+          "lane_id": 5.0,
+          "start_time_s": 1118848515.3,
+          "end_time_s": 1118848560.9,
+          "duration_s": 45.60000014305115,
+          "vehicle_count": 9.0,
+          "y_m": 620.4304584
+        }
+      ]
+    },
+    {
+      "file": "US-101/0820am-0835am/trajectories-0820am-0835am.csv",
+      "path": "C:\\Personal\\EB1A\\VehicleSafetyResearch\\crest-paper-one\\data\\raw\\ngsim\\US-101\\vehicle-trajectory-data\\0820am-0835am\\trajectories-0820am-0835am.csv",
+      "total_rows": 1048575,
+      "unique_vehicles": 1298,
+      "hard_brake_events": 0,
+      "queue_events": 29,
+      "raw_hard_brake_episodes": 0,
+      "raw_queue_episodes": 53,
+      "hard_brake_details": [],
+      "queue_details": [
+        {
+          "lane_id": 1.0,
+          "start_time_s": 1118848883.7,
+          "end_time_s": 1118848891.6,
+          "duration_s": 7.8999998569488525,
+          "vehicle_count": 6.0,
+          "y_m": 639.8736504
+        },
+        {
+          "lane_id": 1.0,
+          "start_time_s": 1118848907.2,
+          "end_time_s": 1118848917.3,
+          "duration_s": 10.099999904632568,
+          "vehicle_count": 9.0,
+          "y_m": 566.8844136
+        },
+        {
+          "lane_id": 1.0,
+          "start_time_s": 1118848953.6,
+          "end_time_s": 1118848958.6,
+          "duration_s": 5.0,
+          "vehicle_count": 8.0,
+          "y_m": 112.61933280000001
+        },
+        {
+          "lane_id": 1.0,
+          "start_time_s": 1118849113.0,
+          "end_time_s": 1118849159.5,
+          "duration_s": 46.5,
+          "vehicle_count": 13.0,
+          "y_m": 351.89342880000004
+        },
+        {
+          "lane_id": 1.0,
+          "start_time_s": 1118849194.7,
+          "end_time_s": 1118849222.0,
+          "duration_s": 27.299999952316284,
+          "vehicle_count": 13.0,
+          "y_m": 144.41759280000002
+        },
+        {
+          "lane_id": 1.0,
+          "start_time_s": 1118849281.4,
+          "end_time_s": 1118849288.1,
+          "duration_s": 6.699999809265137,
+          "vehicle_count": 8.0,
+          "y_m": 282.7532064
+        },
+        {
+          "lane_id": 1.0,
+          "start_time_s": 1118849335.6,
+          "end_time_s": 1118849352.1,
+          "duration_s": 16.5,
+          "vehicle_count": 11.0,
+          "y_m": 277.7102904
+        },
+        {
+          "lane_id": 1.0,
+          "start_time_s": 1118849378.7,
+          "end_time_s": 1118849385.9,
+          "duration_s": 7.200000047683716,
+          "vehicle_count": 6.0,
+          "y_m": 123.88778880000001
+        },
+        {
+          "lane_id": 1.0,
+          "start_time_s": 1118849409.5,
+          "end_time_s": 1118849417.8,
+          "duration_s": 8.299999952316284,
+          "vehicle_count": 6.0,
+          "y_m": 645.5109264000001
+        },
+        {
+          "lane_id": 2.0,
+          "start_time_s": 1118848883.9,
+          "end_time_s": 1118848889.7,
+          "duration_s": 5.799999952316284,
+          "vehicle_count": 5.0,
+          "y_m": 649.283436
+        },
+        {
+          "lane_id": 2.0,
+          "start_time_s": 1118848939.2,
+          "end_time_s": 1118848989.6,
+          "duration_s": 50.39999985694885,
+          "vehicle_count": 13.0,
+          "y_m": 375.9832968
+        },
+        {
+          "lane_id": 2.0,
+          "start_time_s": 1118849277.8,
+          "end_time_s": 1118849315.6,
+          "duration_s": 37.799999952316284,
+          "vehicle_count": 11.0,
+          "y_m": 642.7689456
+        },
+        {
+          "lane_id": 2.0,
+          "start_time_s": 1118849351.1,
+          "end_time_s": 1118849369.3,
+          "duration_s": 18.200000047683716,
+          "vehicle_count": 13.0,
+          "y_m": 268.8683472
+        },
+        {
+          "lane_id": 2.0,
+          "start_time_s": 1118849392.7,
+          "end_time_s": 1118849445.6,
+          "duration_s": 52.89999985694885,
+          "vehicle_count": 16.0,
+          "y_m": 649.1855952
+        },
+        {
+          "lane_id": 3.0,
+          "start_time_s": 1118848931.6,
+          "end_time_s": 1118848974.5,
+          "duration_s": 42.90000009536743,
+          "vehicle_count": 18.0,
+          "y_m": 396.0674832
+        },
+        {
+          "lane_id": 3.0,
+          "start_time_s": 1118849133.4,
+          "end_time_s": 1118849147.0,
+          "duration_s": 13.599999904632568,
+          "vehicle_count": 10.0,
+          "y_m": 225.2005656
+        },
+        {
+          "lane_id": 3.0,
+          "start_time_s": 1118849165.4,
+          "end_time_s": 1118849171.4,
+          "duration_s": 6.0,
+          "vehicle_count": 7.0,
+          "y_m": 60.620148
+        },
+        {
+          "lane_id": 3.0,
+          "start_time_s": 1118849281.5,
+          "end_time_s": 1118849295.3,
+          "duration_s": 13.799999952316284,
+          "vehicle_count": 10.0,
+          "y_m": 649.6235928000001
+        },
+        {
+          "lane_id": 3.0,
+          "start_time_s": 1118849361.4,
+          "end_time_s": 1118849373.7,
+          "duration_s": 12.299999952316284,
+          "vehicle_count": 11.0,
+          "y_m": 130.7604192
+        },
+        {
+          "lane_id": 3.0,
+          "start_time_s": 1118849408.7,
+          "end_time_s": 1118849428.1,
+          "duration_s": 19.399999856948853,
+          "vehicle_count": 15.0,
+          "y_m": 569.544708
+        },
+        {
+          "lane_id": 4.0,
+          "start_time_s": 1118848881.1,
+          "end_time_s": 1118849001.8,
+          "duration_s": 120.70000004768372,
+          "vehicle_count": 16.0,
+          "y_m": 646.2808512
+        },
+        {
+          "lane_id": 4.0,
+          "start_time_s": 1118849283.6,
+          "end_time_s": 1118849314.0,
+          "duration_s": 30.40000009536743,
+          "vehicle_count": 19.0,
+          "y_m": 612.6419040000001
+        },
+        {
+          "lane_id": 4.0,
+          "start_time_s": 1118849368.4,
+          "end_time_s": 1118849418.6,
+          "duration_s": 50.19999980926514,
+          "vehicle_count": 10.0,
+          "y_m": 232.5468552
+        },
+        {
+          "lane_id": 5.0,
+          "start_time_s": 1118848917.2,
+          "end_time_s": 1118848931.1,
+          "duration_s": 13.899999856948853,
+          "vehicle_count": 12.0,
+          "y_m": 295.86844560000003
+        },
+        {
+          "lane_id": 5.0,
+          "start_time_s": 1118848945.4,
+          "end_time_s": 1118848991.1,
+          "duration_s": 45.69999980926514,
+          "vehicle_count": 12.0,
+          "y_m": 305.4815328
+        },
+        {
+          "lane_id": 5.0,
+          "start_time_s": 1118849270.6,
+          "end_time_s": 1118849305.7,
+          "duration_s": 35.10000014305115,
+          "vehicle_count": 15.0,
+          "y_m": 638.8098984000001
+        },
+        {
+          "lane_id": 5.0,
+          "start_time_s": 1118849324.7,
+          "end_time_s": 1118849350.6,
+          "duration_s": 25.899999856948853,
+          "vehicle_count": 11.0,
+          "y_m": 374.67524760000003
+        },
+        {
+          "lane_id": 5.0,
+          "start_time_s": 1118849380.6,
+          "end_time_s": 1118849387.2,
+          "duration_s": 6.6000001430511475,
+          "vehicle_count": 6.0,
+          "y_m": 135.82985280000003
+        },
+        {
+          "lane_id": 5.0,
+          "start_time_s": 1118849401.6,
+          "end_time_s": 1118849411.3,
+          "duration_s": 9.700000047683716,
+          "vehicle_count": 10.0,
+          "y_m": 647.0013984000001
+        }
+      ]
+    }
+  ]
+}

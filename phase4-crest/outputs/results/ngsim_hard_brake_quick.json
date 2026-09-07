@@ -1,0 +1,42 @@
+{
+  "files": 6,
+  "total_independent_hard_brake_events": 0,
+  "per_file": [
+    {
+      "file": "I-80\\vehicle-trajectory-data\\0400pm-0415pm\\trajectories-0400-0415.csv",
+      "rows": 1048575,
+      "raw_episodes": 0,
+      "independent_events": 0
+    },
+    {
+      "file": "I-80\\vehicle-trajectory-data\\0500pm-0515pm\\trajectories-0500-0515.csv",
+      "rows": 1048575,
+      "raw_episodes": 0,
+      "independent_events": 0
+    },
+    {
+      "file": "I-80\\vehicle-trajectory-data\\0515pm-0530pm\\trajectories-0515-0530.csv",
+      "rows": 1048575,
+      "raw_episodes": 0,
+      "independent_events": 0
+    },
+    {
+      "file": "US-101\\vehicle-trajectory-data\\0750am-0805am\\trajectories-0750am-0805am.csv",
+      "rows": 1048575,
+      "raw_episodes": 0,
+      "independent_events": 0
+    },
+    {
+      "file": "US-101\\vehicle-trajectory-data\\0805am-0820am\\trajectories-0805am-0820am.csv",
+      "rows": 1048575,
+      "raw_episodes": 0,
+      "independent_events": 0
+    },
+    {
+      "file": "US-101\\vehicle-trajectory-data\\0820am-0835am\\trajectories-0820am-0835am.csv",
+      "rows": 1048575,
+      "raw_episodes": 0,
+      "independent_events": 0
+    }
+  ]
+}

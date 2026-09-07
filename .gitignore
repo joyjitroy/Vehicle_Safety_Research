@@ -64,7 +64,8 @@ Thumbs.db
 #test_model_direct.py
 
 # Phase 4 CREST
-phase4-crest/outputs/
+phase4-crest/outputs/features/
+phase4-crest/outputs/figures/
 phase4-crest/data/
 phase4-crest/Paper/
 crest-paper-one/

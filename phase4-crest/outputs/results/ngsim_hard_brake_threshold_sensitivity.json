@@ -1,0 +1,160 @@
+{
+  "thresholds": [
+    -3.0,
+    -3.5,
+    -3.9,
+    -4.5
+  ],
+  "per_file": [
+    {
+      "file": "trajectories-0400-0415.csv",
+      "threshold_ms2": -3.0,
+      "raw_episodes": 88,
+      "independent_events": 57
+    },
+    {
+      "file": "trajectories-0500-0515.csv",
+      "threshold_ms2": -3.0,
+      "raw_episodes": 203,
+      "independent_events": 114
+    },
+    {
+      "file": "trajectories-0515-0530.csv",
+      "threshold_ms2": -3.0,
+      "raw_episodes": 161,
+      "independent_events": 85
+    },
+    {
+      "file": "trajectories-0750am-0805am.csv",
+      "threshold_ms2": -3.0,
+      "raw_episodes": 153,
+      "independent_events": 81
+    },
+    {
+      "file": "trajectories-0805am-0820am.csv",
+      "threshold_ms2": -3.0,
+      "raw_episodes": 117,
+      "independent_events": 47
+    },
+    {
+      "file": "trajectories-0820am-0835am.csv",
+      "threshold_ms2": -3.0,
+      "raw_episodes": 107,
+      "independent_events": 53
+    },
+    {
+      "file": "trajectories-0400-0415.csv",
+      "threshold_ms2": -3.5,
+      "raw_episodes": 0,
+      "independent_events": 0
+    },
+    {
+      "file": "trajectories-0500-0515.csv",
+      "threshold_ms2": -3.5,
+      "raw_episodes": 0,
+      "independent_events": 0
+    },
+    {
+      "file": "trajectories-0515-0530.csv",
+      "threshold_ms2": -3.5,
+      "raw_episodes": 0,
+      "independent_events": 0
+    },
+    {
+      "file": "trajectories-0750am-0805am.csv",
+      "threshold_ms2": -3.5,
+      "raw_episodes": 0,
+      "independent_events": 0
+    },
+    {
+      "file": "trajectories-0805am-0820am.csv",
+      "threshold_ms2": -3.5,
+      "raw_episodes": 0,
+      "independent_events": 0
+    },
+    {
+      "file": "trajectories-0820am-0835am.csv",
+      "threshold_ms2": -3.5,
+      "raw_episodes": 0,
+      "independent_events": 0
+    },
+    {
+      "file": "trajectories-0400-0415.csv",
+      "threshold_ms2": -3.9,
+      "raw_episodes": 0,
+      "independent_events": 0
+    },
+    {
+      "file": "trajectories-0500-0515.csv",
+      "threshold_ms2": -3.9,
+      "raw_episodes": 0,
+      "independent_events": 0
+    },
+    {
+      "file": "trajectories-0515-0530.csv",
+      "threshold_ms2": -3.9,
+      "raw_episodes": 0,
+      "independent_events": 0
+    },
+    {
+      "file": "trajectories-0750am-0805am.csv",
+      "threshold_ms2": -3.9,
+      "raw_episodes": 0,
+      "independent_events": 0
+    },
+    {
+      "file": "trajectories-0805am-0820am.csv",
+      "threshold_ms2": -3.9,
+      "raw_episodes": 0,
+      "independent_events": 0
+    },
+    {
+      "file": "trajectories-0820am-0835am.csv",
+      "threshold_ms2": -3.9,
+      "raw_episodes": 0,
+      "independent_events": 0
+    },
+    {
+      "file": "trajectories-0400-0415.csv",
+      "threshold_ms2": -4.5,
+      "raw_episodes": 0,
+      "independent_events": 0
+    },
+    {
+      "file": "trajectories-0500-0515.csv",
+      "threshold_ms2": -4.5,
+      "raw_episodes": 0,
+      "independent_events": 0
+    },
+    {
+      "file": "trajectories-0515-0530.csv",
+      "threshold_ms2": -4.5,
+      "raw_episodes": 0,
+      "independent_events": 0
+    },
+    {
+      "file": "trajectories-0750am-0805am.csv",
+      "threshold_ms2": -4.5,
+      "raw_episodes": 0,
+      "independent_events": 0
+    },
+    {
+      "file": "trajectories-0805am-0820am.csv",
+      "threshold_ms2": -4.5,
+      "raw_episodes": 0,
+      "independent_events": 0
+    },
+    {
+      "file": "trajectories-0820am-0835am.csv",
+      "threshold_ms2": -4.5,
+      "raw_episodes": 0,
+      "independent_events": 0
+    }
+  ],
+  "totals": {
+    "-3.0": 437,
+    "-3.5": 0,
+    "-3.9": 0,
+    "-4.5": 0
+  }
+}

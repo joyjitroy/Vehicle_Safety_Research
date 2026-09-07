@@ -82,7 +82,7 @@ Phase 3 extends PRISM's internal AV risk reasoning into external, VRU-facing com
 
 **Paper Title:** *CREST: Calibrated Risk Estimation with Source-Aware Temporal Fusion for Cooperative Freeway Hazard Prediction*
 
-Phase 4 extends the inverse crash-probability foundation of SafeDriver-IQ and the multi-model risk engine of PRISM into cooperative freeway hazard prediction. CREST combines Platt-calibrated hazard probabilities with systematic per-source ablation across simulated V2V and RSU sensing channels, and supports inference-time behavioral and perception plugins without retraining. Submitted to **IEEE Transactions on Vehicular Technology**. Source and validation artifacts are in the [`phase4-crest/`](phase4-crest/) directory.
+Phase 4 extends the inverse crash-probability foundation of SafeDriver-IQ and the multi-model risk engine of PRISM into cooperative freeway hazard prediction. CREST combines Platt-calibrated hazard probabilities with systematic per-source ablation across simulated V2V and RSU sensing channels, and supports inference-time behavioral and perception plugins without retraining. Source and validation artifacts are in the [`phase4-crest/`](phase4-crest/) directory.
 
 **Authors:** Joyjit Roy, Sushanta Das, Samaresh Kumar Singh
 
@@ -95,7 +95,7 @@ Phase 4 extends the inverse crash-probability foundation of SafeDriver-IQ and th
 - Generalizes to an independent I-24 MOTION (Nashville, TN) holdout without fine-tuning
 
 ### 📌 Relationship to This Project
-Each phase of the SafeDriver-IQ system was **designed, implemented, and validated first**, and the insights, models, and experimental findings from this project directly led to the corresponding research publications: the Phase 1 paper published in IEEE Xplore (IEEE EIT 2026), the Phase 2 PRISM paper published on arXiv and accepted for ASCE2027, the Phase 3 PRISM-AR manuscript prepared for IEEE TVT, and the Phase 4 CREST manuscript prepared for IEEE TVT.
+Each phase of the SafeDriver-IQ system was **designed, implemented, and validated first**, and the insights, models, and experimental findings from this project directly led to the corresponding research publications: the Phase 1 paper published in IEEE Xplore (IEEE EIT 2026), the Phase 2 PRISM paper published on arXiv and accepted for ASCE2027, the Phase 3 PRISM-AR manuscript prepared for IEEE TVT, and the Phase 4 CREST manuscript (not yet submitted).
 
 In other words:
 - ✅ This repository = **working system + experiments** (Phase 1: `phase1-safedriver-iq/`, Phase 2: `phase2-prism/`, Phase 3: `phase3-prism-ar/`, Phase 4: `phase4-crest/`)
@@ -756,7 +756,7 @@ Immediate future directions include expanded naturalistic-dataset evaluation to 
 
 ### Overview
 
-CREST (Calibrated Risk Estimation with Source-Aware Temporal Fusion) is the fourth phase of the Vehicle_Safety_Research program. It moves from the vehicle-centric scoring of SafeDriver-IQ and PRISM to cooperative, infrastructure-aware freeway hazard prediction. Rather than assuming that adding more sensing sources always helps, CREST systematically ablates each cooperative channel, ego-only kinematics, V2V broadcasts, RSU infrastructure sensing, weather/traffic context, and map geometry, to isolate which sources actually improve prediction, and by how much. The resulting hazard probability is Platt-calibrated so a fixed threshold produces a consistent false-alarm rate, and two inference-time plugins let fleets add behavioral or perception context without retraining. The manuscript is prepared for **IEEE Transactions on Vehicular Technology**.
+CREST (Calibrated Risk Estimation with Source-Aware Temporal Fusion) is the fourth phase of the Vehicle_Safety_Research program. It moves from the vehicle-centric scoring of SafeDriver-IQ and PRISM to cooperative, infrastructure-aware freeway hazard prediction, systematically ablating each cooperative channel (V2V, RSU, weather/traffic, map geometry) to isolate which sources actually improve prediction. The hazard probability is Platt-calibrated for a consistent false-alarm rate, and two inference-time plugins let fleets add behavioral or perception context without retraining.
 
 ### Research Flyer
 
@@ -766,45 +766,29 @@ CREST's four-layer architecture: heterogeneous input sources, parallel per-sourc
 
 ### Abstract
 
-Road traffic crashes cause approximately 1.19 million deaths globally each year, including over 39,000 in the United States in 2024. Freeway rear-end collisions, often caused by sudden queue formation and hard braking, are the focus of this work. Most hazard-prediction models rely solely on the vehicle's own onboard state (ego-only sensing) or produce uncalibrated risk scores that do not support actionable alert thresholds. Prior work using cooperative sensing, such as vehicle-to-vehicle (V2V) or roadside unit (RSU) communication, has not isolated the individual contribution of each source to prediction accuracy.
-
-CREST introduces a framework that combines Platt-calibrated hazard probabilities with systematic per-source ablation across simulated V2V and RSU sensing channels, modeled on current communication standards. CREST also supports adding behavioral and perception plugins at inference time without retraining. Evaluated on real freeway trajectory data, the most effective individual cooperative source increases AUPRC to 0.751 versus 0.678 for ego-only sensing. Combining all sources without a behavioral prior reduces performance to 0.700, while adding a pre-computed behavioral risk score at inference raises AUPRC to 0.808, the highest configuration. At a 5% false-alarm rate, the calibrated model delivers a median warning of 2.97 seconds before hazard onset. These results are maintained on an independent freeway dataset (I-24 MOTION) without fine-tuning.
+Freeway rear-end collisions, often triggered by sudden queue formation, are a leading cause of traffic fatalities. Most hazard-prediction models rely solely on ego-vehicle state or produce uncalibrated risk scores that cannot support actionable alert thresholds, and prior cooperative-sensing work has never isolated the individual contribution of each sensing source. CREST combines Platt-calibrated hazard probabilities with systematic per-source ablation across simulated V2V and RSU channels, plus inference-time plugins for behavioral and perception context. The best single cooperative source raises AUPRC from 0.678 (ego-only) to 0.751, while combining all sources drops it to 0.700, indicating indiscriminate fusion diminishes predictive value; a pre-computed behavioral risk score reverses this, reaching 0.808. At a 5% false-alarm rate, CREST delivers a median 2.97 s warning before hazard onset, sufficient for automated braking at highway speeds, and these results hold on an independent freeway dataset (I-24 MOTION) with no fine-tuning.
 
 ### 1. Introduction
 
-Freeway rear-end collisions are governed by unforgiving physics: a vehicle traveling at 25 m/s requires over 50 meters to stop under emergency braking, and reaction time adds another 25 to 30 meters. A sensor that detects a stopped queue at 60 to 80 meters has already placed the vehicle inside the crash zone. Analytical methods based on time-to-collision and stopping-distance thresholds operate only at the edge of this zone and cannot provide meaningful early warning. Effective intervention requires estimating the probability of a hazard several seconds before it enters any single vehicle's sensor range, which by definition requires information from beyond that vehicle.
+A vehicle at 25 m/s needs over 50 meters to stop under emergency braking, plus 25-30 meters of reaction distance, so a sensor detecting a stopped queue at 60-80 meters has already entered the crash zone. Analytical TTC/stopping-distance methods operate only at that edge and cannot provide meaningful early warning.
 
-Two prior frameworks in this research program establish the foundation for CREST. In our earlier work, SafeDriver-IQ converts binary crash classifiers trained on 213,003 NHTSA CRSS records into continuous 0-100 behavioral risk scores through inverse crash-probability modeling, but operates purely on single-vehicle driving history with no scene-level or cooperative-sensing signal. PRISM extends risk estimation to the scene level by fusing environmental, trajectory-kinematic, and VRU-interaction models through a deep Q-network agentic policy, but neither framework accepts V2X input or produces a calibrated hazard probability suitable for a fixed alert threshold.
-
-Existing freeway hazard prediction and cooperative-perception literature leaves three gaps unaddressed simultaneously. First, hazard prediction methods overwhelmingly rely on ego-vehicle state alone, ignoring cooperative sensing channels that could extend the observable horizon well beyond a single vehicle's sensors. Second, cooperative-perception systems such as V2VNet, OPV2V, DiscoNet, Where2comm, CoBEVT, and V2X-ViT fuse multi-agent observations for object detection or BEV segmentation, but none isolate the individual predictive contribution of each sensing source, which makes it impossible to justify infrastructure investment in any one channel. Third, existing risk-scoring models typically output uncalibrated scores; a calibrated probability, where the score reflects the true empirical hazard rate, is a prerequisite for any threshold-based alert system.
-
-CREST closes all three gaps on real freeway trajectory data. It fuses ego kinematic state, road/weather context, and simulated V2V and RSU inputs into a single Platt-scaled hazard probability, with a systematic ablation across eleven input configurations that quantifies each cooperative source's independent contribution. Two inference-time plugins, for onboard perception and pre-computed behavioral risk, extend the framework without retraining. The primary contributions are: (1) the first systematic per-source cooperative-sensing ablation on real freeway data, spanning ego-only through V2V, three RSU coverage radii, and full sensor fusion; (2) a calibrated cooperative hazard probability that delivers a 2.97 s median lead time at a 5% false-alarm rate; (3) an empirical RSU coverage-radius sweep (150/300/500 m yielding AUPRC 0.672/0.687/0.722), the first quantified estimate of prediction gain per unit of infrastructure coverage; (4) an inference-time plugin architecture, where a pre-computed behavioral prior raises AUPRC from 0.678 to 0.808; and (5) cross-continental generalization, with all results reported on a holdout spanning U.S. and Italian freeway trajectories with no fine-tuning.
+SafeDriver-IQ (Phase 1) converts crash classifiers into continuous risk scores from single-vehicle history alone; PRISM (Phase 2) fuses environmental, trajectory, and VRU models via reinforcement learning, but neither accepts V2X input or produces a calibrated probability. Cooperative-perception systems (V2VNet, OPV2V, DiscoNet, Where2comm, CoBEVT, V2X-ViT) fuse multi-agent data for object detection but never isolate each source's individual predictive value. CREST closes these gaps with: (1) the first systematic per-source ablation on real freeway data across ego-only, V2V, three RSU radii, and full fusion; (2) a Platt-calibrated probability giving a 2.97 s median lead time at 5% FAR; (3) an empirical RSU coverage-radius sweep (150/300/500 m -> AUPRC 0.672/0.687/0.722); (4) inference-time plugins, where a behavioral prior lifts AUPRC from 0.678 to 0.808; and (5) cross-continental generalization (US + Italy) with no fine-tuning.
 
 ### 2. System Architecture
 
-CREST is organized as a four-layer pipeline, mirrored in Fig. 1, that converts heterogeneous multi-source freeway data into a calibrated, actionable hazard probability.
-
 ![CREST System Architecture](phase4-crest/docs/images/F1_CREST_Architecture.png)
 
-**Layer 1: Heterogeneous Input Sources.** Five source blocks are available at each observation window: ego kinematic state (speed, longitudinal/lateral acceleration, and relative gap to the lead vehicle), V2V cooperative messages, RSU cooperative perception, static map/road geometry (elevation, lane count, speed limit, ramp proximity), and dynamic weather/traffic context (precipitation, visibility, weather code, traffic density). An input configuration `C` is any subset of these five blocks, and the concatenated feature vector for `C` is the direct sum of the active blocks; a source that is not part of `C` is excluded entirely rather than zero-padded, which keeps the per-source ablation clean.
+CREST is a four-layer pipeline. **Layer 1** exposes five source blocks per observation window: ego kinematics, V2V messages, RSU perception, static map/road geometry, and dynamic weather/traffic context; any subset can form an input configuration, with inactive sources excluded rather than zero-padded. **Layer 2** encodes each active block through a dedicated MLP: the Ego MLP is a per-timestep snapshot encoder (no temporal recurrence); the Neighbor MLP encodes up to K=10 nearest neighbors within 300 m via sum-pooling regardless of whether they arrive via V2V or RSU; Map and Weather MLPs share an implementation but stay separate ablation arms. The network totals 20,289 parameters. **Layer 3** fuses active encoder outputs through a two-layer MLP to a logit, then a frozen Platt sigmoid (fit on a 1,284-event calibration split, frozen before holdout) yields the calibrated hazard probability. **Layer 4** exposes the probability, lead time, and FAR operating point downstream, plus two inference-time plugins that extend the frozen model without retraining: a **behavioral prior** (pre-computed SafeDriver-IQ score) and an **onboard perception** plugin (camera/LiDAR/radar detections via the Neighbor MLP path).
 
-**Layer 2: Source-Specific Encoders.** Four parallel MLP encoders process each active block independently. The Ego MLP is a per-timestep snapshot encoder over the six ego scalar features, with no temporal recurrence across windows. The Neighbor MLP encodes cooperative neighbor vehicles, whether reported via V2V Basic Safety Message or RSU Collective Perception Message, through an identical per-vehicle path; outputs for up to K=10 nearest neighbors within 300 m are combined by sum-pooling into a fixed-length embedding regardless of neighbor count, so the source of an observation (V2V vs. RSU) is a configuration choice, not an architectural one. The Map MLP and Weather MLP share a unified implementation but are kept as separate ablation arms so their contributions can be isolated. The full network totals 20,289 parameters across all encoders and the fusion head.
+**V2X Simulation.** No public dataset includes live V2X broadcasts, so V2V/RSU channels are simulated from trajectory replay. V2V Basic Safety Messages follow SAE J2735 (10 Hz, 500 m radius); RSU Collective Perception Messages follow ETSI EN 302 637-2 across a 150/300/500 m coverage sweep.
 
-**Layer 3: Fusion, Prediction, and Calibration.** Active encoder outputs are concatenated into a single fusion vector, passed through a two-layer MLP fusion head to a scalar logit `l = f_fuse([e; v; m])`, and converted to a calibrated hazard probability by a frozen Platt sigmoid `p = sigmoid(a * l + b)`. The calibration parameters `(a, b)` are estimated by maximum likelihood on a dedicated 1,284-event calibration split and frozen before any holdout evaluation, so calibration is a training-pipeline design constraint rather than a post-hoc correction applied after seeing results.
+<img src="phase4-crest/docs/images/F3_V2X_Simulation_Schematic.png" alt="V2X Simulation Schematic" width="70%"/>
 
-**Layer 4: Applications and Plugins.** The calibrated probability, together with the estimated lead time and false-alarm operating point, is exposed to downstream driver alerts, ADAS decision support, fleet monitoring, and infrastructure planning. Two optional plugins extend the frozen base model at inference without retraining: the **behavioral prior plugin** injects a pre-computed SafeDriver-IQ risk score into the fusion vector with no gradient flow back through the plugin input, and the **onboard perception plugin** routes camera/LiDAR/radar detections through the same Neighbor MLP path used for V2V and RSU observations.
-
-**V2X Feature Simulation.** No public freeway dataset includes live V2X broadcasts, so V2V and RSU channels are simulated from trajectory replay while ego state, map geometry, and weather context come directly from trajectory records and external static datasets. V2V Basic Safety Messages follow SAE J2735: each vehicle broadcasts position, speed, heading, and acceleration at 10 Hz within a 500 m radius (the brake-event flag is deliberately excluded because the hazard label is itself derived from the same deceleration threshold, which would otherwise leak the label). RSU Collective Perception Messages follow ETSI EN 302 637-2 and report detected objects (position, speed, object type) within an experimentally varied coverage radius of 150 m, 300 m, or 500 m.
-
-![V2X Simulation Schematic](phase4-crest/docs/images/F3_V2X_Simulation_Schematic.png)
-
-![V2X Coverage](phase4-crest/docs/images/F15_V2X_Coverage.png)
-
-Cooperative sensing geometry on a freeway corridor: V2V BSMs broadcast within a 500 m radius (cyan) and RSU CPMs are simulated with a 300 m coverage radius (green), both aggregated by the ego vehicle for CREST inference.
+<img src="phase4-crest/docs/images/F15_V2X_Coverage.png" alt="V2X Coverage" width="70%"/>
 
 ### 3. Dataset Summary
 
-CREST is trained and evaluated on NGSIM and MiTra, two open-access freeway trajectory datasets that intentionally span different countries, sensor modalities, and traffic conditions, with I-24 MOTION (Nashville, USA) held out entirely as an independent US validation site evaluated without any fine-tuning.
+CREST is trained and evaluated on NGSIM and MiTra, two open-access freeway trajectory datasets spanning different countries, sensor modalities, and traffic conditions, with I-24 MOTION (Nashville, USA) held out entirely as an independent US validation site evaluated without any fine-tuning.
 
 | Property | NGSIM | MiTra | I-24 MOTION |
 |---|---|---|---|
@@ -817,7 +801,7 @@ CREST is trained and evaluated on NGSIM and MiTra, two open-access freeway traje
 | Role | Train + holdout | Train + holdout | US validation |
 | Source / Publication | FHWA, ITS DataHub, released 2016 [19] | Chaudhari et al., *Scientific Data*, 2025 [20] | Gloudemans et al., *Transp. Res. Part C*, 2023 [21] |
 
-NGSIM's camera-stitching artifacts suppress extreme deceleration signals, so NGSIM contributes queue-onset labels only; a sensitivity analysis confirmed zero independent hard-braking events on NGSIM at thresholds of -3.5, -3.9, and -4.5 m/s^2, justifying a MiTra-only hard-braking label policy. MiTra's drone footage, by contrast, captures individual vehicle kinematics across all congestion states across nine temporally ordered, non-overlapping sessions (T1-T9), supporting both label types.
+NGSIM's camera-stitching artifacts suppress extreme deceleration signals, so it contributes queue-onset labels only; MiTra's drone footage captures all congestion states across nine sessions (T1-T9), supporting both label types.
 
 ![Data Split Diagram](phase4-crest/docs/images/F2_Data_Split_Diagram.png)
 
@@ -827,11 +811,11 @@ NGSIM's camera-stitching artifacts suppress extreme deceleration signals, so NGS
 | Calibration | MiTra T8 + NGSIM US-101 (last 30%) | 1,284 |
 | Holdout | MiTra T9 + NGSIM I-80 | 838 |
 
-A hard-braking event is a deceleration at or below -3.9 m/s^2 sustained for at least 0.5 s; a queue-onset event is three or more adjacent vehicles traveling below 2 m/s for at least 5 s, indicating backward-propagating congestion. An observation window is labeled positive if either hazard type occurs within a T=10 s lookahead horizon, and the holdout split is geographically and temporally separate from training and calibration, with no model parameters adjusted after holdout evaluation begins.
+A hard-braking event is deceleration at or below -3.9 m/s^2 for at least 0.5 s; a queue-onset event is 3+ adjacent vehicles below 2 m/s for at least 5 s. A window is labeled positive if either occurs within a T=10 s horizon; the holdout split is geographically/temporally separate from training and calibration.
 
 ### 4. Results and Discussion
 
-CREST was evaluated across eleven input configurations on the primary holdout (838 events spanning MiTra T9 and NGSIM I-80), summarized below.
+CREST was evaluated across eleven input configurations on the primary holdout (838 events).
 
 | ID | Configuration | AUPRC | Brier | delta pp vs. B1 |
 |---|---|---|---|---|
@@ -852,37 +836,35 @@ CREST was evaluated across eleven input configurations on the primary holdout (8
 
 ![Ablation](phase4-crest/docs/images/F5_Ablation_Bar_Chart.png)
 
-**Source Attribution and Cooperative Value.** The ablation reveals that cooperative sources contribute unequal, non-additive value. Weather and traffic context (A2) is the strongest single source at 0.751 AUPRC, a 7.3 pp gain over ego-only, showing that dynamic environmental state carries substantial signal beyond ego kinematics; static map geometry (A1), by contrast, slightly degrades performance, indicating that fixed corridor features add noise rather than signal on these datasets. RSU coverage improves monotonically with radius: A4-150 (0.672) falls marginally below the ego-only baseline because 150 m captures too few upstream vehicles for meaningful advance context, A4-300 improves to 0.687, and A4-500 reaches 0.722, a 4.4 pp gain, while V2V BSMs (A3) provide only a marginal +0.4 pp lift, since under simulated channel conditions the kinematic overlap between V2V and ego state limits its added value.
+**Source Attribution.** Cooperative sources contribute unequal, non-additive value. Weather/traffic (A2) is the strongest single source (0.751, +7.3 pp); static map geometry (A1) slightly degrades performance. RSU coverage improves monotonically with radius (0.672 -> 0.687 -> 0.722 at 150/300/500 m), while V2V (A3) provides only a marginal +0.4 pp lift.
 
-![PR Curves](phase4-crest/docs/images/F6_PR_Curve.png)
+<img src="phase4-crest/docs/images/F6_PR_Curve.png" alt="PR Curves" width="60%"/>
 
-The precision-recall comparison confirms that learned temporal modeling matters on its own: B1 (ego-only CREST) exceeds B0 (the non-learned TTC/stopping-distance baseline) by 17.8 percentage points in AUPRC, establishing that even without any cooperative input, a trained model substantially outperforms an analytical heuristic operating at the edge of the crash zone.
+B1 (ego-only) exceeds B0 (the non-learned TTC baseline) by 17.8 pp AUPRC, confirming learned temporal modeling adds substantial value even without cooperative input.
 
-![RSU Sweep](phase4-crest/docs/images/F7_RSU_Sweep_Plot.png)
+<img src="phase4-crest/docs/images/F7_RSU_Sweep_Plot.png" alt="RSU Sweep" width="60%"/>
 
-**Negative Transfer in Fusion.** Full Fusion (F, 0.700) and Selective Fusion (Fopt, 0.688, combining only the two strongest individual sources: weather and RSU-500) both underperform the best single-source results, A2 (0.751) and A4-500 (0.722). Because Fopt still underperforms either of its two constituent sources in isolation, the negative transfer is not caused by including weak sources in the fusion set; instead, the MLP fusion head fails to suppress cross-source interference within the current training budget. This has a direct design implication: cooperative sensing architectures should not assume that adding more sources monotonically improves prediction. Source selection and weighting, not indiscriminate combination, are the more effective design strategy for systems with heterogeneous V2X availability.
+**Negative Transfer.** Full Fusion (0.700) and Selective Fusion (Fopt, 0.688, weather + RSU-500 only) both underperform their best single-source components (0.751, 0.722): the MLP fusion head fails to suppress cross-source interference within the current training budget. Source selection and weighting, not indiscriminate combination, is the more effective design strategy.
 
-![Learning Curves](phase4-crest/docs/images/F8_Learning_Curves.png)
+<img src="phase4-crest/docs/images/F8_Learning_Curves.png" alt="Learning Curves" width="70%"/>
 
-Both B1 and A2 converge within 3 epochs with no sign of overfitting on the calibration split, and the validation-loss gap between the two stabilizes by epoch 2, showing that the weather encoder's contribution is established early and does not require extended training.
+B1 and A2 converge within 3 epochs with no overfitting on the calibration split.
 
-![Split Comparison](phase4-crest/docs/images/F9_Split_Comparison.png)
+<img src="phase4-crest/docs/images/F9_Split_Comparison.png" alt="Split Comparison" width="65%"/>
 
-**Cross-Site Generalization.** CREST (B1), evaluated on I-24 MOTION without fine-tuning, achieves an AUPRC of 0.666, only 1.2 pp below the primary holdout (0.678), and holdout AUPRC tracks calibration-split performance consistently across all configurations, confirming stable generalization rather than overfitting to a single corridor. Retraining Fopt on I-24 MOTION data raises its AUPRC to 0.688, still below the best single-source results on the primary holdout, confirming that the negative-transfer pattern observed above is a property of the fusion mechanism itself, not an artifact of one training distribution.
+**Cross-Site Generalization.** CREST (B1) on I-24 MOTION reaches 0.666 AUPRC, only 1.2 pp below the primary holdout, confirming stable generalization. Retraining Fopt there raises it to 0.688, still below the best single source, so negative transfer is a property of the fusion mechanism itself, not one training distribution.
 
-![Lead Time](phase4-crest/docs/images/F10_Lead_Time.png)
+<img src="phase4-crest/docs/images/F10_Lead_Time.png" alt="Lead Time" width="60%"/>
 
-**Lead-Time Analysis.** At a 5% false-alarm rate, the primary reporting point, CREST detects 96 of 838 holdout events (11.5%), with a median lead time of 2.97 s and mean of 3.52 s; roughly half of detections provide at least 3 s of warning and 35.4% provide at least 5 s, though about 15% fall below 0.5 s (flagged only marginally before onset). At a stricter 1% FAR, only 21 events (2.5%) are detected with a shorter median lead time of 1.27 s, since the highest-confidence alerts are not necessarily the earliest; loosening to 10% FAR raises detection to 198 events (23.6%) but pulls the median lead time down to 2.37 s as more marginal, shorter-warning detections enter the pool. The 5% operating point was fixed before evaluation for its balance of median warning length and false-alarm tolerance, and was never adjusted afterward.
+**Lead Time.** At 5% FAR, CREST detects 96/838 events (11.5%), median 2.97 s / mean 3.52 s; about half of detections give at least 3 s warning. At 1% FAR detection drops to 2.5% (median 1.27 s); at 10% FAR it rises to 23.6% but median lead time falls to 2.37 s. The 5% point was fixed before evaluation.
 
-**Calibration as a Design Constraint.** Platt scaling parameters are estimated on the dedicated 1,284-event calibration split and frozen before holdout evaluation, so calibration is built into the training pipeline rather than applied as a post-hoc adjustment after seeing results. In a safety-critical alert system, overconfident probability estimates can either suppress necessary alerts or trigger unnecessary interventions; by producing probabilities that reflect empirical hazard frequency rather than raw model confidence, CREST makes the lead-time and false-alarm operating points above operationally meaningful rather than arbitrary thresholds on an uncalibrated score.
-
-**Plugin Architecture and Post-Deployment Extensibility.** The inference-time plugin results show CREST can gain capability without retraining or recertifying the frozen base model. The behavioral prior plugin (A7), which injects a pre-computed SafeDriver-IQ score, reaches 0.808 AUPRC, the best of all eleven configurations and a 13.0 pp gain over ego-only, reflecting a strong separation between SafeDriver-IQ score distributions for hazard and non-hazard events. The onboard perception plugin (A6) contributes a more modest +1.6 pp by adding camera/LiDAR detection context. Because both plugins operate purely at inference time, fleet operators or ADAS integrators can add new signal sources after deployment, which is especially valuable under regulatory regimes that require re-validation for any base-model update.
+**Calibration and Plugins.** Platt parameters are fit on the calibration split and frozen before holdout, so calibration is a training-pipeline constraint, not a post-hoc fix, making the lead-time/FAR operating points above operationally meaningful. The behavioral prior plugin (A7) reaches the best overall result, 0.808 AUPRC (+13.0 pp), from a strong SafeDriver-IQ score separation between hazard and non-hazard events; the perception plugin (A6) adds a more modest +1.6 pp. Both operate purely at inference time, letting fleets add signal sources post-deployment without retraining or recertifying the base model.
 
 ### 5. Real-Time Inference and Deployment
 
-At each time step t, CREST validates timestamp alignment, source freshness, and missing-data conditions across the five potential input sources before constructing the current driving scene using only information available up to t (causal ordering, consistent with training). Each active source is routed through its independent encoder, so the frozen model can run on any subset of sources without architectural modification, and inference continues on the remaining sources if a cooperative channel drops out (not evaluated during a live channel-loss event). The formal per-timestep procedure is given in Algorithm 1.
+At each time step, CREST validates timestamp alignment and source freshness, then builds the scene from information available up to that point only (causal ordering). Each active source runs through its independent encoder, so the frozen model works on any subset and continues on remaining sources if a channel drops (not evaluated live). Algorithm 1 gives the per-timestep procedure.
 
-![CREST Inference Flow](phase4-crest/docs/images/F12_CREST_Inference_Flow.png)
+<img src="phase4-crest/docs/images/F12_CREST_Inference_Flow.png" alt="CREST Inference Flow" width="50%"/>
 
 ```
 Algorithm 1 - CREST Real-Time Hazard Inference
@@ -901,39 +883,35 @@ Ensure:  Calibrated hazard probability p; alert decision d
 9: return p, d
 ```
 
-The alert issuance operating point is fixed at 5% FAR, established before evaluation from the precision-recall and ROC curves and never adjusted afterward. On CPU hardware, a single forward pass through this pipeline runs in 61.7 microseconds, comfortably inside the 100 ms V2X broadcast cycle and well within real-time budgets for driver alerts or ADAS decision support.
+The alert operating point is fixed at 5% FAR, set before evaluation and never adjusted afterward. On CPU, a forward pass runs in 61.7 microseconds, well inside the 100 ms V2X broadcast cycle.
 
 ![CREST HMI Alert](phase4-crest/docs/images/F13_CREST_HMI_Alert.png)
 
-An illustrative HMI display showing a hazard probability of 0.83 and a lead-time estimate of 2.9 s alongside a queue-ahead advisory; the display is indicative only, and actual interface standards and integration are outside the scope of the paper.
+Illustrative HMI display: hazard probability 0.83, lead time 2.9 s, queue-ahead advisory (indicative only; interface design is outside this paper's scope).
 
 ![CREST Warning Sequence](phase4-crest/docs/images/F14_CREST_Warning_Sequence.png)
 
-The warning-to-stop sequence at the median lead time illustrates the operational timeline: at t = -2.97 s CREST issues an alert (hazard probability 0.83, queue-ahead advisory), braking is initiated at t = -1.5 s, and the vehicle reaches a safe stop at t = 0 s. The 1.47 s interval between the alert and the start of braking is the driver-or-ADAS response window available at the median operating point.
+Warning-to-stop sequence at the median lead time: alert at t = -2.97 s, braking at t = -1.5 s, safe stop at t = 0 s, giving a 1.47 s driver/ADAS response window.
 
-Full cooperative deployment depends on the availability of roadside V2X infrastructure and vehicle-side onboard units, neither of which is evaluated in this paper; latency budgets, communication reliability under congestion, regulatory certification, and fleet penetration rates remain open engineering and policy questions for operational rollout.
+Full cooperative deployment depends on roadside V2X infrastructure and vehicle-side OBUs, neither evaluated here; latency budgets, congestion reliability, certification, and fleet penetration remain open questions.
 
 ### 6. Application Examples
 
-The calibrated hazard probability and its accompanying lead time are the two quantities CREST delivers downstream, and they are designed to plug directly into graduated, threshold-based alert systems rather than requiring bespoke integration logic. For **ADAS decision support**, the probability can be thresholded at the same 5% FAR operating point used in evaluation to trigger a driver alert with a known, pre-characterized false-alarm rate and a median 2.97 s warning window, sufficient for automated emergency braking at highway speeds. For **fleet safety monitoring**, the same calibrated probability stream, aggregated across trips, can flag corridors or time windows with elevated hazard rates without requiring an actual crash to have occurred. For **infrastructure planning**, the empirical RSU coverage-radius sweep (0.672 at 150 m, 0.687 at 300 m, 0.722 at 500 m) gives planners a direct, quantified estimate of predictive gain per unit of roadside sensor coverage, supporting evidence-based deployment-density decisions as connected-vehicle infrastructure adoption increases.
+The calibrated probability and lead time plug directly into graduated alert systems: **ADAS** can threshold at 5% FAR for a known false-alarm rate and ~3 s warning window; **fleet monitoring** can aggregate the probability stream across trips to flag high-hazard corridors without requiring an actual crash; **infrastructure planning** can use the RSU coverage-radius sweep (0.672/0.687/0.722 at 150/300/500 m) to size roadside sensor deployment density.
 
 ### 7. Limitations
 
-**Simulated V2X Communications.** V2V Basic Safety Messages and RSU Collective Perception Messages are simulated from trajectory replay rather than captured from live broadcasts. Channel impairments such as packet loss, latency, and interference are modeled parametrically, but this does not fully represent the variability of real-world V2X deployments, so performance under live channel conditions may differ from the results reported here.
-
-**Snapshot Encoding.** CREST's encoders process each observation window independently, with no temporal recurrence across consecutive windows. Sequential dependencies across windows are not modeled; recurrent or attention-based temporal encoding may capture additional predictive structure in freeway traffic dynamics that the current snapshot architecture cannot.
-
-**Detection Rate at the Primary Operating Point.** At 5% FAR, CREST detects only 96 of 838 holdout events (11.5%); the majority of hazard events in the holdout set are not detected at this threshold. This highlights both the inherent difficulty of early freeway hazard prediction from trajectory data and the operational cost of a conservative false-alarm constraint, and it limits the system's coverage at the reported operating point.
-
-**Geographic and Environmental Scope.** Evaluation is conducted entirely on US and European freeway datasets (NGSIM, MiTra, I-24 MOTION). Performance on urban arterials, signalized intersections, or road networks with different traffic characteristics has not been assessed, and generalization beyond structured freeways requires separate evaluation.
-
-**Simulated Behavioral Prior.** The behavioral prior plugin (A7) uses a SafeDriver-IQ risk score computed from the same trajectory data used for training and evaluation. In live deployment this score would instead be computed from a separate longitudinal driving history, so the plugin's 0.808 AUPRC result should be treated as an upper bound on the contribution of driver behavioral context under ideal data conditions, not a guaranteed field result.
+- **Simulated V2X.** V2V/RSU channels are simulated from trajectory replay, not live broadcasts; packet loss, latency, and interference are only parametrically modeled, so live-channel performance may differ.
+- **Snapshot Encoding.** Encoders process each window independently with no temporal recurrence; recurrent/attention-based encoding may capture additional predictive structure.
+- **Detection Rate.** At 5% FAR, only 96/838 holdout events (11.5%) are detected; most hazard events are missed at this conservative operating point.
+- **Geographic Scope.** Evaluation covers only US/European freeways (NGSIM, MiTra, I-24 MOTION); urban arterials and signalized intersections are untested.
+- **Simulated Behavioral Prior.** The A7 plugin's SafeDriver-IQ score is computed from the same trajectory data used for training/evaluation, so 0.808 AUPRC should be treated as an upper bound, not a guaranteed field result.
 
 ### 8. Conclusion and Future Directions
 
-CREST establishes source-aware ablation as a design principle for cooperative freeway hazard prediction: it isolates each sensing channel's independent contribution and pairs those attributions with Platt-calibrated probabilities on real trajectory data, a decomposition not previously performed in cooperative sensing work, and thereby supports evidence-based infrastructure investment decisions. Across eleven configurations, cooperative sources prove non-additive; the best single source (A2, 0.751 AUPRC) outperforms full fusion (F, 0.700), while injecting a behavioral prior at inference (A7) yields the strongest result overall (0.808 AUPRC, 0.166 Brier). The model generalizes to an independent Tennessee freeway dataset with zero fine-tuning, confirming these findings are not an artifact of the training distribution, and the calibrated model delivers a 2.97 s median warning lead time at 5% FAR while running in 61.7 microseconds on CPU hardware, well inside the 100 ms V2X broadcast cycle. At highway speeds, that advance warning provides sufficient distance for automated emergency braking to prevent or substantially mitigate the rear-end collisions that account for thousands of freeway fatalities annually.
+CREST establishes source-aware ablation as a design principle for cooperative freeway hazard prediction, pairing per-source attribution with Platt-calibrated probabilities to support evidence-based infrastructure decisions. Cooperative sources prove non-additive: the best single source (A2, 0.751) beats full fusion (0.700), while a behavioral prior at inference (A7) gives the strongest result overall (0.808 AUPRC, 0.166 Brier). The model generalizes to an independent Tennessee dataset with zero fine-tuning, delivers a 2.97 s median warning at 5% FAR, and runs in 61.7 microseconds on CPU, well inside the 100 ms V2X broadcast cycle.
 
-These properties position CREST as a deployable upstream sensing module for threshold-based intervention systems: its calibrated output can integrate directly with graduated alert architectures such as PRISM without per-site recalibration, combining behavioral risk scoring and cooperative infrastructure sensing in a single prediction layer. As connected-vehicle infrastructure adoption increases, CREST's RSU coverage-sensitivity results give infrastructure planners empirical guidance on deployment density that benefits both human-driven and autonomous vehicles during the transition to full V2X coverage. Future work will validate the framework on live V2X field data and assess real-time behavioral score streams on connected-vehicle testbeds, alongside extending the fusion head to resolve the negative-transfer pattern identified above and jointly training the inference-time plugins with the base hazard model.
+CREST is designed as a deployable upstream module that can integrate with graduated alert architectures such as PRISM without per-site recalibration, and its RSU coverage-sensitivity results give infrastructure planners empirical deployment-density guidance. Future work: validate on live V2X field data, assess real-time behavioral score streams on connected-vehicle testbeds, resolve the fusion head's negative-transfer pattern, and jointly train the inference-time plugins with the base model.
 
 ### Phase 4 Authors
 
@@ -1070,9 +1048,9 @@ These properties position CREST as a deployable upstream sensing module for thre
 | Phase 3 (PRISM-AR/TVT) | Argoverse 2 | 1,000 candidate → 50 evaluated clips | VRU-interaction clips | Evaluate risk-adaptive AR cues |
 | Phase 3 (PRISM-AR/TVT) | Waymo WOMD | 286 candidate → 25 evaluated clips | VRU-interaction clips | Evaluate risk-adaptive AR cues |
 | Phase 3 (PRISM-AR/TVT) | Synthetic near-miss generator | 60 scenarios | Controlled pedestrian-crossing scenes | Supplement rare warning/emergency cases |
-| Phase 4 (CREST/TVT) | NGSIM US-101 + I-80 | Train + holdout (queue-onset only) | Freeway trajectories | Train/evaluate CREST hazard model |
-| Phase 4 (CREST/TVT) | MiTra T1-T9 | Train + holdout (hard-brake + queue-onset) | Freeway trajectories | Train/evaluate CREST hazard model |
-| Phase 4 (CREST/TVT) | I-24 MOTION | 838 holdout events | Freeway trajectories | Zero-shot cross-site generalization test |
+| Phase 4 (CREST) | NGSIM US-101 + I-80 | Train + holdout (queue-onset only) | Freeway trajectories | Train/evaluate CREST hazard model |
+| Phase 4 (CREST) | MiTra T1-T9 | Train + holdout (hard-brake + queue-onset) | Freeway trajectories | Train/evaluate CREST hazard model |
+| Phase 4 (CREST) | I-24 MOTION | 838 holdout events | Freeway trajectories | Zero-shot cross-site generalization test |
 
 Phase 3 candidate clips are drawn from the same three AV datasets as Phase 2 (1,296 total candidate clips), then filtered by a VRU-interaction extractor (20 m ego-approach radius, decreasing distance, ≥5 frames visible) down to 231 total evaluated scenario clips. See [`phase3-prism-ar/README.md`](phase3-prism-ar/README.md) and `phase3-prism-ar/src/prism_ar/dataset_generation/scenario_extractor.py` for the extraction logic. Phase 4 uses a canonical schema to unify NGSIM and MiTra at 10 Hz; training uses balanced sampling (5,320 positive + 5,320 negative), with the holdout (838 events) geographically and temporally separate from training/calibration.
 
@@ -1509,9 +1487,9 @@ The `phase3-prism-ar/` folder contains the reproducibility bundle for the PRISM-
 
 These artifacts support the paper's results: 231 evaluated scenario clips, tier accuracy 0.43 → 0.71, cue-risk monotonicity ρ = -0.703 (p < 0.0001), and sub-millisecond per-frame latency. See [Quick Start — Phase 3 (PRISM-AR)](#quick-start--phase-3-phase3-prism-ar) above to regenerate them.
 
-## CREST (TVT) Validation Artifacts
+## CREST Validation Artifacts
 
-The `phase4-crest/` folder contains the reproducibility bundle for the CREST IEEE TVT manuscript:
+The `phase4-crest/` folder contains the reproducibility bundle for the CREST manuscript:
 
 - **Scripts** (`phase4-crest/scripts/`): 31 pipeline scripts covering audit, label construction, split assignment, feature precomputation (per-configuration), training, evaluation, lead-time computation, and figure generation (see [phase4-crest/README.md](phase4-crest/README.md#scripts-reference) for the full reference table)
 - **Data** (`phase4-crest/outputs/results/`): `ablations.json`, `b0_baseline.json`, `holdout_eval.json`, `i24_holdout_eval.json`, `lead_time.json`, `pr_curve_data.csv`, `learning_curves_data.csv`, `label_summary.json`, `ngsim_p0_audit_summary.json`, and related label/split CSVs

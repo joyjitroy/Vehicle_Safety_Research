@@ -78,11 +78,27 @@ Phase 3 extends PRISM's internal AV risk reasoning into external, VRU-facing com
 - Activates warning/emergency cues in risk-critical cases the static baseline fails to escalate
 - Sub-millisecond per-frame latency (reference implementation)
 
+### Phase 4: CREST
+
+**Paper Title:** *CREST: Calibrated Risk Estimation with Source-Aware Temporal Fusion for Cooperative Freeway Hazard Prediction*
+
+Phase 4 extends the inverse crash-probability foundation of SafeDriver-IQ and the multi-model risk engine of PRISM into cooperative freeway hazard prediction. CREST combines Platt-calibrated hazard probabilities with systematic per-source ablation across simulated V2V and RSU sensing channels, and supports inference-time behavioral and perception plugins without retraining. Submitted to **IEEE Transactions on Vehicular Technology**. Source and validation artifacts are in the [`phase4-crest/`](phase4-crest/) directory.
+
+**Authors:** Joyjit Roy, Sushanta Das, Samaresh Kumar Singh
+
+### Key Results (Phase 4)
+
+- **Best single cooperative source (A2 - weather/traffic):** AUPRC 0.751 vs. 0.678 ego-only (B1)
+- **Full cooperative fusion (F):** AUPRC drops to 0.700, indicating negative transfer
+- **Behavioral prior plugin (A7):** AUPRC 0.808, Brier 0.166, the best overall configuration
+- **Lead time at 5% false-alarm rate:** 2.97 s median warning
+- Generalizes to an independent I-24 MOTION (Nashville, TN) holdout without fine-tuning
+
 ### 📌 Relationship to This Project
-Each phase of the SafeDriver-IQ system was **designed, implemented, and validated first**, and the insights, models, and experimental findings from this project directly led to the corresponding research publications: the Phase 1 arXiv paper, the Phase 2 ASCE2027 paper, and the Phase 3 PRISM-AR manuscript prepared for IEEE TVT.
+Each phase of the SafeDriver-IQ system was **designed, implemented, and validated first**, and the insights, models, and experimental findings from this project directly led to the corresponding research publications: the Phase 1 arXiv paper, the Phase 2 ASCE2027 paper, the Phase 3 PRISM-AR manuscript prepared for IEEE TVT, and the Phase 4 CREST manuscript prepared for IEEE TVT.
 
 In other words:
-- ✅ This repository = **working system + experiments** (Phase 1: `phase1-safedriver-iq/`, Phase 2: `phase2-prism/`, Phase 3: `phase3-prism-ar/`)
+- ✅ This repository = **working system + experiments** (Phase 1: `phase1-safedriver-iq/`, Phase 2: `phase2-prism/`, Phase 3: `phase3-prism-ar/`, Phase 4: `phase4-crest/`)
 - ✅ The papers = **formalization of methodology, results, and contributions** for each phase
 
 ### 🚀 What the Paper Formalizes
@@ -750,30 +766,103 @@ Freeway rear-end collisions remain a leading contributor to traffic fatalities. 
 
 The CREST network is organized into three encoder branches plus a plugin-aware fusion head:
 
-- **Ego encoder.** Processes the host vehicle's own state (position, velocity, acceleration) and the target-prediction horizon.
-- **Neighbor encoder.** Aggregates surrounding vehicles through top-K selection and sum-pooled MLP encoding, with simulated V2V BSMs (A3) and RSU CPMs (A4) injected as ablations.
-- **Map encoder.** Ingests road-geometry, elevation, weather, and traffic-context features.
-- **Fusion MLP.** Combines ego, neighbor, and map embeddings into a calibrated hazard probability via Platt scaling.
+| Component | Role |
+|---|---|
+| **Ego encoder** | Encodes host-vehicle kinematic state (position, velocity, acceleration) over the observation window |
+| **Neighbor encoder** | Top-K neighbor selection with a sum-pooled MLP; ingests simulated V2V BSMs (A3) or RSU CPMs (A4) when active |
+| **Map encoder** | Encodes road geometry/elevation (A1) and weather/local-traffic context (A2) when active |
+| **Fusion MLP** | Concatenates active encoder outputs into a single hazard logit |
+| **Platt calibration layer** | Frozen post-hoc sigmoid mapping raw logit to a calibrated hazard probability, fit on the calibration split |
+| **Inference-time plugin slot** | Accepts a pre-computed perception score (A6) or behavioral risk score (A7, SafeDriver-IQ) without retraining the base network |
 
-A pre-computed behavioral risk score can be injected at inference time through a plugin slot without retraining the base network.
+The frozen model can operate on any subset of the five input sources (ego, V2V, RSU, map, weather/traffic) without architectural modification, so inference continues with the remaining sources if a cooperative channel becomes unavailable.
+
+![V2X Simulation Schematic](phase4-crest/docs/images/F3_V2X_Simulation_Schematic.png)
+
+V2V BSMs and RSU CPMs are simulated on top of ground-truth trajectories with communication range limits, detection uncertainty (missed detections, position noise, stale tracks), and an RSU coverage-radius sweep (150 m, 300 m, 500 m).
+
+![V2X Coverage](phase4-crest/docs/images/F15_V2X_Coverage.png)
+
+**Real-time inference pipeline:**
+
+![CREST Inference Flow](phase4-crest/docs/images/F12_CREST_Inference_Flow.png)
+![CREST HMI Alert](phase4-crest/docs/images/F13_CREST_HMI_Alert.png)
+![CREST Warning Sequence](phase4-crest/docs/images/F14_CREST_Warning_Sequence.png)
 
 ### 3. Dataset Summary
 
-CREST was evaluated on real freeway trajectory data from NGSIM US-101 and MiTra, with an independent I-24 MOTION (Tennessee) holdout. The canonical schema unifies NGSIM and MiTra trajectories at 10 Hz, and negative events are sampled upstream of hard-braking queue onsets.
+CREST is trained and evaluated on NGSIM and MiTra, two open-access freeway trajectory datasets covering different countries, sensor modalities, and traffic conditions, with I-24 MOTION (Nashville, USA) as an independent US validation site evaluated without fine-tuning.
 
-| Dataset | Role | Corridor |
+| Property | NGSIM | MiTra | I-24 MOTION |
+|---|---|---|---|
+| Method | Ground camera | Drone | Ground camera |
+| Location | California, USA | Milan, Italy | Nashville, USA |
+| Freeway | US-101, I-80 | A50 | I-24 |
+| Duration | ~45 min/site | 135 min (9 sessions) | 3 incident days |
+| Traffic | Mixed | Free-flow to congestion | Incident-driven |
+| Labels | Queue onset | Hard braking, queue onset | Queue onset |
+| Role | Train + holdout | Train + holdout | US validation |
+
+![Data Split Diagram](phase4-crest/docs/images/F2_Data_Split_Diagram.png)
+
+| Split | Source | Events |
 |---|---|---|
-| NGSIM US-101 | Train / calibrate / holdout | Los Angeles, CA |
-| MiTra | Train / calibrate / holdout | Michigan test track |
-| I-24 MOTION | Independent holdout | Nashville, TN |
+| Training | MiTra T4-T7 + NGSIM US-101 (first 70%) | 10,640 (5,320 pos + 5,320 neg, balanced) |
+| Calibration | MiTra T8 + NGSIM US-101 (last 30%) | 1,284 |
+| Holdout | MiTra T9 + NGSIM I-80 | 838 |
 
-### 4. Results and Discussion
+**Hazard labels:** hard braking (deceleration <= -3.9 m/s^2 for at least 0.5 s, MiTra only) and queue onset (3+ adjacent vehicles below 2 m/s for at least 5 s, both datasets). A window is labeled positive if either hazard onset falls within the T=10 s lookahead horizon.
 
-The ablation study across eleven configurations shows that cooperative sensing sources are non-additive. The most effective individual cooperative source (A2 - weather and local traffic) reaches AUPRC 0.751, compared to 0.678 for ego-only sensing (B1). Full fusion of all cooperative channels (F) drops AUPRC to 0.700, demonstrating that indiscriminate fusion diminishes predictive value. Adding a pre-computed behavioral risk score at inference (A7) raises AUPRC to 0.808 with a Brier score of 0.166, the best overall configuration. At a 5% false-alarm rate, the model provides a 2.97 s median warning lead time before hazard onset.
+### 4. Ablation Configurations and Results
+
+| ID | Configuration | Active Sources | Family |
+|---|---|---|---|
+| B0 | TTC Baseline | Analytical only | Baseline |
+| B1 | Ego-Only | Ego kinematics | Baseline |
+| A1 | Ego + Map Context | Ego + map geometry | Single-source |
+| A2 | Ego + Weather | Ego + weather/traffic context | Single-source |
+| A3 | Ego + V2V | Ego + V2V BSMs | Single-source |
+| A4-150/300/500 | Ego + RSU | Ego + RSU (150/300/500 m radius) | Infrastructure sweep |
+| F | Full Fusion | All sources | Fusion |
+| Fopt | Selective Fusion | Ego + Weather + RSU-500 | Fusion |
+| A6 | Ego + Perception Plugin | Ego + onboard perception (inference-time) | Plugin |
+| A7 | Ego + Behavioral Prior | Ego + SafeDriver-IQ score (inference-time) | Plugin |
+
+**Holdout results:**
+
+| ID | Configuration | AUPRC | Brier | delta pp vs. B1 |
+|---|---|---|---|---|
+| B0 | TTC Baseline | 0.500 | 0.500 | - |
+| B1 | Ego-Only | 0.678 | 0.230 | Ref. |
+| A1 | Ego + Map Context | 0.664 | 0.231 | -1.4 |
+| A2 | Ego + Weather | **0.751** | 0.218 | **+7.3** |
+| A3 | Ego + V2V | 0.674 | 0.230 | -0.4 |
+| A4-150 | Ego + RSU-150 | 0.672 | 0.230 | -0.6 |
+| A4-300 | Ego + RSU-300 | 0.687 | 0.231 | +0.9 |
+| A4-500 | Ego + RSU-500 | 0.722 | 0.229 | +4.4 |
+| F | Full Fusion | 0.700 | 0.233 | +2.2 |
+| Fopt | Selective Fusion | 0.688 | 0.229 | +1.0 |
+| A6 | Ego + Perception Plugin† | 0.694 | 0.226 | +1.6 |
+| A7 | Ego + Behavioral Prior† | **0.808** | **0.166** | **+13.0** |
+
+†Inference-time plugins; base model not retrained.
 
 ![PR Curves](phase4-crest/docs/images/F6_PR_Curve.png)
 ![Ablation](phase4-crest/docs/images/F5_Ablation_Bar_Chart.png)
+![RSU Sweep](phase4-crest/docs/images/F7_RSU_Sweep_Plot.png)
+![Learning Curves](phase4-crest/docs/images/F8_Learning_Curves.png)
+![Split Comparison](phase4-crest/docs/images/F9_Split_Comparison.png)
 ![Lead Time](phase4-crest/docs/images/F10_Lead_Time.png)
+
+**Lead time by FAR operating point (B1, holdout):**
+
+| FAR | Detected | Rate | Median | Mean |
+|---|---|---|---|---|
+| 1% | 21/838 | 2.5% | 1.27 s | 2.48 s |
+| **5%** | **96/838** | **11.5%** | **2.97 s** | **3.52 s** |
+| 10% | 198/838 | 23.6% | 2.37 s | 3.34 s |
+
+**Key findings:** cooperative sources are non-additive; weather/traffic (A2) is the strongest single source while map geometry (A1) slightly degrades performance; RSU coverage radius has a monotonic effect (500 m best at +4.4 pp); full fusion (F, Fopt) underperforms the best single sources due to negative transfer in the fusion head; the behavioral prior plugin (A7) achieves the best overall result without retraining; CREST generalizes to I-24 MOTION with only a 1.2 pp AUPRC drop and no fine-tuning.
 
 ### 5. Application Examples
 
@@ -781,7 +870,7 @@ The calibrated hazard probability can be thresholded to support graduated ADAS a
 
 ### 6. Limitations
 
-The evaluation relies on simulated V2V and RSU observations derived from ground-truth trajectories. Real communication delays, packet loss, and sensor noise are not fully represented. The behavioral plugin is pre-computed and not jointly trained with the hazard model.
+The evaluation relies on simulated V2V and RSU observations derived from ground-truth trajectories; real communication delay, packet loss, and sensor noise are not fully represented. The behavioral (A7) and perception (A6) plugins are pre-computed and not jointly trained with the hazard model. Full fusion (F, Fopt) shows negative transfer, indicating the current MLP fusion head does not suppress cross-source interference within the training budget used. Channel-loss robustness is architecturally supported but not evaluated during a live channel-loss event.
 
 ### 7. Conclusion and Future Directions
 
@@ -857,6 +946,23 @@ CREST demonstrates that cooperative sensing sources offer unequal and non-additi
 3. **Cue-Risk Monotonicity Validation** - Spearman ρ = -0.703 (Wilcoxon p < 0.0001) alignment between cue intensity and risk severity
 4. **Real-Time Feasibility** - Sub-millisecond per-frame reference implementation
 5. **Multi-Baseline Evaluation Protocol** - Paired comparison against no-interface, static eHMI, and oracle upper-bound policies
+
+### Phase 4: CREST
+
+| Traditional Approach | CREST (Novel) |
+|---------------------|----------------------|
+| Ego-only sensing | Ego + simulated V2V/RSU cooperative sources evaluated individually |
+| Uncalibrated risk scores | Platt-calibrated hazard probabilities with FAR-based lead-time reporting |
+| Indiscriminate sensor fusion assumed beneficial | Systematic ablation reveals full fusion underperforms the best single source (negative transfer) |
+| Fixed model, no post-deployment extension | Inference-time behavioral/perception plugins added without retraining |
+| Single-site evaluation | Zero-shot generalization to an independent freeway site (I-24 MOTION) |
+
+**Novel Contributions (Phase 4):**
+1. **Source-Aware Ablation** - First systematic per-source isolation of V2V, RSU, weather/traffic, and map-geometry contributions to freeway hazard prediction
+2. **Platt-Calibrated Hazard Probabilities** - Actionable alert thresholds via post-hoc calibration on a dedicated calibration split
+3. **Negative-Transfer Discovery** - Demonstrates indiscriminate cooperative fusion (F, Fopt) underperforms the best individual source, motivating source-aware design
+4. **Inference-Time Plugin Architecture** - Behavioral (SafeDriver-IQ) and perception priors injected without retraining the base network, yielding the best overall AUPRC (0.808)
+5. **Cross-Site Generalization** - Zero-shot evaluation on I-24 MOTION with only a 1.2 pp AUPRC drop
 
 # <span style="color:blue">Dataset</span>
 

@@ -1,0 +1,35 @@
+# Frozen CREST model architecture parameters.
+# Do not change without updating the paper methods.
+
+framework: pytorch
+max_parameters: 1000000
+
+architecture:
+  input_features:
+    - speed_ms
+    - lon_acc_ms2
+    - lat_acc_ms2
+    - x_rel_m
+    - y_rel_m
+    - distance_m
+
+  ego_encoder:
+    hidden_dims: [64, 64]
+    output_dim: 64
+
+  neighbor_encoder:
+    top_k: 10
+    hidden_dims: [32, 32]
+    output_dim: 32
+    max_radius_m: 300.0
+
+  map_encoder:
+    input_dim: 8
+    hidden_dims: [16, 8]
+    output_dim: 8
+
+  fusion:
+    hidden_dims: [64, 32]
+    output_dim: 1
+
+  dropout: 0.1

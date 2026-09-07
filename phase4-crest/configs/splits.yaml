@@ -1,0 +1,15 @@
+calibration:
+  description: Last 20% by time; reserved for Platt scaling only.
+  ngsim_us101:
+    time_unit: ms
+    global_time_min: 1118846979700
+    global_time_max: 1118849475400
+    calibration_start_global_time: 1118848976260
+  mitra_t6:
+    time_unit: s
+    time_min: 0.0
+    time_max: 1019.018067
+    calibration_start_time: 815.2144536
+train:
+  ngsim_us101: global_time < calibration_start_global_time
+  mitra_t6: time_s < calibration_start_time

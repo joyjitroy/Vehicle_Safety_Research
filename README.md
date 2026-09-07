@@ -8,7 +8,7 @@
 
 # <span style="color:blue">Project Overview</span>
 
-Vehicle Safety Research is a multi-phase research program that moves from reactive crash prediction to proactive, explainable safety intelligence for both human-driven and automated vehicles. Phase 1, SafeDriver-IQ, transforms national crash and naturalistic driving data into a continuous 0-100 safety score that tells drivers in real time how close they are to crash conditions and what specific actions would make them safer. Phase 2, PRISM, extends this into an agentic multi-model architecture that fuses environmental, trajectory, and VRU-interaction risks through reinforcement learning. Phase 3, PRISM-AR, maps these internal risk states to adaptive augmented-reality cues for pedestrians and cyclists. All three phases share the same inverse risk-scoring foundation and focus on protecting vulnerable road users (VRUs).
+Vehicle Safety Research is a multi-phase research program that moves from reactive crash prediction to proactive, explainable safety intelligence for both human-driven and automated vehicles. Phase 1, SafeDriver-IQ, transforms national crash and naturalistic driving data into a continuous 0-100 safety score that tells drivers in real time how close they are to crash conditions and what specific actions would make them safer. Phase 2, PRISM, extends this into an agentic multi-model architecture that fuses environmental, trajectory, and VRU-interaction risks through reinforcement learning. Phase 3, PRISM-AR, maps these internal risk states to adaptive augmented-reality cues for pedestrians and cyclists. All four phases share the same inverse risk-scoring foundation and focus on protecting vulnerable road users (VRUs). CREST extends this to cooperative freeway hazard prediction by fusing calibrated hazard probabilities with source-aware V2V and RSU sensing channels.
 
 ### Comprehensive Crash Factor Investigation (Notebook 04)
 A deep-dive multi-dataset investigation combining **CRSS** (417K crashes) and **Waymo Open Motion Dataset** to answer 8 core research questions:
@@ -723,6 +723,87 @@ Immediate future directions include expanded naturalistic-dataset evaluation to 
 - Arijit Roy
 - Sushanta Das
 - Samaresh Kumar Singh
+
+# <span style="color:blue">Phase 4: CREST - Calibrated Risk Estimation with Source-Aware Temporal Fusion for Cooperative Freeway Hazard Prediction</span>
+
+### Overview
+
+CREST is the fourth phase of the Vehicle Safety Research program. It extends the inverse crash-probability foundation of SafeDriver-IQ and the multi-model risk engine of PRISM into a cooperative freeway hazard prediction system. CREST combines Platt-calibrated hazard probabilities with a systematic, per-source ablation of simulated V2V and RSU sensing channels, modeled on current communication standards. It also supports behavioral and perception plugins at inference time without retraining.
+
+### Research Flyer
+
+![CREST System Architecture](phase4-crest/docs/images/F1_CREST_Architecture.png)
+
+CREST uses an ego-neighbor-map temporal-fusion network with source-aware V2V and RSU ablations, Platt calibration, and an optional inference-time behavioral plugin.
+
+### Abstract
+
+Road traffic crashes cause approximately 1.19 million deaths globally each year, including over 39,000 in the United States in 2024. Freeway rear-end collisions, often caused by sudden queue formation and hard braking, are the focus of this work. Most hazard-prediction models rely solely on the vehicle's own onboard state (ego-only sensing) or produce uncalibrated risk scores that do not support actionable alert thresholds. Prior work using cooperative sensing, such as vehicle-to-vehicle (V2V) or roadside unit (RSU) communication, has not isolated the individual contribution of each source to prediction accuracy.
+
+CREST introduces a framework that combines Platt-calibrated hazard probabilities with systematic per-source ablation across simulated V2V and RSU sensing channels, modeled on current communication standards. CREST also supports adding behavioral and perception plugins at inference time without retraining. Evaluated on real freeway trajectory data, the most effective individual cooperative source increases AUPRC to 0.751 versus 0.678 for ego-only sensing. Combining all sources without a behavioral prior reduces performance to 0.700, while adding a pre-computed behavioral risk score at inference raises AUPRC to 0.808, the highest configuration. At a 5% false-alarm rate, the calibrated model delivers a median warning of 2.97 seconds before hazard onset. These results are maintained on an independent freeway dataset (I-24 MOTION) without fine-tuning.
+
+### 1. Introduction
+
+Freeway rear-end collisions remain a leading contributor to traffic fatalities. A vehicle traveling at 25 m/s requires over 50 meters to stop under emergency braking, yet queue formation can propagate upstream faster than drivers can react. CREST addresses this by moving beyond ego-only sensing to calibrated, source-aware cooperative fusion.
+
+### 2. System Architecture
+
+The CREST network is organized into three encoder branches plus a plugin-aware fusion head:
+
+- **Ego encoder.** Processes the host vehicle's own state (position, velocity, acceleration) and the target-prediction horizon.
+- **Neighbor encoder.** Aggregates surrounding vehicles through top-K selection and sum-pooled MLP encoding, with simulated V2V BSMs (A3) and RSU CPMs (A4) injected as ablations.
+- **Map encoder.** Ingests road-geometry, elevation, weather, and traffic-context features.
+- **Fusion MLP.** Combines ego, neighbor, and map embeddings into a calibrated hazard probability via Platt scaling.
+
+A pre-computed behavioral risk score can be injected at inference time through a plugin slot without retraining the base network.
+
+### 3. Dataset Summary
+
+CREST was evaluated on real freeway trajectory data from NGSIM US-101 and MiTra, with an independent I-24 MOTION (Tennessee) holdout. The canonical schema unifies NGSIM and MiTra trajectories at 10 Hz, and negative events are sampled upstream of hard-braking queue onsets.
+
+| Dataset | Role | Corridor |
+|---|---|---|
+| NGSIM US-101 | Train / calibrate / holdout | Los Angeles, CA |
+| MiTra | Train / calibrate / holdout | Michigan test track |
+| I-24 MOTION | Independent holdout | Nashville, TN |
+
+### 4. Results and Discussion
+
+The ablation study across eleven configurations shows that cooperative sensing sources are non-additive. The most effective individual cooperative source (A2 - weather and local traffic) reaches AUPRC 0.751, compared to 0.678 for ego-only sensing (B1). Full fusion of all cooperative channels (F) drops AUPRC to 0.700, demonstrating that indiscriminate fusion diminishes predictive value. Adding a pre-computed behavioral risk score at inference (A7) raises AUPRC to 0.808 with a Brier score of 0.166, the best overall configuration. At a 5% false-alarm rate, the model provides a 2.97 s median warning lead time before hazard onset.
+
+![PR Curves](phase4-crest/docs/images/F6_PR_Curve.png)
+![Ablation](phase4-crest/docs/images/F5_Ablation_Bar_Chart.png)
+![Lead Time](phase4-crest/docs/images/F10_Lead_Time.png)
+
+### 5. Application Examples
+
+The calibrated hazard probability can be thresholded to support graduated ADAS alerts, fleet hazard monitoring, and infrastructure planning. The inference-time plugin slot allows behavior models and external perception systems to be integrated without retraining.
+
+### 6. Limitations
+
+The evaluation relies on simulated V2V and RSU observations derived from ground-truth trajectories. Real communication delays, packet loss, and sensor noise are not fully represented. The behavioral plugin is pre-computed and not jointly trained with the hazard model.
+
+### 7. Conclusion and Future Directions
+
+CREST demonstrates that cooperative sensing sources offer unequal and non-additive value, and that source-aware calibration, rather than indiscriminate fusion, is essential for effective real-world hazard prediction. Future work will extend the framework to closed-loop V2X stacks, real-world roadside deployments, and end-to-end training of the behavioral plugin.
+
+### Phase 4 Authors
+
+- Joyjit Roy
+- Sushanta Das
+- Samaresh Kumar Singh
+
+### Citation
+
+```bibtex
+@article{crest2026,
+  author  = {Roy, Joyjit and Das, Sushanta and Singh, Samaresh Kumar},
+  title   = {CREST: Calibrated Risk Estimation with Source-Aware Temporal Fusion for Cooperative Freeway Hazard Prediction},
+  journal = {arXiv preprint},
+  year    = {2026},
+  note    = {Submitted to IEEE Transactions on Vehicular Technology}
+}
+```
 
 # <span style="color:blue">Key Innovations</span>
 

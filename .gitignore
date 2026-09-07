@@ -62,3 +62,11 @@ Thumbs.db
 # Temporary test files
 #check_distributions.py
 #test_model_direct.py
+
+# Phase 4 CREST
+phase4-crest/outputs/
+phase4-crest/data/
+phase4-crest/Paper/
+crest-paper-one/
+phase4-crest/figure_data.json
+

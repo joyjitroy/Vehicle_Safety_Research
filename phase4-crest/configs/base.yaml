@@ -1,0 +1,49 @@
+# Frozen CREST experimental parameters.
+# Do not change these values without updating the paper methods and re-auditing.
+
+prediction:
+  horizon_s: 10.0  # primary prediction horizon, frozen at T = 10s
+
+labels:
+  hard_braking:
+    acc_threshold_ms2: -3.9
+    min_duration_s: 0.5
+  queue_onset:
+    min_vehicles: 3
+    max_gap_m: 5.0
+    speed_threshold_ms: 2.0
+    min_duration_s: 5.0
+
+merge:
+  temporal_gap_s: 10.0
+
+sampling:
+  ngsim_hz: 10.0
+  mitra_hz: 30.0
+
+v2x:
+  rsu:
+    coverage_radius_m: 500.0  # default; ablation sweep uses 150, 300, 500
+    coverage_radii_m: [150, 300, 500]
+  detection_uncertainty:
+    missed_detection_prob: 0.05
+    false_positive_ghost_prob: 0.01
+    position_noise_std_m: 1.0
+    stale_track_prob: 0.05
+    stale_track_lag_s: 0.2
+  perfect_sensor:
+    enabled: true  # oracle upper-bound experiment
+
+canonical_columns:
+  - vehicle_id
+  - dataset_source
+  - time_s
+  - x_m
+  - y_m
+  - speed_ms
+  - lon_acc_ms2
+  - lat_acc_ms2
+  - lane_id
+  - vehicle_type
+  - leader_id
+  - follower_id

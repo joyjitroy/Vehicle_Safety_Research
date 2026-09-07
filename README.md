@@ -1019,6 +1019,26 @@ CREST demonstrates that cooperative sensing sources offer unequal and non-additi
 - Used for: PRISM/PRISM-AR validation across diverse urban environments and per-city breakdowns
 - Stored under `phase2-prism/datasets/argoverse2-val/`
 
+**NGSIM (Next Generation Simulation)** — FHWA freeway trajectory dataset
+- Ground-camera trajectories on US-101 (Los Angeles) and I-80
+- ~45 min per site; queue-onset labels only (camera-stitching artifacts suppress extreme deceleration signals)
+- Released 2016 via ITS DataHub, Data.transportation.gov
+- Used for: CREST training, calibration, and holdout (Phase 4)
+- Stored under `phase4-crest/data/raw/ngsim/`
+
+**MiTra** — Drone-based freeway trajectory dataset
+- 135 minutes across 9 non-overlapping sessions (T1–T9) on the A50 freeway, Milan, Italy
+- Captures individual vehicle kinematics across all congestion states; supports both hard-braking and queue-onset labels
+- Published by Chaudhari et al., *Scientific Data*, 2025
+- Used for: CREST training, calibration, and holdout (Phase 4)
+- Stored under `phase4-crest/data/raw/mitra/`
+
+**I-24 MOTION** — Independent freeway validation dataset
+- Ground-camera trajectories, I-24, Nashville, TN; INCEPTION v1.0, 3 incident days (Nov–Dec 2022)
+- Published by Gloudemans et al., *Transportation Research Part C*, 2023
+- Used for: zero-shot CREST generalization test, no fine-tuning (Phase 4)
+- Stored under `phase4-crest/data/external/i24_motion/`
+
 ### Dataset Summary by Paper
 
 | Paper | Dataset | Size | Type | Purpose |
@@ -1031,8 +1051,11 @@ CREST demonstrates that cooperative sensing sources offer unequal and non-additi
 | Phase 3 (PRISM-AR/TVT) | Argoverse 2 | 1,000 candidate → 50 evaluated clips | VRU-interaction clips | Evaluate risk-adaptive AR cues |
 | Phase 3 (PRISM-AR/TVT) | Waymo WOMD | 286 candidate → 25 evaluated clips | VRU-interaction clips | Evaluate risk-adaptive AR cues |
 | Phase 3 (PRISM-AR/TVT) | Synthetic near-miss generator | 60 scenarios | Controlled pedestrian-crossing scenes | Supplement rare warning/emergency cases |
+| Phase 4 (CREST/TVT) | NGSIM US-101 + I-80 | Train + holdout (queue-onset only) | Freeway trajectories | Train/evaluate CREST hazard model |
+| Phase 4 (CREST/TVT) | MiTra T1-T9 | Train + holdout (hard-brake + queue-onset) | Freeway trajectories | Train/evaluate CREST hazard model |
+| Phase 4 (CREST/TVT) | I-24 MOTION | 838 holdout events | Freeway trajectories | Zero-shot cross-site generalization test |
 
-Phase 3 candidate clips are drawn from the same three AV datasets as Phase 2 (1,296 total candidate clips), then filtered by a VRU-interaction extractor (20 m ego-approach radius, decreasing distance, ≥5 frames visible) down to 231 total evaluated scenario clips. See [`phase3-prism-ar/README.md`](phase3-prism-ar/README.md) and `phase3-prism-ar/src/prism_ar/dataset_generation/scenario_extractor.py` for the extraction logic.
+Phase 3 candidate clips are drawn from the same three AV datasets as Phase 2 (1,296 total candidate clips), then filtered by a VRU-interaction extractor (20 m ego-approach radius, decreasing distance, ≥5 frames visible) down to 231 total evaluated scenario clips. See [`phase3-prism-ar/README.md`](phase3-prism-ar/README.md) and `phase3-prism-ar/src/prism_ar/dataset_generation/scenario_extractor.py` for the extraction logic. Phase 4 uses a canonical schema to unify NGSIM and MiTra at 10 Hz; training uses balanced sampling (5,320 positive + 5,320 negative), with the holdout (838 events) geographically and temporally separate from training/calibration.
 
 # <span style="color:blue">Data Management</span>
 
@@ -1044,8 +1067,14 @@ The repository keeps small, shareable datasets in `data/` and expects large AV d
 - `phase2-prism/datasets/` — Local nuScenes and Argoverse 2 data (not tracked; add this folder to `.gitignore` if you create it).
 - `phase2-prism/results/models/` — Saved trained model weights for PRISM (e.g., `agentic_policy.pt`, `kinematic_lstm.pt`, `vru_lstm.pt`).
 - `phase3-prism-ar/data/prism_ar/` — Generated PRISM-AR annotations and rendered AR overlay images.
+- `phase4-crest/data/raw/` — NGSIM and MiTra raw trajectory CSVs (not tracked; download separately per source citation in `phase4-crest/README.md`).
+- `phase4-crest/data/processed/` — Canonical-schema parquet files per dataset (10 Hz, unified NGSIM/MiTra format).
+- `phase4-crest/data/interim/` — Label windows, feature caches (`outputs/features/`, git-ignored, regenerate via `scripts/precompute_features*.py`), and splits.
+- `phase4-crest/data/external/` — I-24 MOTION independent holdout data (not tracked).
+- `phase4-crest/outputs/results/` — Tracked: ablation/holdout/lead-time JSON and CSV results backing the README tables.
+- `phase4-crest/outputs/checkpoints/` — Tracked: trained model weights per configuration (B1, A1-A4, F, Fopt, A6, A7) and Platt calibration parameters.
 
-To point Phase 2 and Phase 3 at external datasets, set the `SDIQ_*` environment variables in `phase2-prism/src/sdiq/config.py` or use Windows directory junctions (e.g. `C:\data_prismar\nuscenes`, `C:\data_prismar\argoverse2`, `C:\data_prismar\waymo`, `C:\data_prismar\crss`).
+To point Phase 2 and Phase 3 at external datasets, set the `SDIQ_*` environment variables in `phase2-prism/src/sdiq/config.py` or use Windows directory junctions (e.g. `C:\data_prismar\nuscenes`, `C:\data_prismar\argoverse2`, `C:\data_prismar\waymo`, `C:\data_prismar\crss`). Phase 4 raw datasets (NGSIM, MiTra, I-24 MOTION) are downloaded per the citations in `phase4-crest/README.md` and placed under `phase4-crest/data/raw/` and `phase4-crest/data/external/`.
 ## Project Structure
 
 ```
@@ -1095,13 +1124,25 @@ To point Phase 2 and Phase 3 at external datasets, set the `SDIQ_*` environment 
 │   │   └── models/                # Saved PyTorch weights (agentic, kinematic, VRU)
 │   ├── src/sdiq/                  # config, data loaders, models, agentic layer
 │   └── tests/                     # Pytest suite (61 tests)
-└── phase3-prism-ar/               # Phase 3: risk-adaptive AR cues for VRUs
-    ├── data/                      # Scenario annotations + rendered AR images
-    ├── docs/                      # PAPER_PLAN.md, architecture docx, Backups/
+├── phase3-prism-ar/               # Phase 3: risk-adaptive AR cues for VRUs
+│   ├── data/                      # Scenario annotations + rendered AR images
+│   ├── docs/                      # PAPER_PLAN.md, architecture docx, Backups/
+│   ├── notebooks/
+│   ├── results/                   # CSVs, JSON, figures, report.md
+│   ├── scripts/                   # run_*.py, generate_*.py, measure_*.py
+│   ├── src/prism_ar/              # data_ingestion, prism, ar_overlay, ...
+│   └── tests/                     # Unit tests
+└── phase4-crest/                  # Phase 4: cooperative freeway hazard prediction
+    ├── configs/                   # base.yaml, model.yaml, splits.yaml (frozen thresholds/architecture)
+    ├── data/                      # raw/ (NGSIM, MiTra), processed/, interim/, external/ (I-24 MOTION) - not tracked
+    ├── docs/images/               # Paper figures F1-F15
     ├── notebooks/
-    ├── results/                   # CSVs, JSON, figures, report.md
-    ├── scripts/                   # run_*.py, generate_*.py, measure_*.py
-    ├── src/prism_ar/              # data_ingestion, prism, ar_overlay, ...
+    ├── outputs/
+    │   ├── results/                # Tracked: ablations.json, holdout_eval.json, lead_time.json, pr_curve_data.csv, ...
+    │   ├── checkpoints/             # Tracked: per-config .pt weights + platt.json calibration params
+    │   └── features/                # Precomputed feature caches (git-ignored, regenerate via scripts)
+    ├── scripts/                   # 31 pipeline scripts (audit, labels, splits, precompute, train, eval, figures)
+    ├── src/crest/                 # adapters, labels, features, datasets, models, evaluation
     └── tests/                     # Unit tests
 ```
 
@@ -1446,6 +1487,8 @@ Phase 2 and Phase 3 extend this impact from human-driven vehicles to autonomous 
 
 **Phase 3 current scope:** PRISM-AR's reported results use a deterministic, fixed-weight risk-fusion pipeline rather than the agentic DQN+SHAP extension. The four-tier labels in the paper (Silent, Information, Warning, Emergency) differ from the current codebase labels (silent, advisory, intervention, emergency); these map to the same escalation levels. The agentic extension is designed but not evaluated in the current reference results.
 
+**Phase 4 current limitation:** CREST's V2V and RSU sensing channels are simulated on top of ground-truth trajectories; real communication delay, packet loss, and sensor noise are not modeled. Full cooperative sensor fusion (F, Fopt) exhibits negative transfer, underperforming the best single source (A2, A4-500), indicating the current MLP fusion head does not suppress cross-source interference within the training budget used. The behavioral (A7) and perception (A6) plugins are pre-computed and not jointly trained with the base hazard model.
+
 ## Contributing
 
 | Phase | Where to start |
@@ -1453,15 +1496,16 @@ Phase 2 and Phase 3 extend this impact from human-driven vehicles to autonomous 
 | Phase 1 | Review [notebooks/04_crash_factor_investigation.ipynb](notebooks/04_crash_factor_investigation.ipynb) and run `phase1-safedriver-iq/demo_quick.py` |
 | Phase 2 | See [phase2-prism/README.md](phase2-prism/README.md) and run `.venv/bin/python -m sdiq.main run` |
 | Phase 3 | See [phase3-prism-ar/README.md](phase3-prism-ar/README.md) and run `scripts/run_prism_ar_real_data.py` |
+| Phase 4 | See [phase4-crest/README.md](phase4-crest/README.md) and run `python scripts/run_ngsim_p0_audit.py` |
 | All phases | Check the issues tab for planned features and collaboration ideas |
 
 ## Authors
 
 | Author | Affiliation / Role | Phases |
 |---|---|---|
-| Joyjit Roy | Independent Researcher, IEEE Senior Member, Austin TX | Phase 1, 2, 3 |
-| Samaresh Kumar Singh | Independent Researcher, IEEE Senior Member, Leander TX | Phase 1, 2, 3 |
-| Sushanta Das | American Center for Mobility, Ypsilanti MI | Phase 1, 2, 3 |
+| Joyjit Roy | Independent Researcher, IEEE Senior Member, Austin TX | Phase 1, 2, 3, 4 |
+| Samaresh Kumar Singh | Independent Researcher, IEEE Senior Member, Leander TX | Phase 1, 2, 3, 4 |
+| Sushanta Das | American Center for Mobility, Ypsilanti MI | Phase 1, 2, 3, 4 |
 | Mojtaba Bahramgiri | Department of ECE & Applied Computing, Michigan Technological University | Phase 1 |
 | Meng Lu | Aeolix ITS / Macau University of Science and Technology | Phase 3 |
 | Arijit Roy | Independent Researcher, Kolkata, India | Phase 3 |
@@ -1475,6 +1519,7 @@ Phase 2 and Phase 3 extend this impact from human-driven vehicles to autonomous 
 - **American Center for Mobility (ACM)** for collaboration and domain guidance as a federally designated CAV proving ground
 - **NHTSA** for CRSS data availability
 - **Waymo, Argoverse 2, and nuScenes** teams for open autonomous-driving datasets used in Phases 2 and 3
+- **FHWA, MiTra (Chaudhari et al.), and I-24 MOTION (Gloudemans et al.)** teams for open freeway trajectory datasets used in Phase 4
 - **SafeDriver-IQ** novel methodology development
 - Python scientific computing community (pandas, scikit-learn, etc.)
 

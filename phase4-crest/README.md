@@ -24,9 +24,9 @@ CREST is a four-layer pipeline. **Layer 1** exposes five source blocks per obser
 
 **V2X Simulation.** No public dataset includes live V2X broadcasts, so V2V/RSU channels are simulated from trajectory replay. V2V Basic Safety Messages follow SAE J2735 (10 Hz, 500 m radius); RSU Collective Perception Messages follow ETSI EN 302 637-2 across a 150/300/500 m coverage sweep.
 
-<img src="docs/images/F3_V2X_Simulation_Schematic.png" alt="V2X Simulation Schematic" width="70%"/>
+![V2X Simulation Schematic](docs/images/F3_V2X_Simulation_Schematic.png)
 
-<img src="docs/images/F15_V2X_Coverage.png" alt="V2X Coverage" width="70%"/>
+![V2X Coverage](docs/images/F15_V2X_Coverage.png)
 
 ## 3. Datasets
 

@@ -760,9 +760,7 @@ CREST (Calibrated Risk Estimation with Source-Aware Temporal Fusion) is the four
 
 ### Research Flyer
 
-![CREST System Architecture](phase4-crest/docs/images/F1_CREST_Architecture.png)
-
-CREST's four-layer architecture: heterogeneous input sources, parallel per-source MLP encoders, fusion with frozen Platt calibration, and graduated downstream safety outputs, with dashed plugin slots for behavioral and perception context.
+*(Flyer to be added.)*
 
 ### Abstract
 
@@ -782,9 +780,9 @@ CREST is a four-layer pipeline. **Layer 1** exposes five source blocks per obser
 
 **V2X Simulation.** No public dataset includes live V2X broadcasts, so V2V/RSU channels are simulated from trajectory replay. V2V Basic Safety Messages follow SAE J2735 (10 Hz, 500 m radius); RSU Collective Perception Messages follow ETSI EN 302 637-2 across a 150/300/500 m coverage sweep.
 
-<img src="phase4-crest/docs/images/F3_V2X_Simulation_Schematic.png" alt="V2X Simulation Schematic" width="70%"/>
+![V2X Simulation Schematic](phase4-crest/docs/images/F3_V2X_Simulation_Schematic.png)
 
-<img src="phase4-crest/docs/images/F15_V2X_Coverage.png" alt="V2X Coverage" width="70%"/>
+![V2X Coverage](phase4-crest/docs/images/F15_V2X_Coverage.png)
 
 ### 3. Dataset Summary
 

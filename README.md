@@ -95,7 +95,7 @@ Phase 4 extends the inverse crash-probability foundation of SafeDriver-IQ and th
 - Generalizes to an independent I-24 MOTION (Nashville, TN) holdout without fine-tuning
 
 ### 📌 Relationship to This Project
-Each phase of the SafeDriver-IQ system was **designed, implemented, and validated first**, and the insights, models, and experimental findings from this project directly led to the corresponding research publications: the Phase 1 arXiv paper, the Phase 2 ASCE2027 paper, the Phase 3 PRISM-AR manuscript prepared for IEEE TVT, and the Phase 4 CREST manuscript prepared for IEEE TVT.
+Each phase of the SafeDriver-IQ system was **designed, implemented, and validated first**, and the insights, models, and experimental findings from this project directly led to the corresponding research publications: the Phase 1 paper published in IEEE Xplore (IEEE EIT 2026), the Phase 2 PRISM paper published on arXiv and accepted for ASCE2027, the Phase 3 PRISM-AR manuscript prepared for IEEE TVT, and the Phase 4 CREST manuscript prepared for IEEE TVT.
 
 In other words:
 - ✅ This repository = **working system + experiments** (Phase 1: `phase1-safedriver-iq/`, Phase 2: `phase2-prism/`, Phase 3: `phase3-prism-ar/`, Phase 4: `phase4-crest/`)
@@ -346,15 +346,13 @@ See `PROJECT_SETUP_SUMMARY.md` for detailed setup.
 
 ### 📚 Citation
 ```bibtex
-@article{safedriveriq,
-  author  = {Roy, Joyjit and Singh, Samaresh Kumar and Das, Sushanta and Bahramgiri, Mojtaba},
-  title   = {Real-Time Driver Safety Scoring Through Inverse Crash Probability Modeling},
-  journal = {arXiv preprint arXiv:2603.14841},
-  year    = {2026},
-  doi     = {10.48550/arXiv.2603.14841},
-  url     = {https://arxiv.org/abs/2603.14841},
-  note    = {Presented at IEEE EIT 2026, forthcoming in IEEE Xplore}
-}
+@INPROCEEDINGS{11670411,
+  author={Roy, Joyjit and Kumar Singh, Samaresh and Das, Sushanta and Bahramgiri, Mojtaba},
+  booktitle={2026 IEEE International Conference on Electro Information Technology (eIT)},
+  title={Real-Time Driver Safety Scoring Through Inverse Crash Probability Modeling},
+  year={2026},
+  pages={1-12},
+  doi={10.1109/eIT68936.2026.11670411}}
 ```
 
 
@@ -534,6 +532,20 @@ Immediate future work targets latency optimization through GPU deployment and ON
 - Joyjit Roy
 - Samaresh Kumar Singh
 - Sushanta Das
+
+### Citation
+
+```bibtex
+@article{prism2026,
+  author  = {Roy, Joyjit and Singh, Samaresh Kumar and Das, Sushanta},
+  title   = {PRISM: An Agentic Multi-Model Architecture for Proactive Safety in Autonomous Transportation Systems},
+  journal = {arXiv preprint arXiv:2609.01623},
+  year    = {2026},
+  pages   = {1-16},
+  doi     = {10.48550/arXiv.2609.01623},
+  url     = {https://doi.org/10.48550/arXiv.2609.01623}
+}
+```
 
 
 # <span style="color:blue">Phase 3: PRISM-AR - Explainable Risk-Adaptive Driving Intelligence for Vulnerable Road User Communication in Automated Vehicles</span>
@@ -909,18 +921,6 @@ CREST demonstrates that cooperative sensing sources offer unequal and non-additi
 - Joyjit Roy
 - Sushanta Das
 - Samaresh Kumar Singh
-
-### Citation
-
-```bibtex
-@article{crest2026,
-  author  = {Roy, Joyjit and Das, Sushanta and Singh, Samaresh Kumar},
-  title   = {CREST: Calibrated Risk Estimation with Source-Aware Temporal Fusion for Cooperative Freeway Hazard Prediction},
-  journal = {arXiv preprint},
-  year    = {2026},
-  note    = {Submitted to IEEE Transactions on Vehicular Technology}
-}
-```
 
 # <span style="color:blue">Key Innovations</span>
 

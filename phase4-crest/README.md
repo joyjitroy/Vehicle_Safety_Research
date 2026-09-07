@@ -336,14 +336,6 @@ python scripts/generate_figures.py
 - Fusion negative transfer (F, Fopt underperforming best single sources) indicates the current MLP fusion head does not suppress cross-source interference within the training budget used.
 - Channel-loss robustness (operating on a reduced source subset) is architecturally supported but not evaluated during a live channel-loss event.
 
-## 10. Citation
+## 10. Publication Status
 
-```bibtex
-@article{crest2026,
-  author  = {Roy, Joyjit and Das, Sushanta and Singh, Samaresh Kumar},
-  title   = {CREST: Calibrated Risk Estimation with Source-Aware Temporal Fusion for Cooperative Freeway Hazard Prediction},
-  journal = {IEEE Transactions on Vehicular Technology},
-  year    = {2026},
-  note    = {Submitted}
-}
-```
+Submitted to *IEEE Transactions on Vehicular Technology*. Not yet available on arXiv or IEEE Xplore; citation details will be added once published.

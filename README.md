@@ -1252,6 +1252,39 @@ python scripts/run_robustness_study.py
 
 On Windows, `scripts/setup_venv.bat` can be used instead of step 1 to create an isolated virtual environment first. See [phase3-prism-ar/README.md](phase3-prism-ar/README.md) for dataset path configuration and implementation notes.
 
+## Quick Start — Phase 4 (CREST)
+
+Phase 4 also lives in its own folder (`phase4-crest/`), independent of the other phases' environments.
+
+```bash
+cd phase4-crest
+
+# 1. Audit and verification (P0 checkpoints)
+python scripts/run_ngsim_p0_audit.py
+python scripts/verify_canonical_schema.py
+python scripts/verify_coordinate_conversions.py
+
+# 2. Build labels and assign splits
+python scripts/build_labels.py
+python scripts/assign_splits.py
+
+# 3. Precompute features per configuration (B1, A1-A4, F, Fopt, A6, A7)
+python scripts/precompute_features.py
+python scripts/precompute_features_a2.py
+
+# 4. Train and evaluate
+python scripts/train_baseline.py
+python scripts/run_ablations.py
+python scripts/eval_holdout.py
+python scripts/infer_i24_holdout.py
+python scripts/compute_lead_time.py
+
+# 5. Generate the paper figures
+python scripts/generate_figures.py
+```
+
+See [phase4-crest/README.md](phase4-crest/README.md) for the full ablation configuration table, dataset setup, and results.
+
 ## Detailed Setup Instructions
 
 ### Step 1: Clone/Download Project
@@ -1350,7 +1383,7 @@ Expected: 65 tests total (53 pass + 12 realtime tests with 5 expected failures d
 
 ## Pipeline
 
-> **Note:** the step numbers below are internal sub-stages within each phase's own pipeline — they are unrelated to the SafeDriver-IQ (Phase 1) / PRISM (Phase 2) / PRISM-AR (Phase 3) numbering used elsewhere in this README.
+> **Note:** the step numbers below are internal sub-stages within each phase's own pipeline — they are unrelated to the SafeDriver-IQ (Phase 1) / PRISM (Phase 2) / PRISM-AR (Phase 3) / CREST (Phase 4) numbering used elsewhere in this README.
 
 ### Phase 1: SafeDriver-IQ Pipeline
 
@@ -1413,6 +1446,18 @@ Implemented in `phase3-prism-ar/scripts/run_prism_ar_real_data.py`:
 5. Compute evaluation metrics (tier accuracy, recall, cue-risk monotonicity, warning lead time, cue flicker, visual clutter)
 6. Save the results CSV, summary tables, and sample overlay images
 
+### Phase 4: CREST Pipeline
+
+Implemented in `phase4-crest/scripts/`:
+
+1. **P0 audit and verification** — NGSIM/MiTra event audit, canonical schema verification, coordinate conversion checks
+2. **Label construction** — extract hard-braking and queue-onset events, build T=10s lookahead windows, assign train/calibration/holdout splits
+3. **Feature precomputation** — per-configuration feature tensors (B1 ego-only through A1-A4, F, Fopt, A6, A7)
+4. **Baseline and training** — analytical TTC baseline (B0), train the B1 ego-only CREST model, run all ablation configurations, train Fopt
+5. **Calibration** — fit Platt scaling on the calibration split
+6. **Evaluation** — holdout AUPRC/Brier, I-24 MOTION zero-shot inference, lead-time analysis at 1%/5%/10% FAR
+7. **Figure generation** — reproduce all 15 paper figures from saved results
+
 ## ASCE2027 Validation Artifacts
 
 The `phase2-prism/asce2027/` folder contains the reproducibility bundle for the ASCE2027 conference paper:
@@ -1445,6 +1490,17 @@ The `phase3-prism-ar/` folder contains the reproducibility bundle for the PRISM-
 
 These artifacts support the paper's results: 231 evaluated scenario clips, tier accuracy 0.43 → 0.71, cue-risk monotonicity ρ = -0.703 (p < 0.0001), and sub-millisecond per-frame latency. See [Quick Start — Phase 3 (PRISM-AR)](#quick-start--phase-3-phase3-prism-ar) above to regenerate them.
 
+## CREST (TVT) Validation Artifacts
+
+The `phase4-crest/` folder contains the reproducibility bundle for the CREST IEEE TVT manuscript:
+
+- **Scripts** (`phase4-crest/scripts/`): 31 pipeline scripts covering audit, label construction, split assignment, feature precomputation (per-configuration), training, evaluation, lead-time computation, and figure generation (see [phase4-crest/README.md](phase4-crest/README.md#scripts-reference) for the full reference table)
+- **Data** (`phase4-crest/outputs/results/`): `ablations.json`, `b0_baseline.json`, `holdout_eval.json`, `i24_holdout_eval.json`, `lead_time.json`, `pr_curve_data.csv`, `learning_curves_data.csv`, `label_summary.json`, `ngsim_p0_audit_summary.json`, and related label/split CSVs
+- **Checkpoints** (`phase4-crest/outputs/checkpoints/`): trained `.pt` weights for B1, A1-A4 (150/300/500), F, Fopt, A6, A7, plus `platt.json` calibration parameters and `history.json` training curves
+- **Figures** (`phase4-crest/docs/images/`): architecture (F1), data split (F2), V2X simulation schematic (F3), horizon sensitivity (F4), ablation bar chart (F5), PR curve (F6), RSU sweep (F7), learning curves (F8), split comparison (F9), lead time (F10), inference flow (F12), HMI alert (F13), warning sequence (F14), V2X coverage (F15)
+
+These artifacts support the paper's results: best single cooperative source AUPRC 0.751 vs. 0.678 ego-only, negative transfer in full fusion (0.700), behavioral-plugin AUPRC 0.808 (best overall), and 2.97 s median lead time at 5% FAR. See [Quick Start — Phase 4 (CREST)](#quick-start--phase-4-crest) above to regenerate them.
+
 ## Runnable Entry Points
 
 | Phase | Entry point | What it demonstrates |
@@ -1455,6 +1511,8 @@ These artifacts support the paper's results: 231 evaluated scenario clips, tier 
 | Phase 1 | `notebooks/04_crash_factor_investigation.ipynb` | 8-investigation crash factor analysis with Waymo |
 | Phase 2 | `python -m sdiq.main run` (inside `phase2-prism/.venv`) | End-to-end PRISM agentic pipeline |
 | Phase 3 | `scripts/run_prism_ar_real_data.py` | PRISM-AR real-data AR cue evaluation |
+| Phase 4 | `phase4-crest/scripts/run_ablations.py` | CREST cooperative-source ablation study (A1-A4, F, A6, A7) |
+| Phase 4 | `phase4-crest/scripts/infer_i24_holdout.py` | CREST zero-shot generalization to I-24 MOTION |
 
 ## Expected Impact
 
@@ -1464,7 +1522,7 @@ With 20% adoption of the SafeDriver-IQ family (Phase 1 scoring, Phase 2 PRISM ag
 - **170 work zone deaths/year** (20% reduction)
 - **30,000 VRU injuries/year** (20% reduction)
 
-Phase 2 and Phase 3 extend this impact from human-driven vehicles to autonomous vehicle fleets by translating the same risk reasoning into real-time internal interventions and external VRU-facing AR cues.
+Phase 2 and Phase 3 extend this impact from human-driven vehicles to autonomous vehicle fleets by translating the same risk reasoning into real-time internal interventions and external VRU-facing AR cues. Phase 4 extends the same calibrated-risk approach to freeway infrastructure, where a 2.97 s median warning lead time at 5% FAR provides sufficient time for automated braking or driver reaction ahead of rear-end collisions caused by queue formation.
 
 **Total impact: 1,870+ lives saved annually**
 
@@ -1478,6 +1536,7 @@ Phase 2 and Phase 3 extend this impact from human-driven vehicles to autonomous 
 - **[phase3-prism-ar/README.md](phase3-prism-ar/README.md)** — PRISM-AR (Phase 3) overview and quick start
 - **[phase3-prism-ar/docs/PAPER_PLAN.md](phase3-prism-ar/docs/PAPER_PLAN.md)** — PRISM-AR IEEE TVT submission plan
 - **[phase3-prism-ar/results/report.md](phase3-prism-ar/results/report.md)** — PRISM-AR generated evaluation report
+- **[phase4-crest/README.md](phase4-crest/README.md)** — CREST (Phase 4) overview, architecture, dataset, and full results tables
 
 ## Known Issues & Limitations
 

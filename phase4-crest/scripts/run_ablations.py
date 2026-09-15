@@ -126,7 +126,7 @@ def load_split_tensors(prefix, split: str, map_dim: int):
     )
 
 
-def evaluate(model, loader, device):
+def evaluate(model, loader, device, return_scores=False):
     model.eval()
     all_probs, all_labels = [], []
     with torch.no_grad():
@@ -136,12 +136,16 @@ def evaluate(model, loader, device):
             all_labels.extend(labels.numpy().tolist())
     all_probs = np.clip(np.array(all_probs), 1e-6, 1.0 - 1e-6)
     all_labels = np.array(all_labels)
-    return {
+    metrics = {
         'auprc': float(average_precision_score(all_labels, all_probs)),
         'brier': float(brier_score_loss(all_labels, all_probs)),
         'log_loss': float(log_loss(all_labels, all_probs)),
         'mean_prob': float(all_probs.mean()),
     }
+    if return_scores:
+        metrics['probs'] = all_probs.tolist()
+        metrics['labels'] = all_labels.tolist()
+    return metrics
 
 
 def fit_platt(logits, labels):
@@ -201,7 +205,7 @@ def train_config(name: str, prefix, map_dim: int, ckpt_name: str):
             cal_labels.extend(labels.numpy().tolist())
     platt_a, platt_b = fit_platt(np.array(cal_logits), np.array(cal_labels))
 
-    holdout_metrics = evaluate(model, holdout_loader, device)
+    holdout_metrics = evaluate(model, holdout_loader, device, return_scores=True)
 
     return {
         'config': name, 'map_input_dim': map_dim, 'checkpoint': str(ckpt_path),
@@ -219,7 +223,7 @@ def load_existing_b1(map_dim: int, ckpt_name: str):
 
     holdout_ds = TensorDataset(*load_split_tensors(None, 'holdout', map_dim))
     holdout_loader = DataLoader(holdout_ds, batch_size=BATCH_SIZE, shuffle=False)
-    holdout_metrics = evaluate(model, holdout_loader, device)
+    holdout_metrics = evaluate(model, holdout_loader, device, return_scores=True)
 
     platt_path = CKPT_DIR / 'platt.json'
     platt = json.load(open(platt_path, encoding='utf-8')) if platt_path.exists() else None

@@ -20,7 +20,7 @@ SafeDriver-IQ (Phase 1) converts crash classifiers into continuous risk scores f
 
 ![CREST Architecture](docs/images/F1_CREST_Architecture.png)
 
-CREST is a four-layer pipeline. **Layer 1** exposes five source blocks per observation window: ego kinematics, V2V messages, RSU perception, static map/road geometry, and dynamic weather/traffic context; any subset can form an input configuration, with inactive sources excluded rather than zero-padded. **Layer 2** encodes each active block through a dedicated MLP: the Ego MLP is a per-timestep snapshot encoder (no temporal recurrence); the Neighbor MLP encodes up to K=10 nearest neighbors within 300 m via sum-pooling regardless of whether they arrive via V2V or RSU; Map and Weather MLPs share an implementation but stay separate ablation arms. The network totals 20,289 parameters. **Layer 3** fuses active encoder outputs through a two-layer MLP to a logit, then a frozen Platt sigmoid (fit on a 1,284-event calibration split, frozen before holdout) yields the calibrated hazard probability. **Layer 4** exposes the probability, lead time, and FAR operating point downstream, plus two inference-time plugins that extend the frozen model without retraining: a **behavioral prior** (pre-computed SafeDriver-IQ score) and an **onboard perception** plugin (camera/LiDAR/radar detections via the Neighbor MLP path).
+CREST is a four-layer pipeline. **Layer 1** exposes five source blocks per observation window: ego kinematics, V2V messages, RSU perception, static map/road geometry, and dynamic weather/traffic context; any subset can form an input configuration, with inactive sources excluded rather than zero-padded. **Layer 2** encodes each active block through a dedicated MLP: the Ego MLP is a per-timestep snapshot encoder (no temporal recurrence); the Neighbor MLP encodes up to K=10 nearest neighbors within 300 m via mean-pooling regardless of whether they arrive via V2V or RSU; Map and Weather MLPs share an implementation but stay separate ablation arms. The network totals 20,289 parameters. **Layer 3** fuses active encoder outputs through a two-layer MLP to a logit, then a frozen Platt sigmoid (fit on a 1,284-event calibration split, frozen before holdout) yields the calibrated hazard probability. **Layer 4** exposes the probability, lead time, and FAR operating point downstream, plus two inference-time plugins that extend the frozen model without retraining: a **behavioral prior** (pre-computed SafeDriver-IQ score) and an **onboard perception** plugin (camera/LiDAR/radar detections via the Neighbor MLP path).
 
 **V2X Simulation.** No public dataset includes live V2X broadcasts, so V2V/RSU channels are simulated from trajectory replay. V2V Basic Safety Messages follow SAE J2735 (10 Hz, 500 m radius); RSU Collective Perception Messages follow ETSI EN 302 637-2 across a 150/300/500 m coverage sweep.
 
@@ -254,7 +254,7 @@ Before the first model file was written, the following were completed and confir
 7. RSU coverage-radius and detection-uncertainty parameters configured.
 8. Calibration split reserved: last 20% of NGSIM US-101 + last 20% of MiTra T6 by time.
 9. SafeDriver-IQ prior artifact loadability verified (optional A5/A7).
-10. Framework: PyTorch; V2V encoder as sum-pooled MLP over top-K neighbors.
+10. Framework: PyTorch; V2V encoder as mean-pooled MLP over top-K neighbors.
 
 All label thresholds and evaluation protocols are frozen in `configs/base.yaml`.
 

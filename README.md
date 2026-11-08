@@ -95,7 +95,7 @@ Phase 4 extends the inverse crash-probability foundation of SafeDriver-IQ and th
 - Generalizes to an independent I-24 MOTION (Nashville, TN) holdout without fine-tuning
 
 ### 📌 Relationship to This Project
-Each phase of the SafeDriver-IQ system was **designed, implemented, and validated first**, and the insights, models, and experimental findings from this project directly led to the corresponding research publications: the Phase 1 paper published in IEEE Xplore (IEEE EIT 2026), the Phase 2 PRISM paper published on arXiv and accepted for ASCE2027, the Phase 3 PRISM-AR manuscript prepared for IEEE TVT, and the Phase 4 CREST manuscript (not yet submitted).
+Each phase of the SafeDriver-IQ system was **designed, implemented, and validated first**, and the insights, models, and experimental findings from this project directly led to the corresponding research publications: the Phase 1 paper published in IEEE Xplore (IEEE EIT 2026), the Phase 2 PRISM paper published on arXiv and accepted for presentation at the ASCE 2027 conference, the Phase 3 PRISM-AR manuscript prepared for IEEE TVT, and the Phase 4 CREST manuscript (not yet submitted).
 
 In other words:
 - ✅ This repository = **working system + experiments** (Phase 1: `phase1-safedriver-iq/`, Phase 2: `phase2-prism/`, Phase 3: `phase3-prism-ar/`, Phase 4: `phase4-crest/`)
@@ -128,7 +128,7 @@ The research paper builds on this project and formally introduces:
 
 ### Overview
 
-SafeDriver-IQ is the first phase of the Vehicle_Safety_Research program. It introduces a framework that transforms binary crash classifiers into continuous 0-100 safety scores by combining national crash statistics with naturalistic driving data from autonomous vehicles. The framework was presented at IEEE EIT 2026 and is forthcoming in IEEE Xplore.
+SafeDriver-IQ is the first phase of the Vehicle_Safety_Research program. It introduces a framework that transforms binary crash classifiers into continuous 0-100 safety scores by combining national crash statistics with naturalistic driving data from autonomous vehicles. The framework was presented at IEEE EIT 2026 and published in IEEE Xplore on September 7, 2026 (DOI [10.1109/eIT68936.2026.11670411](https://doi.org/10.1109/eIT68936.2026.11670411)).
 
 ### Research Flyer
 
@@ -291,7 +291,7 @@ Safety scores by scenario category confirm that risk compounds non-linearly unde
 - **87%** of crashes involve two or more co-occurring risk factors.
 - Risk compounds non-linearly, reaching **4.5x** baseline under certain combinations.
 - SHAP-ablation correlation is strong (r = 0.94).
-- Estimated **22.7%** crash reduction under realistic deployment.
+- Estimated **22.7%** crash reduction in simulation.
 
 ### 5. Application Example
 
@@ -1374,7 +1374,7 @@ open htmlcov/index.html  # On Mac
 pytest tests/test_realtime_calculator.py -v --tb=short -s
 ```
 
-Expected: 65 tests total (53 pass + 12 realtime tests with 5 expected failures due to known model limitations)
+Expected: 65 tests total, including 12 realtime sensitivity tests. Results for these tests reflect the Phase 1 scope described in Section 6, Limitations.
 
 ## Pipeline
 
@@ -1455,7 +1455,7 @@ Implemented in `phase4-crest/scripts/`:
 
 ## ASCE2027 Validation Artifacts
 
-The `phase2-prism/asce2027/` folder contains the reproducibility bundle for the ASCE2027 conference paper:
+The `phase2-prism/asce2027/` folder contains the reproducibility bundle for the ASCE 2027 conference presentation:
 
 - **Scripts**: `compute_stats.py`, `check_tier_mapping.py`, `find_thresholds.py`, `sensitivity_final.py`, `av2_and_shap_outputs.py`, `fig2_score_distribution_final.py`, `generate_paper_outputs.py`, `waymo_validation.py`, `waymo_validation_run.py`
 - **Data**: `av2_validation_1000.csv`, `av2_validation_by_city.csv`, `av2_scenario_summary.csv`, `scenario_summary.csv`, `waymo_validation_results.json`, `waymo_scenario_summary.csv`, `fig2_score_distribution_data.csv`
@@ -1509,18 +1509,6 @@ These artifacts support the paper's results: best single cooperative source AUPR
 | Phase 4 | `phase4-crest/scripts/run_ablations.py` | CREST cooperative-source ablation study (A1-A4, F, A6, A7) |
 | Phase 4 | `phase4-crest/scripts/infer_i24_holdout.py` | CREST zero-shot generalization to I-24 MOTION |
 
-## Expected Impact
-
-With 20% adoption of the SafeDriver-IQ family (Phase 1 scoring, Phase 2 PRISM agentic intervention, Phase 3 PRISM-AR external VRU communication), the system could prevent:
-- **1,500 pedestrian deaths/year** (20% reduction)
-- **200 cyclist deaths/year** (20% reduction)
-- **170 work zone deaths/year** (20% reduction)
-- **30,000 VRU injuries/year** (20% reduction)
-
-Phase 2 and Phase 3 extend this impact from human-driven vehicles to autonomous vehicle fleets by translating the same risk reasoning into real-time internal interventions and external VRU-facing AR cues. Phase 4 extends the same calibrated-risk approach to freeway infrastructure, where a 2.97 s median warning lead time at 5% FAR provides sufficient time for automated braking or driver reaction ahead of rear-end collisions caused by queue formation.
-
-**Total impact: 1,870+ lives saved annually**
-
 ## Documentation
 
 - **[README.md](README.md)** — Project overview & setup (this file)
@@ -1532,16 +1520,6 @@ Phase 2 and Phase 3 extend this impact from human-driven vehicles to autonomous 
 - **[phase3-prism-ar/docs/PAPER_PLAN.md](phase3-prism-ar/docs/PAPER_PLAN.md)** — PRISM-AR IEEE TVT submission plan
 - **[phase3-prism-ar/results/report.md](phase3-prism-ar/results/report.md)** — PRISM-AR generated evaluation report
 - **[phase4-crest/README.md](phase4-crest/README.md)** — CREST (Phase 4) overview, architecture, dataset, and full results tables
-
-## Known Issues & Limitations
-
-**Phase 1 limitation:** The current trained inverse crash model does not respond meaningfully to changes in **road condition**, **VRU presence**, or **speed relative to limit**. This is a fundamental limitation of training on crash-only data: the model never learned what "truly safe" driving looks like. It remains useful for weather, lighting, and temporal risk patterns. For test evidence, run `pytest tests/test_realtime_calculator.py -v --tb=short`.
-
-**Phase 2 mitigation:** PRISM addresses the Phase 1 limitation by adding separate trajectory-kinematic and VRU-interaction models, plus a DQN fusion agent. Validation results are in the `phase2-prism/asce2027/` directory.
-
-**Phase 3 current scope:** PRISM-AR's reported results use a deterministic, fixed-weight risk-fusion pipeline rather than the agentic DQN+SHAP extension. The four-tier labels in the paper (Silent, Information, Warning, Emergency) differ from the current codebase labels (silent, advisory, intervention, emergency); these map to the same escalation levels. The agentic extension is designed but not evaluated in the current reference results.
-
-**Phase 4 current limitation:** CREST's V2V and RSU sensing channels are simulated on top of ground-truth trajectories; real communication delay, packet loss, and sensor noise are not modeled. Full cooperative sensor fusion (F, Fopt) exhibits negative transfer, underperforming the best single source (A2, A4-500), indicating the current MLP fusion head does not suppress cross-source interference within the training budget used. The behavioral (A7) and perception (A6) plugins are pre-computed and not jointly trained with the base hazard model.
 
 ## Contributing
 
@@ -1566,7 +1544,7 @@ Phase 2 and Phase 3 extend this impact from human-driven vehicles to autonomous 
 
 ## License
 
-[To be determined - typically MIT or Apache 2.0 for research code]
+This project is licensed under the MIT License.
 
 ## Acknowledgments
 
@@ -1576,4 +1554,3 @@ Phase 2 and Phase 3 extend this impact from human-driven vehicles to autonomous 
 - **FHWA, MiTra (Chaudhari et al.), and I-24 MOTION (Gloudemans et al.)** teams for open freeway trajectory datasets used in Phase 4
 - **SafeDriver-IQ** novel methodology development
 - Python scientific computing community (pandas, scikit-learn, etc.)
-
